@@ -1,0 +1,183 @@
+@require "_theme.styl"
+@require "_reset.styl"
+@require "_scrollbars.styl"
+@require "_blazor-chrome.styl"
+
+// BEGIN THEME ////////////////////////////////////////////////////////////////
+
+$block-size = 5px
+$default-anchor-text-color = hsl(210deg, 100%, 50%)
+$default-background-color = black
+$default-font-family = 'Open Sans', 'Helvetica', 'Helvetica Neue', 'Segoe UI', 'Arial', sans-serif
+$default-font-size = $block-size * 3
+$default-line-height = $block-size * 4
+$default-text-color = rgba(white, 80%)
+$content-max-width = 900px
+
+// END THEME //////////////////////////////////////////////////////////////////
+
+// BEGIN CLASSES //////////////////////////////////////////////////////////////
+
+.pad-xs
+    padding: $block-size
+    gap: $block-size
+
+.pad-s
+    padding: $block-size * 2
+    gap: $block-size * 2
+
+.strip
+    display: flex
+
+.header-toolbar
+    display: flex
+    justify-content: space-between
+    max-width: $content-max-width
+    margin: 0px auto
+
+.main-content
+    max-width: $content-max-width
+    margin: 0px auto
+
+.login-button
+    padding: $block-size
+    line-height: $default-font-size * 2
+
+.dialog-container
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+
+.login-form
+    @extends .pad-s
+    border-radius: $block-size
+    background-color: hsla(210deg, 20%, 10%, 100%)
+    //width: 300px
+    //flex: 0 0 300px
+
+.form-row
+    @extends .pad-s
+    justify-content: flex-start
+    label
+        flex: 0 0 80px
+
+.validation-summary-errors
+    color: darkorange
+    padding-left: $block-size * 2
+    
+.text-danger
+    display: block
+    color: darkorange
+    line-height: $block-size * 5
+
+// END CLASSES ////////////////////////////////////////////////////////////////
+
+// BEGIN ELEMENTS /////////////////////////////////////////////////////////////
+
+*, *:before, *:after 
+    box-sizing: inherit
+
+html
+    box-sizing: border-box
+
+html, body, main
+    background-color: $default-background-color
+    color: $default-text-color
+    font-family: $default-font-family
+    font-size: $default-font-size
+    line-height: $default-line-height
+    height: 100%
+    
+header
+    background-color: hsla(210deg, 100%, 50%, 25%)
+
+h1
+    @extend .pad-s
+    font-size: $default-font-size * 2
+    line-height: $default-font-size * 2
+
+h2
+    @extend .pad-s
+    font-size: $default-font-size * 1.5
+    line-height: $default-font-size * 1.5
+
+p
+    @extend .pad-s
+
+a
+    color: hsla($default-anchor-text-color, 80%)
+    text-decoration: none
+    &:hover
+        color: hsla($default-anchor-text-color, 90%)
+
+label
+    display: block
+    padding-bottom: $block-size
+
+input
+    width: 200px
+
+input[type=checkbox]
+    flex: 0
+    margin-left: 90px
+
+input[type=text], input[type=email], input[type=password]
+    padding: $block-size * 2
+    background-color: hsl(210deg, 30%, 15%) !important
+    border: none
+    border-radius: $block-size
+    outline: none
+    width: 250px
+    color: $default-text-color
+    font-family: $default-font-family
+    font-size: $default-font-size
+    line-height: $default-line-height
+
+button
+    display: block
+    width: 100%
+    background-color: hsla(210deg, 30%, 20%, 100%)
+    border: none
+    padding: $block-size * 2
+    border-radius: $block-size
+    cursor: pointer
+    color: $default-text-color
+    font-family: $default-font-family
+    font-size: $default-font-size
+    line-height: $default-line-height
+
+::-webkit-input-placeholder /* Edge */
+    color: rgba(white, 50%)
+    font-family: $default-font-family
+    font-size: $default-font-size
+    line-height: $default-line-height
+
+::placeholder
+    color: rgba(white, 50%)
+    font-family: $default-font-family
+    font-size: $default-font-size
+    line-height: $default-line-height
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    font-family: $default-font-family
+    font-size: $default-font-size
+    line-height: $default-line-height
+    -webkit-box-shadow: 0 0 0 100px hsl(210deg, 30%, 15%) inset !important;
+    //border-radius: $block-size
+    //outline: solid 1px hsl(210deg, 30%, 20%)
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill{
+    font-family: $default-font-family
+    font-size: $default-font-size
+    line-height: $default-line-height
+    -webkit-text-fill-color: white !important;
+}
+
+// END ELEMENTS ///////////////////////////////////////////////////////////////
