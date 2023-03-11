@@ -1,0 +1,46 @@
+﻿@using SmallTalk.Data;
+@using SmallTalk.Data.Schema;
+@inject IMessageDateRepository MessageDateRepository
+
+<div class="editor">
+    <div>
+        @*<span class="textarea" role="textbox" contenteditable></span>*@
+        <BlazorContentEditableComponent CSSClass="textarea" @bind-Value="Text" />
+    </div>
+    <div class="tool-strip">
+        <a href="#" class="button">
+            <span class="glyphicon glyphicon-paperclip"></span>
+            <span>Attach</span>
+        </a>
+        <div class="actions">
+            <a class="success button" @onclick=SendAsync>
+                <span class="glyphicon glyphicon-send"></span>
+                <span>Send</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+@code 
+{
+    public string Text { get; set; }
+
+    public async Task SendAsync()
+    {
+        await MessageDateRepository.AppendMessageAsync(
+            channel: "alchemy",
+            date: DateTime.UtcNow,
+            message: new Message(
+                MessageId: Guid.NewGuid(),
+                Channel: "alchemy",
+                Author: "jimnoble@gmail.com",
+                WriteTime: DateTime.UtcNow,
+                ParentMessageDate: null,
+                ParentMessageId: null,
+                Content: Text,
+                Attachments: Array.Empty<Attachment>(),
+                Reactions: Array.Empty<Reaction>()));
+
+        Text = "";
+    }
+}

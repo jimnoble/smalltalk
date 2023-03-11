@@ -1,4 +1,7 @@
 ﻿@page "/"
+@using SmallTalk.Data;
+@using SmallTalk.Data.Schema;
+@inject IMessageDateRepository MessageDateRepository
 
 <PageTitle>Index</PageTitle>
 
@@ -207,3 +210,4 @@
 </div>
 
 <div class="typing-indicator">Alice and Bob are typing...</div>
+

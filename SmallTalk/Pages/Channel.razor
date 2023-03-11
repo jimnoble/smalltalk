@@ -1,0 +1,63 @@
+﻿@page "/channels/{ChannelName}"
+@using Markdig;
+@using SmallTalk.Data;
+@using SmallTalk.Data.Schema;
+@inject IMessageDateRepository MessageDateRepository
+
+<PageTitle>Smalltalk #@ChannelName</PageTitle>
+
+<h1>#@ChannelName</h1>
+
+@foreach (var message in Messages ?? Array.Empty<Message>())
+{
+    <div class="message-stack">
+
+        <div class="message-row">
+            <div class="margin-column">
+                <div class="timestamp">@($"{message.WriteTime:HH:mm}")</div>
+            </div>
+            <div class="content-column">
+                <p>@((MarkupString)Markdown.ToHtml(message.Content))</p>
+            </div>
+        </div>
+    </div>
+}
+
+@code
+{
+    [Parameter]
+    public string ChannelName { get; set; }
+
+    IEnumerable<Message> Messages { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        @*await MessageDateRepository.AppendMessageAsync(
+            channel: "alchemy",
+            date: DateTime.UtcNow.Date,
+            message: new Message(
+                MessageId: Guid.NewGuid(),
+                Channel: "alchemy",
+                Author: "jimnoble@gmail.com",
+                WriteTime: DateTime.UtcNow,
+                ParentMessageDate: null,
+                ParentMessageId: null,
+                Content: "Hello, world!",
+                Attachments: Array.Empty<Attachment>(),
+                Reactions: Array.Empty<Reaction>()));*@
+
+        var messages = new List<Message>();
+
+        await foreach (var date in MessageDateRepository.EnumerateDatesAsync(channel: "alchemy"))
+        {
+            await foreach (var message in MessageDateRepository.EnumerateMessagesAsync(channel: "alchemy", date: date))
+            {
+                messages.Add(message);
+            }
+        }
+
+        Messages = messages;
+
+        StateHasChanged();
+    }
+}
