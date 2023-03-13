@@ -1,0 +1,100 @@
+﻿@inject IJSRuntime JSRuntime
+
+<textarea id="@DivID" @attributes="AttributesList"></textarea>
+
+@code {
+
+    [Parameter]
+    public string Value { get; set; }
+
+    [Parameter]
+    public bool Enabled { get; set; } = true;   //default to true
+
+    [Parameter]
+    public string CSSClass { get; set; }
+
+    [Parameter]
+    public string CSSStyle { get; set; }
+
+    [Parameter]
+    public int Rows { get; set; }
+
+    [Parameter]
+    public int Columns { get; set; }
+
+    [Parameter]
+    public string Width { get; set; }
+
+    [Parameter]
+    public EventCallback<string> ValueChanged { get; set; }
+
+    //component elements
+
+    private Random RandomNumberGenerator { get; set; } = new Random();
+
+    private int DivID { get; set; } = new Random().Next();
+
+    private Dictionary<string, object> AttributesList = new Dictionary<string, object>();
+
+    protected override void OnInitialized()
+    {
+        //add Rows if supplied, default to 1 if not supplied
+        AttributesList.Add("rows", Rows == 0 ? 1 : Rows);
+
+        //add overflow:hidden to prevent scrollbars from showing
+        CSSStyle = CSSStyle + "overflow:hidden;";
+
+        //set width
+        if (!string.IsNullOrWhiteSpace(Width))  //if Width  was supplied add to CSSStyle
+        {
+            CSSStyle = CSSStyle + Width;
+        }
+        else if (Columns != 0)  //if Columns was supplied add to AttributesList
+        {
+            AttributesList.Add("columns", Columns);
+        }
+        else    //if neither Width nor Columns was supplied set width to 100%
+        {
+            CSSStyle = CSSStyle + "width:100%;";
+        }
+
+        //Enabled=false add disabled attribute to AttributesList
+        if (!Enabled)
+        {
+            AttributesList.Add("disabled", "disabled");
+        }
+
+        //add CSSClass if supplied
+        if (!string.IsNullOrWhiteSpace(CSSClass))
+        {
+            AttributesList.Add("class", CSSClass);
+        }
+
+        //add CSSStyle
+        AttributesList.Add("style", CSSStyle);
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+    }
+
+    //send initial text (if supplied) to javascript to place in the div
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeAsync<string>("BlazorContentEditable", DivID, DotNetObjectReference.Create(this), Value);
+        }
+        else
+        {
+            await JSRuntime.InvokeAsync<string>("SetValue", DivID, Value);
+        }
+    }
+
+    //receive input text from javascript and invoke callback to parent component
+    [JSInvokable]
+    public void GetUpdatedTextFromJavascript(string TextFromJavascript)
+    {
+        ValueChanged.InvokeAsync(TextFromJavascript);
+    }
+}

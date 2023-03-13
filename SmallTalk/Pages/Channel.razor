@@ -1,40 +1,113 @@
 ﻿@page "/channels/{ChannelName}"
 @using Markdig;
+@using MoreLinq;
 @using SmallTalk.Data;
 @using SmallTalk.Data.Schema;
+@inject IJSRuntime JSRuntime
 @inject IMessageDateRepository MessageDateRepository
+@inject SmallTalkDataContext SmallTalkDataContext
 
 <PageTitle>Smalltalk #@ChannelName</PageTitle>
 
-<h1>#@ChannelName</h1>
+<div class="content-stack stack">
 
-@foreach (var message in Messages ?? Array.Empty<Message>())
-{
-    <div class="message-stack">
+    <div id="@ScrollableId" class="scrollable-content">
 
-        <div class="message-row">
-            <div class="margin-column">
-                <div class="timestamp">@($"{message.WriteTime:HH:mm}")</div>
-            </div>
-            <div class="content-column">
-                <p>@((MarkupString)Markdown.ToHtml(message.Content))</p>
+        <h1>#@ChannelName</h1>
+
+        @foreach (var messageDay in Messages ?? Array.Empty<IEnumerable<IEnumerable<Message>>>())
+        {
+            <div class="date-divider">@messageDay.First().First().WriteTime.ToString("D")</div>
+
+            foreach (var messageStack in messageDay)
+            {
+                var user = Users[messageStack.First().Author];
+
+                <div class="message-stack">
+
+                    <div class="header message-row">
+                        <div class="margin-column">
+                            @if (string.IsNullOrWhiteSpace(user.AvatarUrl))
+                            {
+                                <div class="avatar" style="background-color: @(user.AvatarColor)">@user.DisplayName.Substring(0, 1)</div>
+                            }
+                            else
+                            {
+                                <div class="avatar" style="background: url(@(user.AvatarUrl)) no-repeat center center; background-size: auto 100%; background-color: @(user.AvatarColor)"></div>
+                            }
+                        </div>
+                        <div class="content-column">
+                            <div class="user-display-name">@user.DisplayName</div>
+                        </div>
+                    </div>
+
+                    @foreach(var message in messageStack)
+                    {
+                        <div class="message-stack @(message.WriteTime > LastViewTime ? "incoming" : "")">
+
+                            <div class="message-row">
+                                <div class="margin-column">
+                                    <div class="timestamp">@*@($"{message.WriteTime:HH:mm}")*@</div>
+                                </div>
+                                <div class="content-column">
+                                    <p>@((MarkupString)Markdown.ToHtml(message.Content ?? string.Empty))</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            }
+        }
+    </div>
+
+    <div class="editor">
+        <div>
+            <span id="content1" class="textarea" role="textbox" contenteditable></span>
+            @*<BlazorContentEditableComponent @ref="editableComponent" CSSClass="textarea" @bind-Value="Text" />*@
+            @*<textarea @bind="Text" @bind:event="oninput"></textarea>*@
+        </div>
+        <div class="tool-strip">
+            <a href="#" class="button">
+                <span class="glyphicon glyphicon-paperclip"></span>
+                <span>Attach</span>
+            </a>
+            <div class="actions">
+                <a id="send1" class="success button" @onclick=SendAsync>
+                    <span class="glyphicon glyphicon-send"></span>
+                    <span>Send</span>
+                </a>
             </div>
         </div>
     </div>
-}
 
+</div>
 @code
 {
+    BlazorContentEditableComponent editableComponent;
+
+    bool scrollToBottomPending;
+
     [Parameter]
     public string ChannelName { get; set; }
 
-    IEnumerable<Message> Messages { get; set; }
+    public string ScrollableId { get; set; } = $"{new Random().Next()}";
 
-    protected override async Task OnInitializedAsync()
+    public DateTime LastViewTime { get; set; } = DateTime.UtcNow;
+
+    public string Text { get; set; }
+
+    IReadOnlyDictionary<string, User> Users { get; set; }
+
+    IEnumerable<IEnumerable<IEnumerable<Message>>> Messages { get; set; }
+
+    public async Task SendAsync()
     {
-        @*await MessageDateRepository.AppendMessageAsync(
+        var text = (await JSRuntime.InvokeAsync<string>("getEditorText")).Replace(@" ", " ").Trim();
+
+        await MessageDateRepository.AppendMessageAsync(
             channel: "alchemy",
-            date: DateTime.UtcNow.Date,
+            date: DateTime.UtcNow,
             message: new Message(
                 MessageId: Guid.NewGuid(),
                 Channel: "alchemy",
@@ -42,9 +115,49 @@
                 WriteTime: DateTime.UtcNow,
                 ParentMessageDate: null,
                 ParentMessageId: null,
-                Content: "Hello, world!",
+                Content: text,
                 Attachments: Array.Empty<Attachment>(),
-                Reactions: Array.Empty<Reaction>()));*@
+                Reactions: Array.Empty<Reaction>()));
+
+        Text = "";
+
+        scrollToBottomPending = true;
+
+        //StateHasChanged();
+        await OnInitializedAsync();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        @*await SmallTalkDataContext.Users.Upsert(new[]
+        {
+            new User(
+                Email: "alice@emu0.com",
+                DisplayName: "Alice",
+                AvatarColor: "red",
+                AvatarUrl: "/content/avatars/alice.png"),
+            new User(
+                Email: "bob@emu0.com",
+                DisplayName: "Bob",
+                AvatarColor: "lime",
+                AvatarUrl: "/content/avatars/bob.png"),
+        });*@
+
+        await LoadMessagesAsync();
+
+        StateHasChanged();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        await LoadMessagesAsync();
+
+        StateHasChanged();
+    }
+
+    async Task LoadMessagesAsync()
+    {
+        Users = (await SmallTalkDataContext.Users.Get()).ToDictionary(u => u.Email, u => u);
 
         var messages = new List<Message>();
 
@@ -55,9 +168,23 @@
                 messages.Add(message);
             }
         }
+        
+        Messages = messages.GroupBy(m => m.WriteTime.Date).Select(g => g.GroupAdjacent(m => m.Author));
+    }
 
-        Messages = messages;
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender || scrollToBottomPending)
+        {
+            await JSRuntime.InvokeVoidAsync("scrollToBottom", ScrollableId);
 
-        StateHasChanged();
+            scrollToBottomPending = false;
+        }
+
+        await JSRuntime.InvokeVoidAsync("setEditorText", Text ?? string.Empty);
+
+        await JSRuntime.InvokeVoidAsync("configureEditorContentArea");
+
+        LastViewTime = DateTime.UtcNow;
     }
 }

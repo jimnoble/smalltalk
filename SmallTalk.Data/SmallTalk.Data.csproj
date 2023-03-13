@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Halforbit.DataStores" Version="3.13.16" />
+    <PackageReference Include="Halforbit.DataStores.FileStores.Serialization.Yaml" Version="3.13.16" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
   </ItemGroup>
 

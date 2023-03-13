@@ -33,7 +33,101 @@
         <a class="dismiss">🗙</a>
     </div>
 
+    <script type="text/javascript">
+                        ﻿
+        function setEditorText(value) {
+            console.log('setting editor text to ' + value);
+            document.getElementById('content1').innerText = value;
+        }
+
+        function getEditorText() {
+            return document.getElementById('content1').innerText;
+        }
+
+        function scrollToBottom(id) {
+            console.log('scrolling to bottom ' + id);
+            var element = document.getElementById(id);
+            element.scrollTop = element.scrollHeight;
+        }
+
+        function configureEditorContentArea() {
+            var element = document.getElementById('content1');
+            element.onkeypress = function (evt) {
+                if (evt.keyCode == 13) {
+                    if (evt.shiftKey) {
+                        @*// Shift + enter pressed
+                        evt.preventDefault()
+                        evt.stopPropagation() // Stop default handling
+
+                        // Simulate enter is pressed
+                        var e = new Event("keydown");
+                        e.keyCode = 13;
+                        e.which = e.keyCode;
+                        element.dispatchEvent(e);*@
+
+                        console.log('new line!');
+                    }
+                    else {
+                        evt.preventDefault()
+                        evt.stopPropagation() // Stop default handling
+
+                        console.log('submit!');
+
+                        clickSendButton();
+                    }
+                }
+            }
+        }
+
+        function clickSendButton() {
+            document.getElementById('send1').click();
+        }
+
+        function BlazorContentEditable(DivID, Instance, TextToDisplay) {
+
+            //set prefilled text
+            document.getElementById(DivID).innerHTML = TextToDisplay;
+
+            //set initial height
+            SetHeight(DivID);
+    
+            //set event listener
+            document.getElementById(DivID).addEventListener("input", function () {
+                Instance.invokeMethodAsync("GetUpdatedTextFromJavascript", document.getElementById(DivID).value);
+                SetHeight(DivID);
+            });
+        }
+
+        function SetValue(DivID, TextToDisplay) {
+            //set prefilled text
+            console.info(document.getElementById(DivID))
+
+            document.getElementById(DivID).innerHTML = TextToDisplay;
+            alert('setting to ' + TextToDisplay);
+        }
+
+        function SetHeight(DivID) {
+
+            //reset to original height
+            document.getElementById(DivID).style.height = 'auto';
+
+            //from https://gomakethings.com/automatically-expand-a-textarea-as-the-user-types-using-vanilla-javascript/
+            // Get the computed styles for the element
+            var computed = window.getComputedStyle(document.getElementById(DivID));
+
+            // Calculate the height
+            var height = parseInt(computed.getPropertyValue('border-top-width'), 10)
+                + document.getElementById(DivID).scrollHeight
+                + parseInt(computed.getPropertyValue('border-bottom-width'), 10);
+
+            //set the height
+            document.getElementById(DivID).style.height = (height + 'px');
+
+        }
+
+    </script>
+
     <script src="_framework/blazor.server.js"></script>
-    <script src="_content/BlazorContentEditable/BlazorContentEditable.js"></script>
+    @*<script src="_content/BlazorContentEditable/BlazorContentEditable.js"></script>*@
 </body>
 </html>

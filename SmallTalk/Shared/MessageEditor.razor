@@ -25,6 +25,9 @@
 {
     public string Text { get; set; }
 
+    [Parameter]
+    public EventCallback<string> OnSubmit { get; set; }
+
     public async Task SendAsync()
     {
         await MessageDateRepository.AppendMessageAsync(
@@ -42,5 +45,7 @@
                 Reactions: Array.Empty<Reaction>()));
 
         Text = "";
+ 
+        StateHasChanged();
     }
 }
