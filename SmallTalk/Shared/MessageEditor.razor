@@ -1,11 +1,11 @@
 ﻿@using SmallTalk.Data;
 @using SmallTalk.Data.Schema;
+@inject IJSRuntime JSRuntime
 @inject IMessageDateRepository MessageDateRepository
 
 <div class="editor">
     <div>
-        @*<span class="textarea" role="textbox" contenteditable></span>*@
-        <BlazorContentEditableComponent CSSClass="textarea" @bind-Value="Text" />
+        <span id="content1" class="textarea" role="textbox" contenteditable></span>
     </div>
     <div class="tool-strip">
         <a href="#" class="button">
@@ -13,7 +13,7 @@
             <span>Attach</span>
         </a>
         <div class="actions">
-            <a class="success button" @onclick=SendAsync>
+            <a id="send1" class="success button" @onclick=SendAsync>
                 <span class="glyphicon glyphicon-send"></span>
                 <span>Send</span>
             </a>
@@ -26,10 +26,19 @@
     public string Text { get; set; }
 
     [Parameter]
-    public EventCallback<string> OnSubmit { get; set; }
+    public EventCallback OnSubmit { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeVoidAsync("setEditorText", Text ?? string.Empty);
+
+        await JSRuntime.InvokeVoidAsync("configureEditorContentArea");
+    }
 
     public async Task SendAsync()
     {
+        var text = (await JSRuntime.InvokeAsync<string>("getEditorText")).Replace(@" ", " ").Trim();
+
         await MessageDateRepository.AppendMessageAsync(
             channel: "alchemy",
             date: DateTime.UtcNow,
@@ -40,12 +49,14 @@
                 WriteTime: DateTime.UtcNow,
                 ParentMessageDate: null,
                 ParentMessageId: null,
-                Content: Text,
+                Content: text,
                 Attachments: Array.Empty<Attachment>(),
                 Reactions: Array.Empty<Reaction>()));
 
         Text = "";
- 
+
         StateHasChanged();
+
+        await OnSubmit.InvokeAsync();
     }
 }

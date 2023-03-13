@@ -37,7 +37,10 @@
                             }
                         </div>
                         <div class="content-column">
-                            <div class="user-display-name">@user.DisplayName</div>
+                            <div class="message-stack-title">
+                                <div class="username">@user.DisplayName</div>
+                                <div class="timestamp">@($"{messageStack.First().WriteTime:HH:mm}")</div>
+                            </div>
                         </div>
                     </div>
 
@@ -60,28 +63,11 @@
             }
         }
     </div>
-
-    <div class="editor">
-        <div>
-            <span id="content1" class="textarea" role="textbox" contenteditable></span>
-            @*<BlazorContentEditableComponent @ref="editableComponent" CSSClass="textarea" @bind-Value="Text" />*@
-            @*<textarea @bind="Text" @bind:event="oninput"></textarea>*@
-        </div>
-        <div class="tool-strip">
-            <a href="#" class="button">
-                <span class="glyphicon glyphicon-paperclip"></span>
-                <span>Attach</span>
-            </a>
-            <div class="actions">
-                <a id="send1" class="success button" @onclick=SendAsync>
-                    <span class="glyphicon glyphicon-send"></span>
-                    <span>Send</span>
-                </a>
-            </div>
-        </div>
-    </div>
+    
+    <MessageEditor OnSubmit=LoadMessages />
 
 </div>
+
 @code
 {
     BlazorContentEditableComponent editableComponent;
@@ -95,54 +81,21 @@
 
     public DateTime LastViewTime { get; set; } = DateTime.UtcNow;
 
-    public string Text { get; set; }
-
     IReadOnlyDictionary<string, User> Users { get; set; }
 
     IEnumerable<IEnumerable<IEnumerable<Message>>> Messages { get; set; }
 
-    public async Task SendAsync()
+    async Task LoadMessages()
     {
-        var text = (await JSRuntime.InvokeAsync<string>("getEditorText")).Replace(@" ", " ").Trim();
-
-        await MessageDateRepository.AppendMessageAsync(
-            channel: "alchemy",
-            date: DateTime.UtcNow,
-            message: new Message(
-                MessageId: Guid.NewGuid(),
-                Channel: "alchemy",
-                Author: "jimnoble@gmail.com",
-                WriteTime: DateTime.UtcNow,
-                ParentMessageDate: null,
-                ParentMessageId: null,
-                Content: text,
-                Attachments: Array.Empty<Attachment>(),
-                Reactions: Array.Empty<Reaction>()));
-
-        Text = "";
+        await LoadMessagesAsync();
 
         scrollToBottomPending = true;
 
-        //StateHasChanged();
-        await OnInitializedAsync();
+        StateHasChanged();
     }
 
     protected override async Task OnInitializedAsync()
     {
-        @*await SmallTalkDataContext.Users.Upsert(new[]
-        {
-            new User(
-                Email: "alice@emu0.com",
-                DisplayName: "Alice",
-                AvatarColor: "red",
-                AvatarUrl: "/content/avatars/alice.png"),
-            new User(
-                Email: "bob@emu0.com",
-                DisplayName: "Bob",
-                AvatarColor: "lime",
-                AvatarUrl: "/content/avatars/bob.png"),
-        });*@
-
         await LoadMessagesAsync();
 
         StateHasChanged();
@@ -153,6 +106,18 @@
         await LoadMessagesAsync();
 
         StateHasChanged();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender || scrollToBottomPending)
+        {
+            await JSRuntime.InvokeVoidAsync("scrollToBottom", ScrollableId);
+
+            scrollToBottomPending = false;
+        }
+
+        LastViewTime = DateTime.UtcNow;
     }
 
     async Task LoadMessagesAsync()
@@ -168,23 +133,7 @@
                 messages.Add(message);
             }
         }
-        
+
         Messages = messages.GroupBy(m => m.WriteTime.Date).Select(g => g.GroupAdjacent(m => m.Author));
-    }
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender || scrollToBottomPending)
-        {
-            await JSRuntime.InvokeVoidAsync("scrollToBottom", ScrollableId);
-
-            scrollToBottomPending = false;
-        }
-
-        await JSRuntime.InvokeVoidAsync("setEditorText", Text ?? string.Empty);
-
-        await JSRuntime.InvokeVoidAsync("configureEditorContentArea");
-
-        LastViewTime = DateTime.UtcNow;
     }
 }

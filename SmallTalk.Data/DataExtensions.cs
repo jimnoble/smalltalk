@@ -4,7 +4,7 @@ namespace SmallTalk.Data;
 
 public static class DataExtensions
 {
-    public static IServiceCollection UseSmallTalkData(this IServiceCollection services)
+    public static IServiceCollection AddSmallTalkData(this IServiceCollection services)
     {
         return services
             .AddSingleton<SmallTalkDataContext>()

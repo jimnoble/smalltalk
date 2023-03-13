@@ -20,7 +20,8 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 builder.Services.AddSingleton<WeatherForecastService>();
-builder.Services.UseSmallTalkData();
+builder.Services.AddSmallTalkData();
+builder.Services.AddEventAggregator();
 
 var app = builder.Build();
 

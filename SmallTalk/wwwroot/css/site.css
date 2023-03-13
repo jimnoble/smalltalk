@@ -185,6 +185,7 @@ p {
 .subtle,
 .date-divider,
 .message-stack .message-row .margin-column .timestamp,
+.message-stack .message-row .content-column .message-stack-title .timestamp,
 .typing-indicator {
   color: rgba(255,255,255,0.35);
   font-size: 10px;
@@ -283,7 +284,7 @@ p {
   margin-right: -10px;
   box-shadow: 1px 2px 10px rgba(0,0,0,0.5);
   position: relative;
-  top: 5px;
+  top: 7.5px;
 }
 .message-stack .message-row .margin-column .timestamp {
   font-size: 10px;
@@ -297,6 +298,7 @@ p {
   padding-bottom: 0px;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
   width: 100%;
+  line-height: 25px;
 }
 .message-stack .message-row .content-column .image-tile {
   display: block;
@@ -318,12 +320,20 @@ p {
   background-color: #29333d;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
 }
-.message-stack .message-row .content-column .user-display-name {
+.message-stack .message-row .content-column .message-stack-title {
+  display: flex;
+}
+.message-stack .message-row .content-column .message-stack-title .username {
   font-size: 20px;
   line-height: 20px;
   font-weight: 100;
   padding-top: 5px;
   padding-left: 5px;
+}
+.message-stack .message-row .content-column .message-stack-title .timestamp {
+  padding-top: 10px;
+  padding-left: 10px;
+  line-height: 15px;
 }
 .message-stack .message-row .content-column p+p {
   margin-top: 5px;
