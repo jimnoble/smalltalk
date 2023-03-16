@@ -4,10 +4,10 @@
 @using MoreLinq;
 @using SmallTalk.Data;
 @using SmallTalk.Data.Schema;
+@inject IEventAggregator EventAggregator
 @inject IJSRuntime JSRuntime
 @inject IMessageDateRepository MessageDateRepository
 @inject SmallTalkDataContext SmallTalkDataContext
-@inject IEventAggregator EventAggregator
 @implements IHandle<MessagePublishedEvent>
 
 <PageTitle>Smalltalk #@ChannelName</PageTitle>
@@ -18,13 +18,13 @@
 
         <h1>#@ChannelName</h1>
 
-        @foreach (var messageDay in Messages ?? Array.Empty<IEnumerable<IEnumerable<Message>>>())
+        @foreach (var messageDay in Messages ?? Array.Empty<IEnumerable<IEnumerable<IEnumerable<Message>>>>())
         {
-            <div class="date-divider">@messageDay.First().First().WriteTime.ToString("D")</div>
+            <div class="date-divider">@messageDay.First().First().First().WriteTime.ToString("D")</div>
 
             foreach (var messageStack in messageDay)
             {
-                var user = Users[messageStack.First().Author];
+                var user = Users[messageStack.First().First().Author];
 
                 <div class="message-group">
 
@@ -42,20 +42,31 @@
                         <div class="content-column">
                             <div class="message-stack-title">
                                 <div class="username">@user.DisplayName</div>
-                                <div class="timestamp">@($"{messageStack.First().WriteTime:HH:mm}")</div>
+                                <div class="timestamp">@($"{messageStack.First().First().WriteTime:HH:mm}")</div>
                             </div>
                         </div>
                     </div>
 
-                    @foreach(var message in messageStack)
+                    @foreach(var messageVersions in messageStack)
                     {
-                        <div tabindex="0" class="message-stack @(message.WriteTime > LastViewTime ? "incoming" : "")">
+                        var message = messageVersions.Last();
+
+                        <div tabindex="0" class="message-stack @(messageVersions.First().WriteTime > LastViewTime ? "incoming" : "")">
                             <div class="toolbar">
                                 <div class="toolbox">
-                                    <a href="#">😄</a>
-                                    <a href="#"><span class="glyphicon glyphicon-share"></span></a>
-                                    <button @onclick="() => DeleteMessageAsync(message)"><span class="glyphicon glyphicon-trash"></span></button>
-                                    <button @onclick="() => EditMessage(message)"><span class="glyphicon glyphicon-pencil"></span></button>
+                                    @if (!string.IsNullOrWhiteSpace(message.Content))
+                                    {
+                                            @*<a href="#">😄</a>
+                                            <a href="#"><span class="glyphicon glyphicon-share"></span></a>*@
+                                            <button @onclick="() => DeleteMessageAsync(messageVersions)"><span class="glyphicon glyphicon-trash"></span></button>
+                                            <button @onclick="() => EditMessageAsync(messageVersions)"><span class="glyphicon glyphicon-pencil"></span></button>
+                                    }
+                                    else
+                                    {
+                                        @*<a href="#">😄</a>
+                                        <a href="#"><span class="glyphicon glyphicon-share"></span></a>*@
+                                        <button @onclick="() => UndoDeleteMessageAsync(messageVersions)"><span class="glyphicon glyphicon-repeat flip-horizontal"></span></button>
+                                    }
                                 </div>
                             </div>
                             <div class="message-row">
@@ -63,7 +74,14 @@
                                     <div class="timestamp">@*@($"{message.WriteTime:HH:mm}")*@</div>
                                 </div>
                                 <div class="content-column">
-                                    <p>@((MarkupString)Markdown.ToHtml(message.Content ?? string.Empty))</p>
+                                    @if (string.IsNullOrWhiteSpace(message.Content))
+                                    {
+                                        <p class="subtle">message deleted</p>
+                                    }
+                                    else
+                                    {
+                                        <p>@((MarkupString)Markdown.ToHtml(messageVersions.Last().Content ?? string.Empty))</p>                                        
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -93,7 +111,7 @@
 
     IReadOnlyDictionary<string, User> Users { get; set; }
 
-    IEnumerable<IEnumerable<IEnumerable<Message>>> Messages { get; set; }
+    IEnumerable<IEnumerable<IEnumerable<IEnumerable<Message>>>> Messages { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -148,16 +166,61 @@
             }
         }
 
-        Messages = messages.GroupBy(m => m.WriteTime.Date).Select(g => g.GroupAdjacent(m => m.Author));
+        Messages = messages
+            .GroupBy(m => m.MessageId)
+            .GroupBy(v => v.First().WriteTime.Date)
+            .Select(g => g.GroupAdjacent(v => v.First().Author));
     }
 
-    void EditMessage(Message message)
+    async Task EditMessageAsync(IEnumerable<Message> messageVersions)
     {
-        messageEditor.EditMessage(message);
+        await messageEditor.FocusEditorAsync();
+
+        messageEditor.EditMessage(messageVersions.Last() with { WriteTime  = messageVersions.First().WriteTime });
     }
 
-    async Task DeleteMessageAsync(Message message)
+    async Task DeleteMessageAsync(IEnumerable<Message> messageVersions)
     {
-        //MessageDateRepository.
+        var message = messageVersions.First();
+
+        await MessageDateRepository.AppendMessageAsync(
+            channel: message.Channel,
+            date: message.WriteTime.Date,
+            message: new Message(
+                MessageId: message.MessageId,
+                Channel: message.Channel,
+                Author: message.Author,
+                WriteTime: DateTime.UtcNow,
+                ParentMessageDate: message.ParentMessageDate,
+                ParentMessageId: message.ParentMessageId,
+                Content: string.Empty,
+                Attachments: Array.Empty<Attachment>(),
+                Reactions: Array.Empty<Reaction>()));
+
+        UpdateMessagesAsync();
+    }
+
+    async Task UndoDeleteMessageAsync(IEnumerable<Message> messageVersions)
+    {
+        var message = messageVersions
+            .Reverse()
+            .SkipWhile(m => string.IsNullOrWhiteSpace(m.Content))
+            .First();
+
+        await MessageDateRepository.AppendMessageAsync(
+            channel: "alchemy",
+            date: message.WriteTime.Date,
+            message: new Message(
+                MessageId: message.MessageId,
+                Channel: message.Channel,
+                Author: message.Author,
+                WriteTime: DateTime.UtcNow,
+                ParentMessageDate: message.ParentMessageDate,
+                ParentMessageId: message.ParentMessageId,
+                Content: message.Content,
+                Attachments: Array.Empty<Attachment>(),
+                Reactions: Array.Empty<Reaction>()));
+
+        UpdateMessagesAsync();
     }
 }

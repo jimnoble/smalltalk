@@ -7,7 +7,7 @@
 
 <div class="editor">
     <div>
-        <span id="content1" class="textarea" role="textbox" contenteditable></span>
+        <span id="content1" @ref="textArea" class="textarea" role="textbox" contenteditable></span>
     </div>
     <div class="tool-strip">
         <a href="#" class="button">
@@ -15,17 +15,35 @@
             <span>Attach</span>
         </a>
         <div class="actions">
-            <a id="send1" class="success button" @onclick=SendAsync>
-                <span class="glyphicon glyphicon-send"></span>
-                <span>Send</span>
-            </a>
+            @if (EditingMessage.HasValue)
+            {
+                <a class="cancel button" @onclick=CancelEditAsync>
+                    <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;
+                    <span>Cancel</span>
+                </a>
+                <a id="send1" class="success button" @onclick=SubmitEditAsync>
+                    <span class="glyphicon glyphicon-check"></span>&nbsp;
+                    <span>Update</span>
+                </a>
+            }
+            else
+            {
+                <a id="send1" class="success button" @onclick=SendAsync>
+                    <span class="glyphicon glyphicon-send"></span>&nbsp;
+                    <span>Send</span>
+                </a>                
+            }
         </div>
     </div>
 </div>
 
 @code 
 {
+    ElementReference textArea;
+
     public string Text { get; set; }
+
+    public Message? EditingMessage { get; set; }
 
     [Parameter]
     public EventCallback OnSubmit { get; set; }
@@ -40,6 +58,8 @@
     public void EditMessage(Message message)
     {
         Text = message.Content;
+
+        EditingMessage = message;
     }
 
     public async Task SendAsync()
@@ -67,5 +87,50 @@
         await EventAggregator.PublishAsync(new MessagePublishedEvent());
 
         await OnSubmit.InvokeAsync();
+    }
+
+    async Task CancelEditAsync()
+    {
+        Text = string.Empty;
+
+        EditingMessage = null;
+
+        StateHasChanged();
+    }
+
+    async Task SubmitEditAsync()
+    {
+        var message = EditingMessage.Value;
+
+        var text = (await JSRuntime.InvokeAsync<string>("getEditorText")).Replace(@" ", " ").Trim();
+
+        await MessageDateRepository.AppendMessageAsync(
+            channel: "alchemy",
+            date: message.WriteTime.Date,
+            message: new Message(
+                MessageId: message.MessageId,
+                Channel: message.Channel,
+                Author: message.Author,
+                WriteTime: DateTime.UtcNow,
+                ParentMessageDate: message.ParentMessageDate,
+                ParentMessageId: message.ParentMessageId,
+                Content: text,
+                Attachments: Array.Empty<Attachment>(),
+                Reactions: Array.Empty<Reaction>()));
+
+        Text = string.Empty;
+
+        EditingMessage = null;
+
+        StateHasChanged();
+
+        await EventAggregator.PublishAsync(new MessagePublishedEvent());
+    }
+
+    public async Task FocusEditorAsync()
+    {
+        await textArea.FocusAsync();
+
+        await JSRuntime.InvokeVoidAsync("focusEditor");
     }
 }

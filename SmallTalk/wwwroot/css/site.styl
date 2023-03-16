@@ -339,9 +339,12 @@ $content-max-width = 900px
     //background-color: rgba(white, 5%)
     border-radius: $block-size
     .actions
+        gap: $block-size * 2
         display: flex
         justify-content: flex-end
         flex: 1
+        a
+            display: block
 
 .button
     @extend .pad-s
@@ -362,13 +365,22 @@ $content-max-width = 900px
         &:hover
             background-color: hsla(120deg, 100%, 50%, 55%)
             box-shadow: inset 0 0 10px hsla(120deg, 100%, 50%, 100%)
+    &.cancel
+        background-color: hsla(0deg, 100%, 50%, 50%)
+        &:hover
+            background-color: hsla(0deg, 100%, 50%, 55%)
+            box-shadow: inset 0 0 10px hsla(0deg, 100%, 50%, 100%)
     &:hover
         color: white
         background-color: hsla(210deg, 50%, 50%, 20%)
         box-shadow: inset 0 0 10px hsla(210deg, 50%, 50%, 30%) 
     
-*+.button
-    margin-top: $block-size * 2
+// *+.button
+//     margin-top: $block-size * 2
+
+.flip-horizontal {
+    transform: scale(-1, 1);
+    }
 
 @keyframes message-appear {
     0% {
