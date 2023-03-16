@@ -90,6 +90,12 @@
             element.focus();
         }
 
+        function playSound() {
+            var element = document.getElementById('audio1');
+            element.currentTime = 0;
+            element.play();
+        }
+
         function BlazorContentEditable(DivID, Instance, TextToDisplay) {
 
             //set prefilled text

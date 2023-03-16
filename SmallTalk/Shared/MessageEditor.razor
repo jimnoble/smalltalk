@@ -131,7 +131,9 @@
 
         Attachment = null;
 
-        await EventAggregator.PublishAsync(new MessagePublishedEvent(WasEdit: false));
+        await EventAggregator.PublishAsync(new MessagePublishedEvent(
+            Channel: ChannelName,
+            WasEdit: false));
 
         await OnSubmit.InvokeAsync(true);
     }
@@ -189,10 +191,12 @@
         EditingMessage = null;
 
         Attachment = null;
-        
+
         StateHasChanged();
 
-        await EventAggregator.PublishAsync(new MessagePublishedEvent(WasEdit: true));
+        await EventAggregator.PublishAsync(new MessagePublishedEvent(
+            Channel: ChannelName,
+            WasEdit: true));
 
         await OnSubmit.InvokeAsync(false);
     }

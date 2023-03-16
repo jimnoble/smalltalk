@@ -132,7 +132,19 @@
             }
         </div>
     </div>
-    
+
+    <audio id="audio1" autoplay controls style="display: none"><source src="/content/audio/new-message.mp3" /></audio>
+    @*@if (playTone)
+    {
+        <div>!!!!</div>
+        <audio autoplay controls><source src="/content/audio/new-message.mp3" /></audio>
+    }
+    else
+    {
+        <div>????</div>
+        <audio controls muted><source src="/content/audio/new-message.mp3" /></audio>
+    }*@
+
     <MessageEditor @ref="messageEditor" ChannelName=@ChannelName User=@User />
 
 </div>
@@ -147,6 +159,8 @@
     MessageEditor messageEditor;
 
     bool scrollToBottomPending;
+
+    bool playTone;
 
     [Parameter]
     public string ChannelName { get; set; }
@@ -188,14 +202,24 @@
             scrollToBottomPending = false;
         }
 
+        if (playTone)
+        {
+            await JSRuntime.InvokeVoidAsync("playSound");
+
+            playTone = false;
+        }
+
         LastViewTime = DateTime.UtcNow;
     }
 
     public async Task HandleAsync(MessagePublishedEvent messagePublishedEvent)
     {
-        await InvokeAsync(async () => await UpdateMessagesAsync());
+        if (messagePublishedEvent.Channel == ChannelName)
+        {
+            await InvokeAsync(async () => await UpdateMessagesAsync());
 
-        scrollToBottomPending = !messagePublishedEvent.WasEdit;
+            scrollToBottomPending = !messagePublishedEvent.WasEdit;
+        }
     }
 
     async Task UpdateMessagesAsync()
@@ -226,6 +250,13 @@
             .GroupBy(m => m.MessageId)
             .GroupBy(v => v.First().WriteTime.Date)
             .Select(g => g.GroupAdjacent(v => v.First().Author));
+
+        var newMessages = messages
+            .GroupBy(m => m.MessageId)
+            .Any(g => g.First().Author != User.Email &&  
+                g.First().WriteTime.ToUniversalTime() > LastViewTime);
+
+        playTone = newMessages;
     }
 
     async Task EditMessageAsync(IEnumerable<Message> messageVersions)
@@ -254,7 +285,9 @@
                 Attachments: Array.Empty<Attachment>(),
                 Reactions: Array.Empty<Reaction>()));
 
-        await EventAggregator.PublishAsync(new MessagePublishedEvent(WasEdit: true));
+        await EventAggregator.PublishAsync(new MessagePublishedEvent(
+            Channel: ChannelName,
+            WasEdit: true));
     }
 
     async Task UndoDeleteMessageAsync(IEnumerable<Message> messageVersions)
@@ -278,7 +311,9 @@
                 Attachments: Array.Empty<Attachment>(),
                 Reactions: Array.Empty<Reaction>()));
 
-        await EventAggregator.PublishAsync(new MessagePublishedEvent(WasEdit: true));
+        await EventAggregator.PublishAsync(new MessagePublishedEvent(
+            Channel: ChannelName,
+            WasEdit: true));
     }
 
     async Task QuoteMessageAsync(Message message)
