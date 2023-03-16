@@ -1,0 +1,1782 @@
+[
+    {
+        "client_msg_id": "9c39c71a-e698-413e-8cf2-cb51ef4abd58",
+        "type": "message",
+        "text": "with the current featureset and what we are trying to do, that will be impossible.\n\nFor example, once you control for trends, you have a mapping between coordinates and future value:\n\n```[ a=0.1, b=1.2, c=0.5, ..., n] -&gt; F-score in range [0., 1.0]```\nOnce you have a large enough time span, you are guaranteed to get approximate repetition where coordinates that are close to each other have conflicting F-scores:\n\n```[ a=0.105, b=1.21, c=0.5, ..., n ] -&gt; 0.1\n[ a=0.1, b=1.2, c=0.5, ..., n ] -&gt; .9 ```\nThis is a topological contradiction: small changes in input should product small changes in output.  Instead, they may now produce conflicting changes or (worse) compromises, in which case the model is never right.\n\nThese holes are unavoidable in stock-style data, and mean that even a theoretically optimal model is bound by the ability for the chosen feature vector (coord) to describe the result in a consistent fashion (onto-mapping with low f(x+e) -&gt; y' divergence from f(x) -&gt; y when e is small) rather than multi-mapping with high epsilon-delta volatility.\n\nThe fix here is to either add more features (draw backs there) or cut smaller time chunks and retrain lightweight models.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676138927.667609",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8o4bI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "with the current featureset and what we are trying to do, that will be impossible.\n\nFor example, once you control for trends, you have a mapping between coordinates and future value:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "[ a=0.1, b=1.2, c=0.5, ..., n] -> F-score in range [0., 1.0]"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nOnce you have a large enough time span, you are guaranteed to get approximate repetition where coordinates that are close to each other have conflicting F-scores:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "[ a=0.105, b=1.21, c=0.5, ..., n ] -> 0.1\n[ a=0.1, b=1.2, c=0.5, ..., n ] -> .9 "
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This is a topological contradiction: small changes in input should product small changes in output.  Instead, they may now produce conflicting changes or (worse) compromises, in which case the model is never right.\n\nThese holes are unavoidable in stock-style data, and mean that even a theoretically optimal model is bound by the ability for the chosen feature vector (coord) to describe the result in a consistent fashion (onto-mapping with low f(x+e) -> y' divergence from f(x) -> y when e is small) rather than multi-mapping with high epsilon-delta volatility.\n\nThe fix here is to either add more features (draw backs there) or cut smaller time chunks and retrain lightweight models."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1676143516.000000"
+        },
+        "thread_ts": "1676053468.776679",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "89cceb86-0468-4caf-b5d0-bd6e7f0d9e4d",
+        "type": "message",
+        "text": "Good news is there are really fast and lightweight tools avail for this kind of thing, and retraining won't be much more costly than streaming the data.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676139023.448699",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yCN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Good news is there are really fast and lightweight tools avail for this kind of thing, and retraining won't be much more costly than streaming the data."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1676139101.000000"
+        },
+        "thread_ts": "1676053468.776679",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "64991288-a1df-4955-966e-fa7bc57cb8ea",
+        "type": "message",
+        "text": "And the model may not need to be retrained more than hourly\/weekly\/daily etc. depending on the findings.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676139069.283109",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "euBlR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And the model may not need to be retrained more than hourly\/weekly\/daily etc. depending on the findings."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676053468.776679",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "682ec19c-3c39-4153-b9f6-c67c4053c009",
+        "type": "message",
+        "text": "Yeah, this sounds right.  JSON is ok on my end as well as <https:\/\/cbor2.readthedocs.io\/en\/latest\/index.html|cbor2>",
+        "user": "U04N4LBE5K4",
+        "ts": "1676139354.919399",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hRlaf",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Yeah, this sounds right.  JSON is ok on my end as well as "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/cbor2.readthedocs.io\/en\/latest\/index.html",
+                                "text": "cbor2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676053543.765999",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "1681a4f0-fdc2-4496-b8a2-b709985aac04",
+        "type": "message",
+        "text": "IPC sounds like the way to go.  Any of these'll be easy to work with in python:\n\n<https:\/\/docs.python.org\/3\/library\/ipc.html|Natively supported python IPC libraries >",
+        "user": "U04N4LBE5K4",
+        "ts": "1676139864.833189",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nbz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "IPC sounds like the way to go.  Any of these'll be easy to work with in python:\n\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/docs.python.org\/3\/library\/ipc.html",
+                                "text": "Natively supported python IPC libraries "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1676139887.000000"
+        },
+        "attachments": [
+            {
+                "from_url": "https:\/\/docs.python.org\/3\/library\/ipc.html",
+                "thumb_url": "https:\/\/docs.python.org\/3\/_static\/og-image.png",
+                "thumb_width": 200,
+                "thumb_height": 200,
+                "service_icon": "https:\/\/docs.python.org\/favicon.ico",
+                "id": 1,
+                "original_url": "https:\/\/docs.python.org\/3\/library\/ipc.html",
+                "fallback": "Python documentation: Networking and Interprocess Communication",
+                "text": "The modules described in this chapter provide mechanisms for networking and inter-processes communication. Some modules only work for two processes that are on the same machine, e.g. signal and mma...",
+                "title": "Networking and Interprocess Communication",
+                "title_link": "https:\/\/docs.python.org\/3\/library\/ipc.html",
+                "service_name": "Python documentation"
+            }
+        ],
+        "thread_ts": "1676053543.765999",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "81adf5a1-b7d5-4b2d-bf15-fd822b861812",
+        "type": "message",
+        "text": "the train function would be bundled up in inference.  So, you send the new row of data...\n\nAnd get a prediction back.\n\nThe clockwork occurs inside the infer function\/container.  My plan there is to make a prediction w\/ prior model and asynchronously train the new model.\n\nWhen it be done -&gt; I swap it in. Figure this'll be a good, soft-swap to have implemented early and abstract away from the model, since we'll scale up the complexity quickly in the model itself.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676140385.332519",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "a+JG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the train function would be bundled up in inference.  So, you send the new row of data...\n\nAnd get a prediction back.\n\nThe clockwork occurs inside the infer function\/container.  My plan there is to make a prediction w\/ prior model and asynchronously train the new model.\n\nWhen it be done -> I swap it in. Figure this'll be a good, soft-swap to have implemented early and abstract away from the model, since we'll scale up the complexity quickly in the model itself."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676054455.486079",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "67c112d7-ab62-4c4e-ad80-2da396ad159f",
+        "type": "message",
+        "text": "I'm thinking small: a small, lightweight model operating on good data with a low latency between training and prediction will get us closer to real-time than is possible w\/ the alternatives.\n\nOne possible thing we need to think about is reinforcement learning at the decision layer -- C# layer.  That might be for later and may require a good chunk of memory.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676140515.248379",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "+GvE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'm thinking small: a small, lightweight model operating on good data with a low latency between training and prediction will get us closer to real-time than is possible w\/ the alternatives.\n\nOne possible thing we need to think about is reinforcement learning at the decision layer -- C# layer.  That might be for later and may require a good chunk of memory."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1676141741.000000"
+        },
+        "thread_ts": "1676053614.714239",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "a6516a04-7069-442d-a29e-85164546b196",
+        "type": "message",
+        "text": "The compute reqs should not be large.  2-4 threaded docker container w\/ 2gb should be plenty, and maybe even less is req'd.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676140556.543959",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IEL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "The compute reqs should not be large.  2-4 threaded docker container w\/ 2gb should be plenty, and maybe even less is req'd."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676053614.714239",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "97f2af12-96ce-4104-afcd-b58db0a0dec9",
+        "type": "message",
+        "text": "training occurs in &lt; 1s, I'll bench it today.\n\nThe tighter we get there, the more room to manuever and innovate\/try things that are computationally complex.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676140622.462069",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3CA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "training occurs in < 1s, I'll bench it today.\n\nThe tighter we get there, the more room to manuever and innovate\/try things that are computationally complex."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1676141936.000000"
+        },
+        "thread_ts": "1676053614.714239",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "fd087cdd-c289-4639-9ca4-3c35f5f70775",
+        "type": "message",
+        "text": "On a different thread, there are three major Python libs that I want to try out and put on our radar, maybe for later:\n\n• <https:\/\/www.pymc.io\/welcome.html|Pymc> -- bayesian inference library\n• <https:\/\/pypi.org\/project\/pycausalimpact\/#:~:text=Python%20causal%20impact%20%28or%20causal%20inference%29%20implementation%20of,differences%20between%20expected%20and%20observed%20time%20series%20data.|CausalImpact> -- causal inference library (used for constructing bayesian inference model)\n• <https:\/\/pypi.org\/project\/pyqlearning\/|Q-Learning> -- allow us to use the simulator to generate optimal strategy, given predictions\nThe first two'll likely be slow burners, and the 3rd will likely increase costs -- they are the cart, sim is the horse imo.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676140783.149229",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WG9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "On a different thread, there are three major Python libs that I want to try out and put on our radar, maybe for later:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/www.pymc.io\/welcome.html",
+                                        "text": "Pymc"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " -- bayesian inference library"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/pypi.org\/project\/pycausalimpact\/#:~:text=Python%20causal%20impact%20%28or%20causal%20inference%29%20implementation%20of,differences%20between%20expected%20and%20observed%20time%20series%20data.",
+                                        "text": "CausalImpact"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " -- causal inference library (used for constructing bayesian inference model)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "link",
+                                        "url": "https:\/\/pypi.org\/project\/pyqlearning\/",
+                                        "text": "Q-Learning"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " -- allow us to use the simulator to generate optimal strategy, given predictions"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nThe first two'll likely be slow burners, and the 3rd will likely increase costs -- they are the cart, sim is the horse imo."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1676141656.000000"
+        },
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U8PN87H1U"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "1edf1b32-6aea-4895-8e17-12170cd0c8a8",
+        "type": "message",
+        "text": "I think just predict, need a little heavier container runtime so that I can dynamically trigger new models as an async operation while providing the next inference in the IPC pipe.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676140920.165219",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "P5E9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think just predict, need a little heavier container runtime so that I can dynamically trigger new models as an async operation while providing the next inference in the IPC pipe."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676053597.881859",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "dcca744c-c2bf-48ff-b7e4-c9f57aefa9f0",
+        "type": "message",
+        "text": "yeah, ok -- I'll two the following two things:\n\n• finish up the validation to go forward with this drunken-walker model \n• then write a trivial system capable of providing inference and trivial online retrain ",
+        "user": "U04N4LBE5K4",
+        "ts": "1676141073.750709",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9YuP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yeah, ok -- I'll two the following two things:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "finish up the validation to go forward with this drunken-walker model "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "then write a trivial system capable of providing inference and trivial online retrain "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676053571.361849",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "b93d153c-2bb6-4301-86cd-c996a5773ba0",
+        "type": "message",
+        "text": "&gt; notably wrt f-score, we actually only need to know if it is zero or non-zero when we are thinking about buying, and one or non-one if we are thinking about selling.\n-- working on this now. I air-gapped for future leak by 16 min (which puts everything 15 min behind the pred we'd be making in reality to be safe), and the numbers still work out\/are sufficient for these reqs.\n\nI think this is *just* going to work.  I'll set it up for the IPC with a `unix fifo` for now.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676159228.970479",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vWa",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "notably wrt f-score, we actually only need to know if it is zero or non-zero when we are thinking about buying, and one or non-one if we are thinking about selling."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "-- working on this now. I air-gapped for future leak by 16 min (which puts everything 15 min behind the pred we'd be making in reality to be safe), and the numbers still work out\/are sufficient for these reqs.\n\nI think this is *just* going to work.  I'll set it up for the IPC with a "
+                            },
+                            {
+                                "type": "text",
+                                "text": "unix fifo",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " for now."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1676159415.000000"
+        },
+        "thread_ts": "1675747412.633829",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "b1aaa0b0-b675-4912-a828-4a9855688933",
+        "type": "message",
+        "text": "I have never heard of CBOR2 before.. looks like it is a compact binary equivalent of JSON, meaning that e.g. field names and schema are interleaved with the data like JSON is? It isn't clear to me. But there are C# libraries for dealing with it, so at the very least this might be a better choice than JSON.\n\nIf we need more efficiency, we might consider Bond or Protocol Buffers for serialization. These approaches demand a schema defined ahead of time, and so do not need to include it interleaved with the data. And they support compact binary formatting, as opposed to plain text. I am gonna guess that MS Bond isn't available for python, but I would be shocked if ProtoBuff is not; it is made by Google.\n\nBut assuming a schema and encoding in binary has its drawbacks -- unlike e.g. JSON, serialized data is hopelessly irretrievable without the exact schema it was serialized as, making it very brittle to change. But, we're not making some public API here, it is literally two processes having an private, ephemeral conversation. You and I can just agree what the schema is ahead of time, and make sure our process versions match. And so maybe we don't care too much if the serialized data isn't durable to schema changes over time.",
+        "user": "U8PN87H1U",
+        "ts": "1676166151.573729",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "JMCxJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I have never heard of CBOR2 before.. looks like it is a compact binary equivalent of JSON, meaning that e.g. field names and schema are interleaved with the data like JSON is? It isn't clear to me. But there are C# libraries for dealing with it, so at the very least this might be a better choice than JSON.\n\nIf we need more efficiency, we might consider Bond or Protocol Buffers for serialization. These approaches demand a schema defined ahead of time, and so do not need to include it interleaved with the data. And they support compact binary formatting, as opposed to plain text. I am gonna guess that MS Bond isn't available for python, but I would be shocked if ProtoBuff is not; it is made by Google.\n\nBut assuming a schema and encoding in binary has its drawbacks -- unlike e.g. JSON, serialized data is hopelessly irretrievable without the exact schema it was serialized as, making it very brittle to change. But, we're not making some public API here, it is literally two processes having an private, ephemeral conversation. You and I can just agree what the schema is ahead of time, and make sure our process versions match. And so maybe we don't care too much if the serialized data isn't durable to schema changes over time."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676053543.765999",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "12db307c-14ec-482e-9171-7c23b4e38dab",
+        "type": "message",
+        "text": "it sounds like you might be wanting in the end product (not simulation but the actual robot) a continuously running instance, so that you can have 'clockwork' like that.",
+        "user": "U8PN87H1U",
+        "ts": "1676166565.956699",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yUXmg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "it sounds like you might be wanting in the end product (not simulation but the actual robot) a continuously running instance, so that you can have 'clockwork' like that."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676167574.000000"
+        },
+        "thread_ts": "1676054455.486079",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "12f7c9a6-fd35-487e-9ea2-4077c5ed8833",
+        "type": "message",
+        "text": "A continuously running instance is going to be more expensive than say, an azure function that starts in response to some event or clock tick, runs only as long as it needs to, then ends. In this way we can 'yield back' compute time we don't need without paying to run continuously.",
+        "user": "U8PN87H1U",
+        "ts": "1676166590.780179",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "m8p\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "A continuously running instance is going to be more expensive than say, an azure function that starts in response to some event or clock tick, runs only as long as it needs to, then ends. In this way we can 'yield back' compute time we don't need without paying to run continuously."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676054455.486079",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "460b9135-ed77-4154-addb-b6af1b88a061",
+        "type": "message",
+        "text": "It also might affect abilities to scale up, as a single instance can only handle so much traffic, and azure functions can scale up and down instantly to as many parallel instances as we need.\n\nBut since we only plan on having one robot, maybe this isn't a concern for us.\n\nStill, an \"event\" based architecture would be a better fit for the cloud, both for efficiency and scalability.",
+        "user": "U8PN87H1U",
+        "ts": "1676166601.348689",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cOA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It also might affect abilities to scale up, as a single instance can only handle so much traffic, and azure functions can scale up and down instantly to as many parallel instances as we need.\n\nBut since we only plan on having one robot, maybe this isn't a concern for us.\n\nStill, an \"event\" based architecture would be a better fit for the cloud, both for efficiency and scalability."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676167309.000000"
+        },
+        "thread_ts": "1676054455.486079",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "bf8f4616-738a-48d7-9fba-012be70e795a",
+        "type": "message",
+        "text": "We do not need to commit one way or the other yet, but just keep it in mind as we proceed.",
+        "user": "U8PN87H1U",
+        "ts": "1676166603.644819",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uNcMX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We do not need to commit one way or the other yet, but just keep it in mind as we proceed."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676054455.486079",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "4a30c3e5-1a1c-4844-b0d6-84db6cc32e42",
+        "type": "message",
+        "text": "I am dipping my toe into WSL for the first time. Looks like you need to pick a linux distro? What do you use? Are you running WSL or just native linux on your machine?",
+        "user": "U8PN87H1U",
+        "ts": "1676168133.315819",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "XtOY9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I am dipping my toe into WSL for the first time. Looks like you need to pick a linux distro? What do you use? Are you running WSL or just native linux on your machine?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676168174.000000"
+        },
+        "thread_ts": "1676168133.315819",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1676170560.311119",
+        "reply_users": [
+            "U04N4LBE5K4"
+        ],
+        "replies": [
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676170560.311119"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1676170560.311119"
+    },
+    {
+        "client_msg_id": "0c1ffa42-79db-43a8-9664-ab7333b0527a",
+        "type": "message",
+        "text": "we may not care, but the C# library I was going to look into for bayesian inference modeling was <http:\/\/Infer.NET|Infer.NET> <https:\/\/dotnet.github.io\/infer\/>",
+        "user": "U8PN87H1U",
+        "ts": "1676169045.486049",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "v3qP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "we may not care, but the C# library I was going to look into for bayesian inference modeling was "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/Infer.NET",
+                                "text": "Infer.NET"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/dotnet.github.io\/infer\/"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676169121.000000"
+        },
+        "attachments": [
+            {
+                "from_url": "https:\/\/dotnet.github.io\/infer\/",
+                "id": 1,
+                "original_url": "https:\/\/dotnet.github.io\/infer\/",
+                "fallback": "Infer.NET",
+                "text": "<http:\/\/Infer.NET|Infer.NET> is a framework for running Bayesian inference in graphical models. It can be used to solve many different kinds of machine learning problems, from standard problems like classification, recommendation or clustering through customised solutions to domain-specific problems.",
+                "title": "Infer.NET",
+                "title_link": "https:\/\/dotnet.github.io\/infer\/",
+                "service_name": "dotnet.github.io"
+            }
+        ]
+    },
+    {
+        "client_msg_id": "ce4cea3b-cd45-470a-8f4a-11dab2518d1c",
+        "type": "message",
+        "text": "its also worth noting if this does what we want it to in the end, ~$100\/month on compute hosting may become irrelevant, so may be we don't fuss to much -- its just the cost of research",
+        "user": "U8PN87H1U",
+        "ts": "1676169603.266089",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dKfS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "its also worth noting if this does what we want it to in the end, ~$100\/month on compute hosting may become irrelevant, so may be we don't fuss to much -- its just the cost of research"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676169630.000000"
+        },
+        "thread_ts": "1676054455.486079",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "da776dce-5ef2-4098-a198-954abf96eef7",
+        "type": "message",
+        "text": "speaking of this doing what we want in the end, it would probably be best not to discuss this project with anyone. Without getting too creepy, it would be hard to predict what other people would choose do with knowledge of the mere existence of such a thing.",
+        "user": "U8PN87H1U",
+        "ts": "1676169892.427969",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KOiO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "speaking of this doing what we want in the end, it would probably be best not to discuss this project with anyone. Without getting too creepy, it would be hard to predict what other people would choose do with knowledge of the mere existence of such a thing."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676054455.486079",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "79c074cd-3987-42e3-94c5-1d405f152a3e",
+        "type": "message",
+        "text": "I am running WSL on Windows 11, and it is pretty good.\n\nUbuntu is the way to go on wsl2, although debian is viewed as \"linux for adults\" in general.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676170560.311119",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nZF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I am running WSL on Windows 11, and it is pretty good.\n\nUbuntu is the way to go on wsl2, although debian is viewed as \"linux for adults\" in general."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676168133.315819",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "dea4b022-c8e6-4882-94de-0c2184af1590",
+        "type": "message",
+        "text": "I think it may be more of a research project followed by implementation.  Once we have the bayes net w\/ posterior probs, it could be implemented in anything. <http:\/\/Infer.net|Infer.net> might have the friction that typed OOP in general has for research, but I remember looking at it in PureCars, and it seemed pretty good :man-shrugging:.   PyMC is coming from the R community, which is the OG in ML\/Bayesian inference, so it may have some bells and whistles that can be ported.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676170611.708729",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1JqSZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think it may be more of a research project followed by implementation.  Once we have the bayes net w\/ posterior probs, it could be implemented in anything. "
+                            },
+                            {
+                                "type": "link",
+                                "url": "http:\/\/Infer.net",
+                                "text": "Infer.net"
+                            },
+                            {
+                                "type": "text",
+                                "text": " might have the friction that typed OOP in general has for research, but I remember looking at it in PureCars, and it seemed pretty good "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "man-shrugging",
+                                "unicode": "1f937-200d-2642-fe0f"
+                            },
+                            {
+                                "type": "text",
+                                "text": ".   PyMC is coming from the R community, which is the OG in ML\/Bayesian inference, so it may have some bells and whistles that can be ported."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1676170838.000000"
+        }
+    },
+    {
+        "client_msg_id": "340f1545-e22f-441e-912c-ea2fc5b95cc0",
+        "type": "message",
+        "text": "I have just purchased a pretty technical book on it from Orielly that I am going to get into this week. Haven't done it since school.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676170646.038639",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ut35",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I have just purchased a pretty technical book on it from Orielly that I am going to get into this week. Haven't done it since school."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "c185e9ea-303e-4c41-8ee5-e6cc109779cd",
+        "type": "message",
+        "text": "in the research phase it is obvious you should pick whatever you're fastest and most familiar with. We will figure out how the simulator implementation works out one way or another",
+        "user": "U8PN87H1U",
+        "ts": "1676170889.722279",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CGkW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "in the research phase it is obvious you should pick whatever you're fastest and most familiar with. We will figure out how the simulator implementation works out one way or another"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "afbebd40-0d37-4d3a-9f4e-0f3f5f8748c3",
+        "type": "message",
+        "text": "cool, yeah, any bayes results'll be pretty portable",
+        "user": "U04N4LBE5K4",
+        "ts": "1676171035.194759",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Cb2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "cool, yeah, any bayes results'll be pretty portable"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "1c3da563-f47c-411c-a378-774ef99865e7",
+        "type": "message",
+        "text": "I've got WSL2 set up, and .NET 7 installed on it and working on my machine. My first foray into pipes has gone .. not well. It is failing for esoteric reasons, and the code to use it is clunky-funky in the first place. What do you think about using TCP instead? We _could_ do raw sockets. But it looks like this library <https:\/\/zeromq.org\/> probably handles a lot of the goofy edge case business and simplifies things. They've got integrations to both .NET and python. It also supports IPC in some cases, with the same library\/api.\n\nIf we use TCP, we could talk via `localhost`, and we would have the option down the line to have the .net controller and python service running on separate machines across a network.\n\nOne question arises: who is the client, and who is the server here? At first I imagined the .NET controller process being the server, but maybe the python library that exposes the predict function should actually be the server, and that function is the service it provides.",
+        "user": "U8PN87H1U",
+        "ts": "1676185359.755469",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wDfkZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I've got WSL2 set up, and .NET 7 installed on it and working on my machine. My first foray into pipes has gone .. not well. It is failing for esoteric reasons, and the code to use it is clunky-funky in the first place. What do you think about using TCP instead? We "
+                            },
+                            {
+                                "type": "text",
+                                "text": "could",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " do raw sockets. But it looks like this library "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/zeromq.org\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": " probably handles a lot of the goofy edge case business and simplifies things. They've got integrations to both .NET and python. It also supports IPC in some cases, with the same library\/api.\n\nIf we use TCP, we could talk via "
+                            },
+                            {
+                                "type": "text",
+                                "text": "localhost",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", and we would have the option down the line to have the .net controller and python service running on separate machines across a network.\n\nOne question arises: who is the client, and who is the server here? At first I imagined the .NET controller process being the server, but maybe the python library that exposes the predict function should actually be the server, and that function is the service it provides."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676186500.000000"
+        },
+        "attachments": [
+            {
+                "from_url": "https:\/\/zeromq.org\/",
+                "thumb_url": "https:\/\/zeromq.org\/images\/logo.gif",
+                "thumb_width": 381,
+                "thumb_height": 119,
+                "service_icon": "https:\/\/zeromq.org\/apple-touch-icon.png",
+                "id": 1,
+                "original_url": "https:\/\/zeromq.org\/",
+                "fallback": "ZeroMQ",
+                "text": "An open-source universal messaging library",
+                "title": "ZeroMQ",
+                "title_link": "https:\/\/zeromq.org\/",
+                "service_name": "zeromq.org"
+            }
+        ]
+    },
+    {
+        "client_msg_id": "8422c711-c4ce-4d8b-90e5-38110d92d972",
+        "type": "message",
+        "text": "and if it really is as simple and transactional as e.g. the simulator calling the predict function on the python process, getting its result, and that's the end of it -- and not lingering conversationally -- maybe _the_ simplest thing is for your python process to just run a web server, and expose the function as e.g. a GET or POST endpoint?",
+        "user": "U8PN87H1U",
+        "ts": "1676185768.273919",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xTNRH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and if it really is as simple and transactional as e.g. the simulator calling the predict function on the python process, getting its result, and that's the end of it -- and not lingering conversationally -- maybe "
+                            },
+                            {
+                                "type": "text",
+                                "text": "the",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " simplest thing is for your python process to just run a web server, and expose the function as e.g. a GET or POST endpoint?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676185837.000000"
+        }
+    },
+    {
+        "client_msg_id": "deb5a4b9-4220-407e-91c9-36c467ef5cf5",
+        "type": "message",
+        "text": "a python web server might also help address parallelization issues.. it can handle multiple requests made separately at the same time, so we don't have to worry about multiplexing multiple requests through some single pipe. Though I don't know how useful that will be, as a single simulation run will have to wait for the results of one call before it can make another",
+        "user": "U8PN87H1U",
+        "ts": "1676185988.203309",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8nbUn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "a python web server might also help address parallelization issues.. it can handle multiple requests made separately at the same time, so we don't have to worry about multiplexing multiple requests through some single pipe. Though I don't know how useful that will be, as a single simulation run will have to wait for the results of one call before it can make another"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676186594.000000"
+        }
+    },
+    {
+        "client_msg_id": "35d1aa8d-b830-4427-a498-a1aba89f38ad",
+        "type": "message",
+        "text": "a web service _might_ be a bridge too far performance wise, as a https connect requires several round trip communications during handshaking and we'd be waiting on that for every request. So maybe zeromq is our best bet.. we can make a persistent connection to the python process so we don't incur handshaking on every request -- all 250k of them :confused:",
+        "user": "U8PN87H1U",
+        "ts": "1676186161.168789",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "S1f51",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "a web service "
+                            },
+                            {
+                                "type": "text",
+                                "text": "might",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " be a bridge too far performance wise, as a https connect requires several round trip communications during handshaking and we'd be waiting on that for every request. So maybe zeromq is our best bet.. we can make a persistent connection to the python process so we don't incur handshaking on every request -- all 250k of them "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "confused",
+                                "unicode": "1f615"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676186410.000000"
+        }
+    },
+    {
+        "client_msg_id": "567783cb-f430-40c9-b701-e4ad20db28d5",
+        "type": "message",
+        "text": "TL;DR it looks like zeromq might be our best bet for IPC here. What do you think?",
+        "user": "U8PN87H1U",
+        "ts": "1676186231.227489",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xf9im",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "TL;DR it looks like zeromq might be our best bet for IPC here. What do you think?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676186231.227489",
+        "reply_count": 3,
+        "reply_users_count": 2,
+        "latest_reply": "1676255792.768939",
+        "reply_users": [
+            "U8PN87H1U",
+            "U04N4LBE5K4"
+        ],
+        "replies": [
+            {
+                "user": "U8PN87H1U",
+                "ts": "1676188312.592719"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1676188437.714979"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676255792.768939"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1676255792.768939"
+    },
+    {
+        "client_msg_id": "0036c9ff-bf25-4502-abaa-8385db4aab02",
+        "type": "message",
+        "text": "look how stupid easy this is:\nServer:\n```using NetMQ;\nusing NetMQ.Sockets;\n\nusing (var responder = new ResponseSocket())\n{\n    responder.Bind(\"tcp:\/\/*:5555\");\n\n    while (true) \n    {\n        string str = responder.ReceiveFrameString();\n\n        Console.WriteLine(\"Received Hello\");\n\n        responder.SendFrame(\"World\");\n    }\n}```\nClient:\n```using NetMQ;\nusing NetMQ.Sockets;\n\nusing (var requester = new RequestSocket())\n{\n    requester.Connect(\"<tcp:\/\/localhost:5555>\");\n\n    Console.WriteLine(\"Sending Hello...\");\n\n    requester.SendFrame(\"Hello\");\n\n    string str = requester.ReceiveFrameString();\n\n    Console.WriteLine(\"Received World\");\n}```\n",
+        "user": "U8PN87H1U",
+        "ts": "1676188312.592719",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "VX9yP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "look how stupid easy this is:\nServer:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "using NetMQ;\nusing NetMQ.Sockets;\n\nusing (var responder = new ResponseSocket())\n{\n    responder.Bind(\"tcp:\/\/*:5555\");\n\n    while (true) \n    {\n        string str = responder.ReceiveFrameString();\n\n        Console.WriteLine(\"Received Hello\");\n\n        responder.SendFrame(\"World\");\n    }\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Client:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "using NetMQ;\nusing NetMQ.Sockets;\n\nusing (var requester = new RequestSocket())\n{\n    requester.Connect(\""
+                            },
+                            {
+                                "type": "link",
+                                "url": "tcp:\/\/localhost:5555"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\");\n\n    Console.WriteLine(\"Sending Hello...\");\n\n    requester.SendFrame(\"Hello\");\n\n    string str = requester.ReceiveFrameString();\n\n    Console.WriteLine(\"Received World\");\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676186231.227489",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "46d1a70c-4649-4257-9779-f32fd263f4a4",
+        "type": "message",
+        "text": "a quick test on local loopback appears to work on both windows and linux, with 3,000-10,000 message pairs exchanged per second. I believe that should be fast enough not to be a substantial bottleneck.",
+        "user": "U8PN87H1U",
+        "ts": "1676188437.714979",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "T9o7W",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "a quick test on local loopback appears to work on both windows and linux, with 3,000-10,000 message pairs exchanged per second. I believe that should be fast enough not to be a substantial bottleneck."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676186231.227489",
+        "parent_user_id": "U8PN87H1U"
+    }
+]

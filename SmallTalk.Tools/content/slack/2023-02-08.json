@@ -1,0 +1,171 @@
+[
+    {
+        "client_msg_id": "92dc7195-73fc-4133-8172-ae222cee21d4",
+        "type": "message",
+        "text": "Ok -- cool; I am going to give the F-score a shot so we have a baseline.  Might be the case that we'll need to dive back into the book data, or add the numerical transforms to try and predict from a better place.",
+        "user": "U04N4LBE5K4",
+        "ts": "1675897660.809909",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fVO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Ok -- cool; I am going to give the F-score a shot so we have a baseline.  Might be the case that we'll need to dive back into the book data, or add the numerical transforms to try and predict from a better place."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1675747412.633829",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "a8445a6f-7764-40f7-b7c7-a09beb12d3dd",
+        "type": "message",
+        "text": "Going to see if I can factor in prediction confidence after that.  Depending on findings, :man-shrugging:, could be something that we start running sims on soon.  I am thinking 60% + accuracy on the F-Score is a reason to figure out how to test it.",
+        "user": "U04N4LBE5K4",
+        "ts": "1675897852.327009",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "aL+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Going to see if I can factor in prediction confidence after that.  Depending on findings, "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "man-shrugging",
+                                "unicode": "1f937-200d-2642-fe0f"
+                            },
+                            {
+                                "type": "text",
+                                "text": ", could be something that we start running sims on soon.  I am thinking 60% + accuracy on the F-Score is a reason to figure out how to test it."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1675747412.633829",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "952e3a73-3a24-4a7e-aaee-159c52adbdc7",
+        "type": "message",
+        "text": "even if we think we don't yet have a winning strategy, there will be value in getting it under simulation so that we know we have working infrastructure to iterate over with future improvements and ideas",
+        "user": "U8PN87H1U",
+        "ts": "1675906434.187729",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "x6Bw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "even if we think we don't yet have a winning strategy, there will be value in getting it under simulation so that we know we have working infrastructure to iterate over with future improvements and ideas"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1675747412.633829",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "b5acbbb5-0548-4f41-95b9-02e437e203ca",
+        "type": "message",
+        "text": "in particular, we will need to work out the API surface area connecting your predictive code and my simulation code",
+        "user": "U8PN87H1U",
+        "ts": "1675907540.008679",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Mmcv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "in particular, we will need to work out the API surface area connecting your predictive code and my simulation code"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1675747412.633829",
+        "parent_user_id": "U8PN87H1U"
+    }
+]

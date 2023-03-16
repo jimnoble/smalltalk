@@ -10,10 +10,24 @@
         <span id="content1" @ref="textArea" class="textarea" role="textbox" contenteditable></span>
     </div>
     <div class="tool-strip">
-        <a href="#" class="button">
-            <span class="glyphicon glyphicon-paperclip"></span>
-            <span>Attach</span>
-        </a>
+        @if (Attachment == null)
+        {
+            <label for="file-upload" class="button">
+                <span class="glyphicon glyphicon-paperclip"></span>
+                <span>Attach</span>
+            </label>            
+        }
+        else
+        {
+            <a class="button" @onclick=RemoveAttachment>
+                <span class="glyphicon glyphicon-file"></span>
+                <span>@Attachment.Value.Label</span>
+                <span class="subtle">@Attachment.Value.ContentType</span>
+                <span class="subtle">@FormatFileSize(Attachment.Value.SizeBytes)</span>
+                <span class="glyphicon glyphicon-trash"></span>
+            </a>
+        }
+        <InputFile id="file-upload" class="file-upload button" OnChange=@LoadFilesAsync multiple />
         <div class="actions">
             @if (EditingMessage.HasValue)
             {
@@ -41,12 +55,14 @@
 {
     ElementReference textArea;
 
+    Attachment? Attachment { get; set; }
+
     public string Text { get; set; }
 
     public Message? EditingMessage { get; set; }
 
     [Parameter]
-    public EventCallback OnSubmit { get; set; }
+    public EventCallback<bool> OnSubmit { get; set; }
 
     [Parameter]
     public string ChannelName { get; set; }
@@ -61,16 +77,34 @@
         await JSRuntime.InvokeVoidAsync("configureEditorContentArea");
     }
 
-    public void EditMessage(Message message)
+    public async Task EditMessageAsync(Message message)
     {
         Text = message.Content;
 
         EditingMessage = message;
+
+        Attachment = message.Attachments.Any() ? message.Attachments.First() : null;
+
+        await textArea.FocusAsync();
+
+        await JSRuntime.InvokeVoidAsync("focusEditor");
     }
 
     public async Task SendAsync()
     {
         var text = (await JSRuntime.InvokeAsync<string>("getEditorText")).Replace(@" ", " ").Trim();
+
+        var attachments = Attachment.HasValue ? 
+            new[] 
+            { 
+                new Attachment(
+                    AttachmentId: Attachment.Value.AttachmentId,
+                    Label: Attachment.Value.Label,
+                    ContentType: Attachment.Value.ContentType,
+                    SizeBytes: Attachment.Value.SizeBytes,
+                    Url: Attachment.Value.Url) 
+            } : 
+            Array.Empty<Attachment>();
 
         await MessageDateRepository.AppendMessageAsync(
             channel: ChannelName,
@@ -83,16 +117,21 @@
                 ParentMessageDate: null,
                 ParentMessageId: null,
                 Content: text,
-                Attachments: Array.Empty<Attachment>(),
+                Attachments: attachments,
                 Reactions: Array.Empty<Reaction>()));
 
         Text = "";
 
-        //StateHasChanged();
+        Attachment = null;
 
         await EventAggregator.PublishAsync(new MessagePublishedEvent());
 
-        await OnSubmit.InvokeAsync();
+        await OnSubmit.InvokeAsync(true);
+    }
+
+    void RemoveAttachment()
+    {
+        Attachment = null;
     }
 
     async Task CancelEditAsync()
@@ -100,6 +139,8 @@
         Text = string.Empty;
 
         EditingMessage = null;
+
+        Attachment = null;
 
         StateHasChanged();
     }
@@ -131,12 +172,52 @@
         StateHasChanged();
 
         await EventAggregator.PublishAsync(new MessagePublishedEvent());
+
+        await OnSubmit.InvokeAsync(false);
     }
 
-    public async Task FocusEditorAsync()
+    async Task LoadFilesAsync(InputFileChangeEventArgs e)
     {
-        await textArea.FocusAsync();
+        var files = e.GetMultipleFiles();
 
-        await JSRuntime.InvokeVoidAsync("focusEditor");
+        foreach (var file in files)
+        {
+            var attachmentId = Guid.NewGuid();
+
+            var outputPath = Path.Combine(
+                Directory.GetCurrentDirectory(), 
+                $"wwwroot/content/uploaded/{attachmentId:N}");
+
+            Directory.CreateDirectory(outputPath);
+
+            await using FileStream fs = new(
+                Path.Combine(outputPath, file.Name),
+                FileMode.Create);
+
+            await file.OpenReadStream().CopyToAsync(fs);
+
+            Attachment = new Attachment(
+                AttachmentId: attachmentId,
+                Url: $"/content/uploaded/{attachmentId:N}/{file.Name}",
+                Label: file.Name,
+                ContentType: file.ContentType,
+                SizeBytes: file.Size);
+        }
+    }
+
+    string FormatFileSize(long length)
+    {
+        string[] sizes = { "B", "KB", "MB", "GB", "TB" };
+        double len = length;
+        int order = 0;
+        while (len >= 1024 && order < sizes.Length - 1)
+        {
+            order++;
+            len = len / 1024;
+        }
+
+        // Adjust the format string to your preferences. For example "{0:0.#}{1}" would
+        // show a single decimal place, and no space.
+        return string.Format("{0:0.##} {1}", len, sizes[order]);
     }
 }

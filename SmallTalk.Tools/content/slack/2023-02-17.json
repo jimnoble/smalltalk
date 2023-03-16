@@ -1,0 +1,131 @@
+[
+    {
+        "client_msg_id": "a8c6a52b-b6c4-4cd6-b7b0-f9ce485d1d79",
+        "type": "message",
+        "text": "and I updated `TimeStartEpochMinutes` from `int64` to `int32`, we just don't need the precision. Epoch minutes today stands at about 27,800,000, well shy of the 2-4 billion ceiling on a 32 bit int",
+        "user": "U8PN87H1U",
+        "ts": "1676666980.068819",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "a3CO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and I updated "
+                            },
+                            {
+                                "type": "text",
+                                "text": "TimeStartEpochMinutes",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "int64",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "int32",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", we just don't need the precision. Epoch minutes today stands at about 27,800,000, well shy of the 2-4 billion ceiling on a 32 bit int"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676667049.000000"
+        }
+    },
+    {
+        "client_msg_id": "2d84e4bb-655e-4e3c-a578-5d8203bcedb3",
+        "type": "message",
+        "text": "if there are other fields you know you won't want let me know. we should shave this yak sooner rather than later",
+        "user": "U8PN87H1U",
+        "ts": "1676667092.295959",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jrYK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "if there are other fields you know you won't want let me know. we should shave this yak sooner rather than later"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676667092.295959",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1676770902.973569",
+        "reply_users": [
+            "U04N4LBE5K4"
+        ],
+        "replies": [
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676770902.973569"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1676770902.973569"
+    }
+]

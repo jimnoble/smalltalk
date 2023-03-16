@@ -1,0 +1,688 @@
+[
+    {
+        "client_msg_id": "bbd49081-3f15-4073-9d97-3176ce119017",
+        "type": "message",
+        "text": "so it sure would be swell if we could produce a general model where we can just train offline and have it. This would be the simplest and most cost effective approach. But it sounds like you think that won't get us far enough to where we need to be. If that is the case I trust your judgement.",
+        "user": "U8PN87H1U",
+        "ts": "1676053468.776679",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gm3g0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "so it sure would be swell if we could produce a general model where we can just train offline and have it. This would be the simplest and most cost effective approach. But it sounds like you think that won't get us far enough to where we need to be. If that is the case I trust your judgement."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676053468.776679",
+        "reply_count": 3,
+        "reply_users_count": 1,
+        "latest_reply": "1676139069.283109",
+        "reply_users": [
+            "U04N4LBE5K4"
+        ],
+        "replies": [
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676138927.667609"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676139023.448699"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676139069.283109"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1676139069.283109"
+    },
+    {
+        "client_msg_id": "483ae705-f7be-4a8f-872a-7c3ba90f6a8b",
+        "type": "message",
+        "text": "regarding simulator implementation, I've never actually done interprocess communications before, but I do know how to set up pipes in C# to do that. Tell me if this sounds right to you, architecturally:\n• We have a master process in C#\/.NET that is the 'controller' of the simulation execution, and the arbiter of sourcing data from wherever we get it.\n• The master process starts up a subordinate process that, if I am understanding it, is some dockerized executable, perhaps that you have created with python? \n• The master process 'invokes' functions in the subordinate by sending messages over IPC pipes. The master process provides the subordinate with all input data.\n• Are we putting the input data through the pipe as well, or e.g. placing it in a tsv in a shared location in local storage?\n• What format should the messages be? JSON, something else?\n• The subordinate 'returns' function results through the pipe, and\/or by writing artifacts to shared local storage.",
+        "user": "U8PN87H1U",
+        "ts": "1676053543.765999",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "MojN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "regarding simulator implementation, I've never actually done interprocess communications before, but I do know how to set up pipes in C# to do that. Tell me if this sounds right to you, architecturally:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "We have a master process in C#\/.NET that is the 'controller' of the simulation execution, and the arbiter of sourcing data from wherever we get it."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "The master process starts up a subordinate process that, if I am understanding it, is some dockerized executable, perhaps that you have created with python? "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "The master process 'invokes' functions in the subordinate by sending messages over IPC pipes. The master process provides the subordinate with all input data."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Are we putting the input data through the pipe as well, or e.g. placing it in a tsv in a shared location in local storage?"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "What format should the messages be? JSON, something else?"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "The subordinate 'returns' function results through the pipe, and\/or by writing artifacts to shared local storage."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676054496.000000"
+        },
+        "thread_ts": "1676053543.765999",
+        "reply_count": 3,
+        "reply_users_count": 2,
+        "latest_reply": "1676166151.573729",
+        "reply_users": [
+            "U04N4LBE5K4",
+            "U8PN87H1U"
+        ],
+        "replies": [
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676139354.919399"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676139864.833189"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1676166151.573729"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1676166151.573729"
+    },
+    {
+        "client_msg_id": "a8d6ed39-25d6-46eb-931b-b2af14932822",
+        "type": "message",
+        "text": "My gut says that if we can avoid reading\/writing local storage during IPC calls, that is probably best for performance, so, maybe all the data in and out goes through the pipe?\n\nI don't know if there are limits on IPC throughput, or if our choice of serialization format is going to matter from an efficiency perspective. JSON is easy, but it has a lot of redundant data in order to be open-schema.",
+        "user": "U8PN87H1U",
+        "ts": "1676053552.954589",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iHYc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "My gut says that if we can avoid reading\/writing local storage during IPC calls, that is probably best for performance, so, maybe all the data in and out goes through the pipe?\n\nI don't know if there are limits on IPC throughput, or if our choice of serialization format is going to matter from an efficiency perspective. JSON is easy, but it has a lot of redundant data in order to be open-schema."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676053897.000000"
+        }
+    },
+    {
+        "client_msg_id": "2aa6b752-ad4a-49a6-9157-84d115d835fa",
+        "type": "message",
+        "text": "Is the expectation that the subordinate process will be running on e.g. linux? That is probably the platform we want to ultimately use for cloud deployment. Are we wanting to use WSL to test\/run this on our local machines? TBH I have basically zero experience with docker, WSL, or python.",
+        "user": "U8PN87H1U",
+        "ts": "1676053559.304279",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "w+A",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Is the expectation that the subordinate process will be running on e.g. linux? That is probably the platform we want to ultimately use for cloud deployment. Are we wanting to use WSL to test\/run this on our local machines? TBH I have basically zero experience with docker, WSL, or python."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "82aff8fd-a3f6-43a6-a6d9-9d3ba1980c50",
+        "type": "message",
+        "text": "We should probably go through a 'hello world' exercise, and try to get a pair of trivial processes running, having nothing to do with trading or ML, that just demonstrate live IPC communication, dockerization, and our chosen stack in general. This way we can both have this approach proven and working on our local machines, and I can start looking into the realities of cloud deployment of such an architecture. Maybe you can get the ball rolling for us by making a trivial subordinate process, and I will try to integrate to it.",
+        "user": "U8PN87H1U",
+        "ts": "1676053571.361849",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "fOoMK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We should probably go through a 'hello world' exercise, and try to get a pair of trivial processes running, having nothing to do with trading or ML, that just demonstrate live IPC communication, dockerization, and our chosen stack in general. This way we can both have this approach proven and working on our local machines, and I can start looking into the realities of cloud deployment of such an architecture. Maybe you can get the ball rolling for us by making a trivial subordinate process, and I will try to integrate to it."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676053571.361849",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1676141073.750709",
+        "reply_users": [
+            "U04N4LBE5K4"
+        ],
+        "replies": [
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676141073.750709"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1676141073.750709"
+    },
+    {
+        "client_msg_id": "76861039-3df9-448a-9650-45a74543dc2d",
+        "type": "message",
+        "text": "We also need to consider performance and concurrency. A single simulation run across six months is ~250k one-minute segments. To complete in a sensible time, the predict and retrain calls will needs to be pretty fast.",
+        "user": "U8PN87H1U",
+        "ts": "1676053581.936579",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lefo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We also need to consider performance and concurrency. A single simulation run across six months is ~250k one-minute segments. To complete in a sensible time, the predict and retrain calls will needs to be pretty fast."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "4f621d73-0b13-4423-8eef-27a773facb2e",
+        "type": "message",
+        "text": "It sounds like we will have ~2 subordinate functions, one to make a prediction and one to retrain?\n• I am guessing (hoping?) that the predict function will be generally fast to execute and low on compute requirements.\n• Also guessing that the retrain function is going to need substantially more wall clock time and compute.",
+        "user": "U8PN87H1U",
+        "ts": "1676053597.881859",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dPGl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It sounds like we will have ~2 subordinate functions, one to make a prediction and one to retrain?\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "I am guessing (hoping?) that the predict function will be generally fast to execute and low on compute requirements."
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "Also guessing that the retrain function is going to need substantially more wall clock time and compute."
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676053597.881859",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1676140920.165219",
+        "reply_users": [
+            "U04N4LBE5K4"
+        ],
+        "replies": [
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676140920.165219"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1676140920.165219"
+    },
+    {
+        "client_msg_id": "8a7bbd37-7500-490e-9423-4cb425e49469",
+        "type": "message",
+        "text": "We don't need to simulate on the cloud, only on local machine. I am guessing compute is going to be our limiting factor. My machine has 32 logical cores, 64gb of ram, and an RTX 3080ti. We will want our implementation to be able to saturate all of those CPU cores. Is your subordinate going to want to \/ be able to perform multithreading across cores? Or are we better served perhaps by having one subordinate process per logical core, and each subordinate process does its work single-threaded? Maybe something inbetween?",
+        "user": "U8PN87H1U",
+        "ts": "1676053614.714239",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IdYia",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "We don't need to simulate on the cloud, only on local machine. I am guessing compute is going to be our limiting factor. My machine has 32 logical cores, 64gb of ram, and an RTX 3080ti. We will want our implementation to be able to saturate all of those CPU cores. Is your subordinate going to want to \/ be able to perform multithreading across cores? Or are we better served perhaps by having one subordinate process per logical core, and each subordinate process does its work single-threaded? Maybe something inbetween?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676054102.000000"
+        },
+        "thread_ts": "1676053614.714239",
+        "reply_count": 3,
+        "reply_users_count": 1,
+        "latest_reply": "1676140622.462069",
+        "reply_users": [
+            "U04N4LBE5K4"
+        ],
+        "replies": [
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676140515.248379"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676140556.543959"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676140622.462069"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1676140622.462069"
+    },
+    {
+        "client_msg_id": "8dbd10e7-6582-4ac1-b89c-e6e5b3b3e985",
+        "type": "message",
+        "text": "I don't expect I will need GPGPU in the master process. Are you expecting to need that? Cloud machines with GPGPU are probably going to be the most expensive by far, but if we need them for live, timely training, it is an option we can consider.",
+        "user": "U8PN87H1U",
+        "ts": "1676053620.484569",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xP5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I don't expect I will need GPGPU in the master process. Are you expecting to need that? Cloud machines with GPGPU are probably going to be the most expensive by far, but if we need them for live, timely training, it is an option we can consider."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "b8a3a113-1281-419e-beb7-be9b3dd86624",
+        "type": "message",
+        "text": "&gt; that'll be complicated to implement at 1 am w\/ cranky baby.\nDon't kill yourself over this stuff, there is no rush or deadline. Make sure you keep a pace that is comfortable and enjoyable for you.",
+        "user": "U8PN87H1U",
+        "ts": "1676053630.807819",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "=ttL",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "that'll be complicated to implement at 1 am w\/ cranky baby."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Don't kill yourself over this stuff, there is no rush or deadline. Make sure you keep a pace that is comfortable and enjoyable for you."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U04N4LBE5K4"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "d8c8fa39-bad8-456d-9059-64bc6579f12f",
+        "type": "message",
+        "text": "I am hoping the subordinate functions can be 'pure' functions, that do not cause side effects, and produce the same output from the same input every time. This seems straighforward for the predict function, but for the train function this is a bit unclear. Would the train function receive a model, and return an updated one?",
+        "user": "U8PN87H1U",
+        "ts": "1676054455.486079",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/TXg=",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I am hoping the subordinate functions can be 'pure' functions, that do not cause side effects, and produce the same output from the same input every time. This seems straighforward for the predict function, but for the train function this is a bit unclear. Would the train function receive a model, and return an updated one?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676054673.000000"
+        },
+        "thread_ts": "1676054455.486079",
+        "reply_count": 7,
+        "reply_users_count": 2,
+        "latest_reply": "1676169892.427969",
+        "reply_users": [
+            "U04N4LBE5K4",
+            "U8PN87H1U"
+        ],
+        "replies": [
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676140385.332519"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1676166565.956699"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1676166590.780179"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1676166601.348689"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1676166603.644819"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1676169603.266089"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1676169892.427969"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1676169892.427969"
+    }
+]

@@ -1,0 +1,961 @@
+[
+    {
+        "client_msg_id": "5df7cf4d-a48e-4be2-bdd4-9769bc8af71f",
+        "type": "message",
+        "text": "Each of these is a linear combination of each other. Some context:\n\n• each of these can be dropped in isolation without loss of anything\n• dropping all three at once does remove some information\n• only `'PriceBidMax'` (or any one of the others) can be completely dropped\n    ◦ doesn't matter much though. ",
+        "user": "U04N4LBE5K4",
+        "ts": "1676823637.147799",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ECG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Each of these is a linear combination of each other. Some context:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "each of these can be dropped in isolation without loss of anything"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "dropping all three at once does remove some information"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "only "
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": "'PriceBidMax'",
+                                        "style": {
+                                            "code": true
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "text": " (or any one of the others) can be completely dropped"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "doesn't matter much though. "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 1,
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1676823662.000000"
+        }
+    },
+    {
+        "client_msg_id": "88444dfb-f2d2-4754-8afb-0e2755ea4a50",
+        "type": "message",
+        "text": "i removed all three from the schema. are you saying you need two?",
+        "user": "U8PN87H1U",
+        "ts": "1676831560.793349",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TusLP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "i removed all three from the schema. are you saying you need two?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676835123.000000"
+        }
+    },
+    {
+        "client_msg_id": "f09993ca-0416-4852-b039-5b52c6103c0f",
+        "type": "message",
+        "text": "yeah 2\/3.  Redid the analysis this am and caught the mistake.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676844391.399519",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hbQO5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yeah 2\/3.  Redid the analysis this am and caught the mistake."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "4bf371da-0df4-4d74-9cc5-7cfe93e20522",
+        "type": "message",
+        "text": "so I will just get rid of spread then",
+        "user": "U8PN87H1U",
+        "ts": "1676844413.394969",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "V+1U",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "so I will just get rid of spread then"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "4101844c-c558-4754-948b-5fd469c3f510",
+        "type": "message",
+        "text": "have you assessed whether those three have _valuable_ information?",
+        "user": "U8PN87H1U",
+        "ts": "1676844445.624469",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "POIpG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "have you assessed whether those three have "
+                            },
+                            {
+                                "type": "text",
+                                "text": "valuable",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " information?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676844456.000000"
+        },
+        "thread_ts": "1676844445.624469",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1676845531.758429",
+        "reply_users": [
+            "U04N4LBE5K4"
+        ],
+        "replies": [
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676844754.763769"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676845531.758429"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1676845531.758429"
+    },
+    {
+        "client_msg_id": "c08f0448-239a-40c6-b426-4ba71dad4d46",
+        "type": "message",
+        "text": "Zero mq docker image is up w\/ default port of 5555 and env vars that can be set to change things:\n\n```PORT\nLOOKBACK # number of minutes the ml is going to look at each time step (the ml buffer)\nDRYRUN # set to '-n' to bypass ML entirely and just test zmq setup```\nFrom my end, the way I'd do things is via docker compose -- you can connect images to each other and expose ports.   The `zmq` `\"mirror\"`  command listens to all TCP connections ('*') on the configured port.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676844546.378159",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "CXYUy",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Zero mq docker image is up w\/ default port of 5555 and env vars that can be set to change things:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "PORT\nLOOKBACK # number of minutes the ml is going to look at each time step (the ml buffer)\nDRYRUN # set to '-n' to bypass ML entirely and just test zmq setup"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nFrom my end, the way I'd do things is via docker compose -- you can connect images to each other and expose ports.   The "
+                            },
+                            {
+                                "type": "text",
+                                "text": "zmq",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "text",
+                                "text": "\"mirror\"",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "  command listens to all TCP connections ('*') on the configured port."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "70c05c29-c068-4b4a-8785-396d5f24bd2d",
+        "type": "message",
+        "text": "I propose we have a virtual meeting sometime in the near future, when the simulator is done enough, so that we can each demo what we have, how to run it, etc. Slack has a 'huddle' feature we should be able to use for voice and screen sharing. If that doesn't work maybe we can do google meet",
+        "user": "U8PN87H1U",
+        "ts": "1676844640.319979",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "n7Gk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I propose we have a virtual meeting sometime in the near future, when the simulator is done enough, so that we can each demo what we have, how to run it, etc. Slack has a 'huddle' feature we should be able to use for voice and screen sharing. If that doesn't work maybe we can do google meet"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "766f84a5-71b9-42b3-9e9d-059f88e7d801",
+        "type": "message",
+        "text": "yeah, they influence the spectral gap by a margin that warrants keeping them for now.  1\/3 can be dropped entirely.\n\nalthough they may not be super important, keeping them in is worthwhile for downstream reasons.\n\nOTOH, dropping them probably won't influence things too much until I start adding in N randomized ML models since they are minor features.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676844754.763769",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZasV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yeah, they influence the spectral gap by a margin that warrants keeping them for now.  1\/3 can be dropped entirely.\n\nalthough they may not be super important, keeping them in is worthwhile for downstream reasons.\n\nOTOH, dropping them probably won't influence things too much until I start adding in N randomized ML models since they are minor features."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676844445.624469",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "0880003c-4d3e-414b-abb3-85c2ac67c3b4",
+        "type": "message",
+        "text": "sounds good -- the current model simply returns F-Score, and I figure it isn't useful beyond motivating the architecture and getting everything working.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676844966.753939",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZTpt",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "sounds good -- the current model simply returns F-Score, and I figure it isn't useful beyond motivating the architecture and getting everything working."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "6891f2c5-b161-48a4-b3c8-fd960d3a4ac9",
+        "type": "message",
+        "text": "the prediction `.proto` is subject to change; I anticipate yielding all kinds of diagnostics, error rate, confidence, etc. But for now it is:\n\n```syntax=\"proto3\";\n\npackage protoblog;\n\nmessage Prediction {\n  float FScore = 1;\n}```\nAnd don't know if it is a problem, but I am bound to `protoc == 3.12.4` in WSL 2",
+        "user": "U04N4LBE5K4",
+        "ts": "1676845085.965369",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NroTK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the prediction "
+                            },
+                            {
+                                "type": "text",
+                                "text": ".proto",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is subject to change; I anticipate yielding all kinds of diagnostics, error rate, confidence, etc. But for now it is:\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "syntax=\"proto3\";\n\npackage protoblog;\n\nmessage Prediction {\n  float FScore = 1;\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And don't know if it is a problem, but I am bound to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "protoc == 3.12.4",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " in WSL 2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U8PN87H1U"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "00a1d869-bfc9-4def-bcdf-c7a25bde3062",
+        "type": "message",
+        "text": "the spectral gap is a scalar value that is inversely proportional to inclusion of valuable information.\n\nIf the spectral gap is huge, there is really only one signal (1D data).  In this case, the spectral gap is reasonably small, and dropping the three features raises it by a small, but non-negligible amount (slightly bad).\n\nThe idea is that while most of the features may be weak, as long as they are independent, various, unique models can be assembled from different, chosen combinations of the weak features that are similarly strong (so good to keep 2 of them).\n\n-- that's really important.\n\nDefinitely want to drop the one feature that is a linear combo of others.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676845531.758429",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lMrUV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the spectral gap is a scalar value that is inversely proportional to inclusion of valuable information.\n\nIf the spectral gap is huge, there is really only one signal (1D data).  In this case, the spectral gap is reasonably small, and dropping the three features raises it by a small, but non-negligible amount (slightly bad).\n\nThe idea is that while most of the features may be weak, as long as they are independent, various, unique models can be assembled from different, chosen combinations of the weak features that are similarly strong (so good to keep 2 of them).\n\n-- that's really important.\n\nDefinitely want to drop the one feature that is a linear combo of others."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1676845621.000000"
+        },
+        "thread_ts": "1676844445.624469",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "0cc04ccc-726b-4424-8451-47e60c66b55d",
+        "type": "message",
+        "text": "the updated input proto is:\n```syntax = \"proto3\";\n\nmessage HistorySegment {\n   int32 TimeStartEpochMinutes = 1;\n   float PriceCenter = 2;\n   float PriceBidMax = 3;\n   float PriceAskMin = 4;\n   float PriceBuy1 = 5;\n   float PriceBuy10 = 6;\n   float PriceBuy100 = 7;\n   float PriceSell1 = 8;\n   float PriceSell10 = 9;\n   float PriceSell100 = 10;\n   float AmountOfferedBid = 11;\n   float AmountOfferedAsk = 12;\n   float GravityBid = 13;\n   float GravityAsk = 14;\n   float GravityNet = 15;\n   float GravitySum = 16;\n   float GravityNormalized = 17;\n}```\n",
+        "user": "U8PN87H1U",
+        "ts": "1676845798.580339",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IDe",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the updated input proto is:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "syntax = \"proto3\";\n\nmessage HistorySegment {\n   int32 TimeStartEpochMinutes = 1;\n   float PriceCenter = 2;\n   float PriceBidMax = 3;\n   float PriceAskMin = 4;\n   float PriceBuy1 = 5;\n   float PriceBuy10 = 6;\n   float PriceBuy100 = 7;\n   float PriceSell1 = 8;\n   float PriceSell10 = 9;\n   float PriceSell100 = 10;\n   float AmountOfferedBid = 11;\n   float AmountOfferedAsk = 12;\n   float GravityBid = 13;\n   float GravityAsk = 14;\n   float GravityNet = 15;\n   float GravitySum = 16;\n   float GravityNormalized = 17;\n}"
+                            }
+                        ],
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": []
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "d0beba10-f410-4692-870d-49fa2e95f78e",
+        "type": "message",
+        "text": "if `PriceCenter` is just the mean of `PriceBidMax` and `PriceAskMin`, can we get rid of that too? Or do you want to keep it for ergonomic reasons",
+        "user": "U8PN87H1U",
+        "ts": "1676851318.913419",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7QSsk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "if "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PriceCenter",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is just the mean of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PriceBidMax",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PriceAskMin",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", can we get rid of that too? Or do you want to keep it for ergonomic reasons"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676851327.000000"
+        }
+    },
+    {
+        "client_msg_id": "b61e3513-bbcb-4ace-a898-4b9e98c346e1",
+        "type": "message",
+        "text": "Regarding price gap and price(buy|sell)(1|10|100): I expect that the size of the price gap and the amount of price degradation between e.g. `PriceBuy1` and `PriceBuy100`are both strong indicators of whether it is a 'good' or 'bad' time to buy or sell, as proxies for the market liquidity available at that moment. It is intuitive, since the more the price needs to change to cover our position, the bigger the risk is. The smaller the gap, and\/or the smaller the price excursion for buying 100 instead of 1, the greener the indicator here.",
+        "user": "U8PN87H1U",
+        "ts": "1676851603.204609",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Dzs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Regarding price gap and price(buy|sell)(1|10|100): I expect that the size of the price gap and the amount of price degradation between e.g. "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PriceBuy1",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PriceBuy100",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "are both strong indicators of whether it is a 'good' or 'bad' time to buy or sell, as proxies for the market liquidity available at that moment. It is intuitive, since the more the price needs to change to cover our position, the bigger the risk is. The smaller the gap, and\/or the smaller the price excursion for buying 100 instead of 1, the greener the indicator here."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676906644.000000"
+        }
+    },
+    {
+        "client_msg_id": "b397507c-45a5-490d-b3fa-731b6619e01c",
+        "type": "message",
+        "text": "what were the smarts you mentioned we would want to add to the strategy code?",
+        "user": "U8PN87H1U",
+        "ts": "1676852224.341399",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Z6R6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "what were the smarts you mentioned we would want to add to the strategy code?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "type": "message",
+        "text": "I just about have the simulator making realistic results based on future-peeking. I am doing some grid searches to dial in some hyperparameters, and this is an interesting graph:",
+        "files": [
+            {
+                "id": "F04QBCACDU2",
+                "created": 1676862398,
+                "timestamp": 1676862398,
+                "name": "2023-02-19_22-05-03.png",
+                "title": "2023-02-19_22-05-03.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U8PN87H1U",
+                "user_team": "T8NQ4486P",
+                "editable": false,
+                "size": 16715,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T8NQ4486P-F04QBCACDU2\/2023-02-19_22-05-03.png?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T8NQ4486P-F04QBCACDU2\/download\/2023-02-19_22-05-03.png?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04QBCACDU2-7bb35e9646\/2023-02-19_22-05-03_64.png?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04QBCACDU2-7bb35e9646\/2023-02-19_22-05-03_80.png?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04QBCACDU2-7bb35e9646\/2023-02-19_22-05-03_360.png?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "thumb_360_w": 360,
+                "thumb_360_h": 223,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04QBCACDU2-7bb35e9646\/2023-02-19_22-05-03_480.png?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "thumb_480_w": 480,
+                "thumb_480_h": 297,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04QBCACDU2-7bb35e9646\/2023-02-19_22-05-03_160.png?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "original_w": 599,
+                "original_h": 371,
+                "thumb_tiny": "AwAdADDMzxjiijPHSigAoo4ozQAUfhRRQAZ46Ue1LkelJQAUUUUAFFFFAH\/\/2Q==",
+                "permalink": "https:\/\/halforbit-crypto.slack.com\/files\/U8PN87H1U\/F04QBCACDU2\/2023-02-19_22-05-03.png",
+                "permalink_public": "https:\/\/slack-files.com\/T8NQ4486P-F04QBCACDU2-bef8c1b2fe",
+                "is_starred": false,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U8PN87H1U",
+        "display_as_bot": false,
+        "ts": "1676862403.440559",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PMk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I just about have the simulator making realistic results based on future-peeking. I am doing some grid searches to dial in some hyperparameters, and this is an interesting graph:"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "client_msg_id": "8a0f55cd-480a-4b8b-b6dd-78f4f33543a4"
+    },
+    {
+        "client_msg_id": "1f3e12d8-7565-4972-8946-1bfca35eef32",
+        "type": "message",
+        "text": "x axis is f-score computation window size, from 5 to 240 minutes. y axis is final portfolio value after a full 5 month sim. We're profitable with &gt;= 10 minutes fscore window, increasingly so with a larger window, until 240 minutes when the returns have diminished completely to a flatline",
+        "user": "U8PN87H1U",
+        "ts": "1676862519.274679",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Pgx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "x axis is f-score computation window size, from 5 to 240 minutes. y axis is final portfolio value after a full 5 month sim. We're profitable with >= 10 minutes fscore window, increasingly so with a larger window, until 240 minutes when the returns have diminished completely to a flatline"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    }
+]

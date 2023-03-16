@@ -1,0 +1,1793 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1675624529.394609",
+        "user": "U8PN87H1U",
+        "text": "<@U8PN87H1U> has joined the channel"
+    },
+    {
+        "type": "message",
+        "text": "",
+        "files": [
+            {
+                "id": "F04NUBLLR24",
+                "created": 1675624974,
+                "timestamp": 1675624974,
+                "name": "hindsight.zip",
+                "title": "hindsight.zip",
+                "mimetype": "application\/zip",
+                "filetype": "zip",
+                "pretty_type": "Zip",
+                "user": "U8PN87H1U",
+                "user_team": "T8NQ4486P",
+                "editable": false,
+                "size": 11769685,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T8NQ4486P-F04NUBLLR24\/hindsight.zip?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T8NQ4486P-F04NUBLLR24\/download\/hindsight.zip?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "media_display_type": "unknown",
+                "permalink": "https:\/\/halforbit-crypto.slack.com\/files\/U8PN87H1U\/F04NUBLLR24\/hindsight.zip",
+                "permalink_public": "https:\/\/slack-files.com\/T8NQ4486P-F04NUBLLR24-fd66d03900",
+                "is_starred": false,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U8PN87H1U",
+        "display_as_bot": false,
+        "ts": "1675624982.731969",
+        "client_msg_id": "f69c60d2-76bb-42f9-8f99-b3d367e2d474"
+    },
+    {
+        "type": "message",
+        "text": "",
+        "files": [
+            {
+                "id": "F04NHAQ9A9X",
+                "created": 1675626366,
+                "timestamp": 1675626366,
+                "name": "sample-history.tsv.gz",
+                "title": "sample-history.tsv.gz",
+                "mimetype": "application\/x-gzip",
+                "filetype": "gzip",
+                "pretty_type": "Gzip",
+                "user": "U8PN87H1U",
+                "user_team": "T8NQ4486P",
+                "editable": false,
+                "size": 13094312,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T8NQ4486P-F04NHAQ9A9X\/sample-history.tsv.gz?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T8NQ4486P-F04NHAQ9A9X\/download\/sample-history.tsv.gz?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "media_display_type": "unknown",
+                "permalink": "https:\/\/halforbit-crypto.slack.com\/files\/U8PN87H1U\/F04NHAQ9A9X\/sample-history.tsv.gz",
+                "permalink_public": "https:\/\/slack-files.com\/T8NQ4486P-F04NHAQ9A9X-c06daff6b4",
+                "is_starred": false,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U8PN87H1U",
+        "display_as_bot": false,
+        "ts": "1675626456.556319",
+        "client_msg_id": "cb8fccc9-18c7-426a-bd40-dacdd983726d",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U04N4LBE5K4"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1675627030.590659",
+        "user": "U04N4LBE5K4",
+        "text": "<@U04N4LBE5K4> has joined the channel"
+    },
+    {
+        "client_msg_id": "a7a9e407-8932-49ef-a3ba-6b84cebae36c",
+        "type": "message",
+        "text": "f-score is computed over ~15 minute window as `(first-value - min-value) \/ (max-value - min-value)` and ranges from `0.0` to `1.0`.",
+        "user": "U8PN87H1U",
+        "ts": "1675627567.369909",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "duh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "f-score is computed over ~15 minute window as "
+                            },
+                            {
+                                "type": "text",
+                                "text": "(first-value - min-value) \/ (max-value - min-value)",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and ranges from "
+                            },
+                            {
+                                "type": "text",
+                                "text": "0.0",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " to "
+                            },
+                            {
+                                "type": "text",
+                                "text": "1.0",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "28475c17-9e34-429e-884b-36e19757cfd3",
+        "type": "message",
+        "text": "the hindsight simulation is just buying when it is zero, and selling when it is one",
+        "user": "U8PN87H1U",
+        "ts": "1675627611.161749",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zN\/Cp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the hindsight simulation is just buying when it is zero, and selling when it is one"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "93c17540-d8fc-42eb-82e0-087b67158940",
+        "type": "message",
+        "text": "h-score is the same as f-score except the last value is used instead of first value",
+        "user": "U8PN87H1U",
+        "ts": "1675627679.434719",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vdupl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "h-score is the same as f-score except the last value is used instead of first value"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "5ffcfa5a-361a-4be4-976b-c5caa264b4b4",
+        "type": "message",
+        "text": "awesome, pulling it down now",
+        "user": "U04N4LBE5K4",
+        "ts": "1675635008.001339",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Tu\/",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "awesome, pulling it down now"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "eb4d7ec6-30df-4756-afda-c4089b452a84",
+        "type": "message",
+        "text": "when looking at the data, are the columns `PriceBuyX` and `PriceSellX` part of the prediction, or is the goal to predict the `PriceCenter`? (or is F-Score calculated against all \"Prices\")?",
+        "user": "U04N4LBE5K4",
+        "ts": "1675638597.247179",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iIV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "when looking at the data, are the columns "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PriceBuyX",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PriceSellX",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " part of the prediction, or is the goal to predict the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PriceCenter",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "? (or is F-Score calculated against all \"Prices\")?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1675638620.000000"
+        }
+    },
+    {
+        "client_msg_id": "02f7aff0-cc60-40b6-8aa7-9622c71740f9",
+        "type": "message",
+        "text": "those three properties are not predictions, they are computed directly from the order book",
+        "user": "U8PN87H1U",
+        "ts": "1675641502.727059",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8uR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "those three properties are not predictions, they are computed directly from the order book"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "3febfeda-b164-458b-9398-a7d817d2217e",
+        "type": "message",
+        "text": "they answer the question \"what would be my actual average price if I bought\/sold that quantity at that time\"",
+        "user": "U8PN87H1U",
+        "ts": "1675641538.156829",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1807",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "they answer the question \"what would be my actual average price if I bought\/sold that quantity at that time\""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "6e87434a-87a7-41ec-b9dc-b19ac3916b97",
+        "type": "message",
+        "text": "I can't remember exactly, but `PriceCenter` is likely just the average of `PriceBuy1` and `PriceSell1`, and is probably what we're using to compute historical price and therefore f-score",
+        "user": "U8PN87H1U",
+        "ts": "1675641596.552499",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5H8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I can't remember exactly, but "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PriceCenter",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is likely just the average of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PriceBuy1",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PriceSell1",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", and is probably what we're using to compute historical price and therefore f-score"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1675641610.000000"
+        }
+    },
+    {
+        "client_msg_id": "7cf22bed-ecd6-4618-b86b-5067d264b086",
+        "type": "message",
+        "text": "the difference between e.g. `PriceBuy1` \/`10`\/`100` indicates what we discussed where the price gets 'worse' the more you buy at once because of the finite amount of orders in the order book",
+        "user": "U8PN87H1U",
+        "ts": "1675641733.409559",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "yCj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the difference between e.g. "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PriceBuy1",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " \/"
+                            },
+                            {
+                                "type": "text",
+                                "text": "10",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": "100",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " indicates what we discussed where the price gets 'worse' the more you buy at once because of the finite amount of orders in the order book"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "1e71e9f6-d19f-42c2-bc31-c34b882de12e",
+        "type": "message",
+        "text": "and in fact none of the data in the tsv is predicted, its all concrete observations and derived computations",
+        "user": "U8PN87H1U",
+        "ts": "1675642641.919029",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Jfq7c",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and in fact none of the data in the tsv is predicted, its all concrete observations and derived computations"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "ec83c215-86b9-4c8f-9101-c0b198786b81",
+        "type": "message",
+        "text": "ah, no confusion -- this is the function that I want to solve for: what is `f(X) -&gt; f_score(PriceCenter)`",
+        "user": "U04N4LBE5K4",
+        "ts": "1675642920.694449",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Cuzk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ah, no confusion -- this is the function that I want to solve for: what is "
+                            },
+                            {
+                                "type": "text",
+                                "text": "f(X) -> f_score(PriceCenter)",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "ac328eae-e509-4bd3-bad6-bee770758779",
+        "type": "message",
+        "text": "and so they are the \"ground truth\" or base true values of the prediction that we want to make",
+        "user": "U04N4LBE5K4",
+        "ts": "1675642960.469489",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Oy\/f",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and so they are the \"ground truth\" or base true values of the prediction that we want to make"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "02a854d4-b09b-4cf9-83fb-1adcf69c5cbe",
+        "type": "message",
+        "text": "think this'll be less an algorithm choice problem and more a formulation problem",
+        "user": "U04N4LBE5K4",
+        "ts": "1675643026.076209",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "J78X",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "think this'll be less an algorithm choice problem and more a formulation problem"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "dbda6d2a-8c76-4b95-a5f4-a11d591f3e08",
+        "type": "message",
+        "text": "do you know how `GravityNormalized` is normalized?",
+        "user": "U04N4LBE5K4",
+        "ts": "1675643309.182809",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qy8Oe",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "do you know how "
+                            },
+                            {
+                                "type": "text",
+                                "text": "GravityNormalized",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is normalized?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "2b62f0b8-b98d-4914-9710-823558dc6f4a",
+        "type": "message",
+        "text": "`GravityNormalized: Math.Round(gravityNet \/ gravitySum, 2)`",
+        "user": "U8PN87H1U",
+        "ts": "1675643479.217379",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "j=+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "GravityNormalized: Math.Round(gravityNet \/ gravitySum, 2)",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "68e36c57-049b-4f86-b7ea-8870db4c39d7",
+        "type": "message",
+        "text": "```var gravityBid = bidsInWindow.Sum(o =&gt; ComputeOrderGravity(priceCenter, o.Price, o.Amount));\n\nvar gravityAsk = asksInWindow.Sum(o =&gt; ComputeOrderGravity(priceCenter, o.Price, o.Amount));\n\nvar gravityNet = gravityAsk - gravityBid;\n\nvar gravitySum = gravityAsk + gravityBid;```",
+        "user": "U8PN87H1U",
+        "ts": "1675643589.794969",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wBE7",
+                "elements": [
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "var gravityBid = bidsInWindow.Sum(o => ComputeOrderGravity(priceCenter, o.Price, o.Amount));\n\nvar gravityAsk = asksInWindow.Sum(o => ComputeOrderGravity(priceCenter, o.Price, o.Amount));\n\nvar gravityNet = gravityAsk - gravityBid;\n\nvar gravitySum = gravityAsk + gravityBid;"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "8ae49a93-3403-4ce8-b113-5bb04900f77e",
+        "type": "message",
+        "text": "```static double ComputeOrderGravity(\n    double centerPrice,\n    double orderPrice,\n    double orderSize)\n{\n    return orderSize \/ Math.Max(1, Math.Abs(orderPrice - centerPrice) \/ 100);\n}```",
+        "user": "U8PN87H1U",
+        "ts": "1675643656.063799",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YAlQ",
+                "elements": [
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "static double ComputeOrderGravity(\n    double centerPrice,\n    double orderPrice,\n    double orderSize)\n{\n    return orderSize \/ Math.Max(1, Math.Abs(orderPrice - centerPrice) \/ 100);\n}"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "e82acd75-d032-4d0b-8205-0bd3ee77990d",
+        "type": "message",
+        "text": "alright so I did straight markovian (random walk assumptions in place) prediction of `PriceCenter` -- have not computed f score.  Do have some good news and bad news.\n\n• bad news: the way we were thinking about things is not going to work.  The closer you get to the event horizon, the less you can predict anything from where you are right now.  \n• good news: there is a bit of a paradigm shift.  If we think in terms of an F-Score window approx 30-120 in the future, the ability to predict might be a lot better than we imagined. \nBut, maybe insight into the event horizon will improve with some of the book data.",
+        "user": "U04N4LBE5K4",
+        "ts": "1675648930.361169",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/Jfle",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "alright so I did straight markovian (random walk assumptions in place) prediction of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "PriceCenter",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " -- have not computed f score.  Do have some good news and bad news.\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "bad news: the way we were thinking about things is not going to work.  The closer you get to the event horizon, the less you can predict anything from where you are right now.  "
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "good news: there is a bit of a paradigm shift.  If we think in terms of an F-Score window approx 30-120 in the future, the ability to predict might be a lot better than we imagined. "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "\nBut, maybe insight into the event horizon will improve with some of the book data."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "type": "message",
+        "text": "",
+        "files": [
+            {
+                "id": "F04N7NLA4NQ",
+                "created": 1675649464,
+                "timestamp": 1675649464,
+                "name": "assessment.json",
+                "title": "assessment.json",
+                "mimetype": "text\/plain",
+                "filetype": "json",
+                "pretty_type": "JSON",
+                "user": "U04N4LBE5K4",
+                "user_team": "T8NQ4486P",
+                "editable": true,
+                "size": 1235,
+                "mode": "snippet",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T8NQ4486P-F04N7NLA4NQ\/assessment.json?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T8NQ4486P-F04N7NLA4NQ\/download\/assessment.json?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "permalink": "https:\/\/halforbit-crypto.slack.com\/files\/U04N4LBE5K4\/F04N7NLA4NQ\/assessment.json",
+                "permalink_public": "https:\/\/slack-files.com\/T8NQ4486P-F04N7NLA4NQ-ec8b3797a5",
+                "edit_link": "https:\/\/halforbit-crypto.slack.com\/files\/U04N4LBE5K4\/F04N7NLA4NQ\/assessment.json\/edit",
+                "is_starred": false,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U04N4LBE5K4",
+        "display_as_bot": false,
+        "ts": "1675649468.870639",
+        "client_msg_id": "b582612a-ee66-440f-80d5-c68c735d635b"
+    },
+    {
+        "client_msg_id": "c4a8f71e-6922-4a1b-a806-e0f5229f6f9c",
+        "type": "message",
+        "text": "the big takeaway there is I am hitting &gt;60% likelihood of correctly predicting whether the stock is going to be higher or lower 30-120 min from the event horizon.",
+        "user": "U04N4LBE5K4",
+        "ts": "1675649523.668319",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "TmDI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the big takeaway there is I am hitting >60% likelihood of correctly predicting whether the stock is going to be higher or lower 30-120 min from the event horizon."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "fcd0cc85-0812-42d7-b7c9-2fada042beee",
+        "type": "message",
+        "text": "the amount notwithstanding, what that means is when we have a robot doing inferences on the minute every minute for a sweep of say 30-120 minutes in the future, then we accumulate 90 predictions on every minute by the time we make a purchase decision.",
+        "user": "U04N4LBE5K4",
+        "ts": "1675649596.167139",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "qh\/px",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the amount notwithstanding, what that means is when we have a robot doing inferences on the minute every minute for a sweep of say 30-120 minutes in the future, then we accumulate 90 predictions on every minute by the time we make a purchase decision."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "28ad0a2f-987b-4c3f-a159-08e4f565bfc7",
+        "type": "message",
+        "text": "What that means is that we can do a 90x synthesis of predictions and have a couple of different models from the different data categories (incl book, which is most important)",
+        "user": "U04N4LBE5K4",
+        "ts": "1675649663.838309",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WCz",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "What that means is that we can do a 90x synthesis of predictions and have a couple of different models from the different data categories (incl book, which is most important)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "a67d1103-150b-41c7-a27a-69709c4f9145",
+        "type": "message",
+        "text": "and we'd be able to nuke the button press",
+        "user": "U04N4LBE5K4",
+        "ts": "1675649673.451869",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5Zj",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and we'd be able to nuke the button press"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "c98266f2-3ba4-44ec-aa51-d8ffa1461d2b",
+        "type": "message",
+        "text": "are you thinking you need raw order book data at this point?",
+        "user": "U8PN87H1U",
+        "ts": "1675650532.182049",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zSNn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "are you thinking you need raw order book data at this point?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "631d5255-e1c0-470e-9aa6-44fd095e4505",
+        "type": "message",
+        "text": "&gt; and we'd be able to nuke the button press\nnot sure what you mean there",
+        "user": "U8PN87H1U",
+        "ts": "1675650898.048989",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Lm4",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and we'd be able to nuke the button press"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "not sure what you mean there"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1675650913.000000"
+        }
+    },
+    {
+        "client_msg_id": "ffa4076a-cf46-4b5b-ae12-3509401c2c2e",
+        "type": "message",
+        "text": "&gt;  nuke the button press\nbasically, take 90 individual prediction opportunities applied to a single minute in the future as it marches towards the present by 3 different models (say, simple, medium and high complexity) can generate a total of 270 predictions for any given point in time.  By synthesizing these predictions to make that push-don't-push decision, we'd have nuked it; e.g. dedicated an asymmetric number of resources to a single position relative to what other people are doing, and we win.",
+        "user": "U04N4LBE5K4",
+        "ts": "1675652553.141949",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EGIQ6",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " nuke the button press"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "basically, take 90 individual prediction opportunities applied to a single minute in the future as it marches towards the present by 3 different models (say, simple, medium and high complexity) can generate a total of 270 predictions for any given point in time.  By synthesizing these predictions to make that push-don't-push decision, we'd have nuked it; e.g. dedicated an asymmetric number of resources to a single position relative to what other people are doing, and we win."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1675652570.000000"
+        }
+    },
+    {
+        "client_msg_id": "7e614e84-ccd0-4afe-a9be-d3ccdc2cc0bb",
+        "type": "message",
+        "text": "&gt;  raw order book data",
+        "user": "U04N4LBE5K4",
+        "ts": "1675652593.914619",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "f=Z",
+                "elements": [
+                    {
+                        "type": "rich_text_quote",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": " raw order book data"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "78525680-1b17-49f7-9c0e-3a440717d44b",
+        "type": "message",
+        "text": "yeah, at least to prove viability.  I think we can already do alright with just the prices, but it'll be good to know whether that data gives us more edge.",
+        "user": "U04N4LBE5K4",
+        "ts": "1675652651.169039",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WrOO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yeah, at least to prove viability.  I think we can already do alright with just the prices, but it'll be good to know whether that data gives us more edge."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "80b1fece-61b7-4af3-811a-d800e371075b",
+        "type": "message",
+        "text": "And so I can plan out how to generate a couple of categorically different predictors (predictors that rely on different technique and data) to beat the 50% mark.\n\n• one more reason here: with the book data, I might be able to get closer to the Event Horizon w\/ better than 50% odds the model predicts direction correctly.  ",
+        "user": "U04N4LBE5K4",
+        "ts": "1675652712.858459",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Z+JrX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "And so I can plan out how to generate a couple of categorically different predictors (predictors that rely on different technique and data) to beat the 50% mark.\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "one more reason here: with the book data, I might be able to get closer to the Event Horizon w\/ better than 50% odds the model predicts direction correctly.  "
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1675653332.000000"
+        }
+    },
+    {
+        "client_msg_id": "ffcf8ccd-0060-4764-8054-d022c5cd7d70",
+        "type": "message",
+        "text": "After that, it would be down to setting up the \"fusion\" of predictions (not ensembling, but rather statistically fusing ML predictions with known variance and success rates for a superior result), and finally simulations and strategy: when we get good at predicting the future in some window or way, how does the bot make money with that information.\n• from an ML perspective, the hard part will be, when this goes live, continually recalibrating the fusion and re-training\n• e.g. the prediction system will have to continuously factor in how it is doing in real time (1 minute)",
+        "user": "U04N4LBE5K4",
+        "ts": "1675653015.368599",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "aFxPG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "After that, it would be down to setting up the \"fusion\" of predictions (not ensembling, but rather statistically fusing ML predictions with known variance and success rates for a superior result), and finally simulations and strategy: when we get good at predicting the future in some window or way, how does the bot make money with that information.\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_list",
+                        "elements": [
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "from an ML perspective, the hard part will be, when this goes live, continually recalibrating the fusion and re-training"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "rich_text_section",
+                                "elements": [
+                                    {
+                                        "type": "text",
+                                        "text": "e.g. the prediction system will have to continuously factor in how it is doing in real time (1 minute)"
+                                    }
+                                ]
+                            }
+                        ],
+                        "style": "bullet",
+                        "indent": 0,
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1675653264.000000"
+        }
+    },
+    {
+        "client_msg_id": "e1070c47-e832-4786-91b5-e78b1627fe93",
+        "type": "message",
+        "text": "I am assuming you are there with most of the simulation and strategy part.  Just want to put that continuous recalibration and retraining out there as a potential req for that high quality buy-sell button timing.",
+        "user": "U04N4LBE5K4",
+        "ts": "1675653731.305639",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "AxE",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I am assuming you are there with most of the simulation and strategy part.  Just want to put that continuous recalibration and retraining out there as a potential req for that high quality buy-sell button timing."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "252bd72a-9767-4a60-b660-d3932cccccda",
+        "type": "message",
+        "text": "fair warning, raw order book data is pretty bulky. I am digging that up now",
+        "user": "U8PN87H1U",
+        "ts": "1675653799.957569",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "P\/vU6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "fair warning, raw order book data is pretty bulky. I am digging that up now"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "cd5d0303-177d-4390-ab10-96634dec4091",
+        "type": "message",
+        "text": "ah, np",
+        "user": "U04N4LBE5K4",
+        "ts": "1675653893.638469",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "=0od",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ah, np"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "f026dbec-9f7d-489a-a32e-76db4929caaf",
+        "type": "message",
+        "text": "and by large, I mean ~250mb compressed per day",
+        "user": "U8PN87H1U",
+        "ts": "1675655695.328439",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Q7u",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and by large, I mean ~250mb compressed per day"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "1010394e-e70b-49b1-ab47-16c720aabd7b",
+        "type": "message",
+        "text": "I guess I am going to put this on a cloud share. Do you have azure storage explorer installed?",
+        "user": "U8PN87H1U",
+        "ts": "1675655711.036839",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "i1Y",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I guess I am going to put this on a cloud share. Do you have azure storage explorer installed?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "c345ff1a-c7fb-4fe9-a607-f6c83b6318ae",
+        "type": "message",
+        "text": "Here is a SAS connection string you can use in storage explorer to connect to the `cryptodata\/archive` blob container where I am placing these\n`SharedAccessSignature=sv=2021-10-04&amp;ss=b&amp;srt=sco&amp;st=2023-02-06T03%3A56%3A59Z&amp;se=2023-03-06T03%3A56%3A00Z&amp;sp=rl&amp;sig=1ZPXJqQhxSQzlMwD%2F2UNHZRwz5cZfD%2FUMcHJxI50COU%3D;BlobEndpoint=<https:\/\/cryptodata.blob.core.windows.net\/>;`",
+        "user": "U8PN87H1U",
+        "ts": "1675656884.858029",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "n\/O",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Here is a SAS connection string you can use in storage explorer to connect to the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "cryptodata\/archive",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " blob container where I am placing these\n"
+                            },
+                            {
+                                "type": "text",
+                                "text": "SharedAccessSignature=sv=2021-10-04&ss=b&srt=sco&st=2023-02-06T03%3A56%3A59Z&se=2023-03-06T03%3A56%3A00Z&sp=rl&sig=1ZPXJqQhxSQzlMwD%2F2UNHZRwz5cZfD%2FUMcHJxI50COU%3D;BlobEndpoint=",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/cryptodata.blob.core.windows.net\/",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ";",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    }
+]

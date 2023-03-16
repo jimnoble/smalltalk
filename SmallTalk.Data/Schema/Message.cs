@@ -15,7 +15,7 @@ public record struct Attachment(
     Guid AttachmentId,
     string Label,
     string ContentType,
-    int SizeBytes,
+    long SizeBytes,
     string Url);
 
 public record struct Reaction(

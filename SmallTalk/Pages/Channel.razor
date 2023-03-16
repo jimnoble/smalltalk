@@ -11,7 +11,7 @@
 @inject SmallTalkDataContext SmallTalkDataContext
 @implements IHandle<MessagePublishedEvent>
 
-<PageTitle>Smalltalk #@ChannelName</PageTitle>
+<PageTitle>smalltalk #@ChannelName</PageTitle>
 
 <div class="content-stack stack">
 
@@ -46,12 +46,14 @@
                         {
                             var message = messageVersions.Last();
 
+                            var messageDeleted = string.IsNullOrWhiteSpace(message.Content) && !message.Attachments.Any();
+
                             <div tabindex="0" class="message-stack @(messageVersions.First().WriteTime > LastViewTime ? "incoming" : "")">
                                 <div class="toolbar">
                                     @if (message.Author == User.Email)
                                     {
                                         <div class="toolbox">
-                                            @if (!string.IsNullOrWhiteSpace(message.Content))
+                                            @if (!messageDeleted)
                                             {
                                                     @*<a href="#">😄</a>
                                                     <a href="#"><span class="glyphicon glyphicon-share"></span></a>*@
@@ -72,19 +74,29 @@
                                         <div class="timestamp">@*@($"{message.WriteTime:HH:mm}")*@</div>
                                     </div>
                                     <div class="content-column">
-                                        @if (string.IsNullOrWhiteSpace(message.Content))
+                                        @if (messageDeleted)
                                         {
                                             <p class="subtle">message deleted</p>
                                         }
-                                        else
+                                        else if (!string.IsNullOrWhiteSpace(message.Content))
                                         {
                                             <p>@((MarkupString)Markdown.ToHtml(messageVersions.Last().Content ?? string.Empty))</p>                                        
+                                        }
+
+                                        @foreach (var attachment in message.Attachments)
+                                        {
+                                            <a class="button" href="@attachment.Url">
+                                                <span class="glyphicon glyphicon-file"></span>
+                                                <span>@attachment.Label</span>
+                                                <span class="subtle">@attachment.ContentType</span>
+                                                <span class="subtle">@FormatFileSize(attachment.SizeBytes)</span>
+                                                <span class="glyphicon glyphicon-cloud-download"></span>
+                                            </a>
                                         }
                                     </div>
                                 </div>
                             </div>
                         }
-
                     </div>
                 }
             }
@@ -148,7 +160,7 @@
     {
         await InvokeAsync(async () => await UpdateMessagesAsync());
 
-        scrollToBottomPending = true;        
+        //scrollToBottomPending = true;        
     }
 
     async Task UpdateMessagesAsync()
@@ -158,9 +170,9 @@
         StateHasChanged();
     }
 
-    async Task MessageSubmittedAsync()
+    async Task MessageSubmittedAsync(bool scrollToBottom)
     {
-        scrollToBottomPending = true;        
+        scrollToBottomPending = scrollToBottom;        
     }
 
     async Task LoadMessagesAsync()
@@ -185,9 +197,10 @@
 
     async Task EditMessageAsync(IEnumerable<Message> messageVersions)
     {
-        await messageEditor.FocusEditorAsync();
-
-        messageEditor.EditMessage(messageVersions.Last() with { WriteTime  = messageVersions.First().WriteTime });
+        await messageEditor.EditMessageAsync(messageVersions.Last() with 
+        { 
+            WriteTime  = messageVersions.First().WriteTime 
+        });
     }
 
     async Task DeleteMessageAsync(IEnumerable<Message> messageVersions)
@@ -233,5 +246,21 @@
                 Reactions: Array.Empty<Reaction>()));
 
         await EventAggregator.PublishAsync(new MessagePublishedEvent());
+    }
+
+    string FormatFileSize(long length)
+    {
+        string[] sizes = { "B", "KB", "MB", "GB", "TB" };
+        double len = length;
+        int order = 0;
+        while (len >= 1024 && order < sizes.Length - 1)
+        {
+            order++;
+            len = len / 1024;
+        }
+
+        // Adjust the format string to your preferences. For example "{0:0.#}{1}" would
+        // show a single decimal place, and no space.
+        return string.Format("{0:0.##} {1}", len, sizes[order]);
     }
 }

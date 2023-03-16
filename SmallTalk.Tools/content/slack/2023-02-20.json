@@ -1,0 +1,124 @@
+[
+    {
+        "type": "message",
+        "text": "here it is carried out to 1440 minutes (24 hrs). The dropoff is probably explained by lost-opportunity cost.. 'is this the lowest\/highest price in the next N minutes?' is true pretty often where N is small, but 'is this the lowest\/highest price for the entire day?' happens far less often, and has to happen twice for a buy\/sell pair. To be fair, when it _does_ happen, I bet it is a much more successful single trade. It just can only happen so frequently.",
+        "files": [
+            {
+                "id": "F04R4C2FU64",
+                "created": 1676910560,
+                "timestamp": 1676910560,
+                "name": "2023-02-20_11-28-29.png",
+                "title": "2023-02-20_11-28-29.png",
+                "mimetype": "image\/png",
+                "filetype": "png",
+                "pretty_type": "PNG",
+                "user": "U8PN87H1U",
+                "user_team": "T8NQ4486P",
+                "editable": false,
+                "size": 20334,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T8NQ4486P-F04R4C2FU64\/2023-02-20_11-28-29.png?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T8NQ4486P-F04R4C2FU64\/download\/2023-02-20_11-28-29.png?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04R4C2FU64-4f5445b878\/2023-02-20_11-28-29_64.png?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04R4C2FU64-4f5445b878\/2023-02-20_11-28-29_80.png?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04R4C2FU64-4f5445b878\/2023-02-20_11-28-29_360.png?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "thumb_360_w": 360,
+                "thumb_360_h": 223,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04R4C2FU64-4f5445b878\/2023-02-20_11-28-29_480.png?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "thumb_480_w": 480,
+                "thumb_480_h": 297,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04R4C2FU64-4f5445b878\/2023-02-20_11-28-29_160.png?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "original_w": 599,
+                "original_h": 371,
+                "thumb_tiny": "AwAdADDM7dKKXnHXj60dOKAEopevWkoAKKKKAFGPWkpcjHSkoAKM0UUAHHrRiiigD\/\/Z",
+                "permalink": "https:\/\/halforbit-crypto.slack.com\/files\/U8PN87H1U\/F04R4C2FU64\/2023-02-20_11-28-29.png",
+                "permalink_public": "https:\/\/slack-files.com\/T8NQ4486P-F04R4C2FU64-64518a5cb9",
+                "is_starred": false,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U8PN87H1U",
+        "display_as_bot": false,
+        "ts": "1676910749.705279",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7EjX",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "here it is carried out to 1440 minutes (24 hrs). The dropoff is probably explained by lost-opportunity cost.. 'is this the lowest\/highest price in the next N minutes?' is true pretty often where N is small, but 'is this the lowest\/highest price for the entire day?' happens far less often, and has to happen twice for a buy\/sell pair. To be fair, when it "
+                            },
+                            {
+                                "type": "text",
+                                "text": "does",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " happen, I bet it is a much more successful single trade. It just can only happen so frequently."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676911476.000000"
+        },
+        "client_msg_id": "5bd05ad4-1dba-449c-a69d-b42ce739393d"
+    },
+    {
+        "client_msg_id": "9571dbdb-146b-481f-a04a-68c33f802c38",
+        "type": "message",
+        "text": "the peak is at about 270 minutes",
+        "user": "U8PN87H1U",
+        "ts": "1676911053.560249",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "S+i",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "the peak is at about 270 minutes"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    }
+]

@@ -1,0 +1,1241 @@
+[
+    {
+        "client_msg_id": "337cacde-09ba-4125-8466-caa71e84ad6a",
+        "type": "message",
+        "text": "are we going to need two predict functions, or two modes of the function maybe? To indicate whether we are looking to buy or sell, which would mean we care if f-score is zero\/non-zero, or one\/not-one, respectively",
+        "user": "U8PN87H1U",
+        "ts": "1676738593.228459",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "f3=9A",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "are we going to need two predict functions, or two modes of the function maybe? To indicate whether we are looking to buy or sell, which would mean we care if f-score is zero\/non-zero, or one\/not-one, respectively"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676738593.228459",
+        "reply_count": 4,
+        "reply_users_count": 1,
+        "latest_reply": "1676748692.736239",
+        "reply_users": [
+            "U04N4LBE5K4"
+        ],
+        "replies": [
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676748415.417819"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676748547.297719"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676748584.331839"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676748692.736239"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1676748692.736239"
+    },
+    {
+        "client_msg_id": "fdf9c0b8-0435-4b6f-ac2a-9ef26265aeb2",
+        "type": "message",
+        "text": "or perhaps just two return values from predict, representing each case",
+        "user": "U8PN87H1U",
+        "ts": "1676738634.123079",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "R+euZ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "or perhaps just two return values from predict, representing each case"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "c9d31bdd-05c0-4fc2-809b-34490d731a2d",
+        "type": "message",
+        "text": "I will be getting as far as I can with the simulator this weekend. I am also going to make a dummy tcp server to bounce requests off of till your part is ready. Hopefully I will have something committed soon that you can kick the tires on.",
+        "user": "U8PN87H1U",
+        "ts": "1676738729.524889",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iNcK",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I will be getting as far as I can with the simulator this weekend. I am also going to make a dummy tcp server to bounce requests off of till your part is ready. Hopefully I will have something committed soon that you can kick the tires on."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "842bb0bb-e352-4104-98bb-7e52eeb0a195",
+        "type": "message",
+        "text": "oh. so it will be obvious to the simulator on many minutes that we aren't going to consider buying or selling. We therefore don't need an f-score estimate for that minute. But I am guessing I am going to need to call you no matter what, to feed you the current state.",
+        "user": "U8PN87H1U",
+        "ts": "1676740781.080229",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3gG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "oh. so it will be obvious to the simulator on many minutes that we aren't going to consider buying or selling. We therefore don't need an f-score estimate for that minute. But I am guessing I am going to need to call you no matter what, to feed you the current state."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676742568.000000"
+        }
+    },
+    {
+        "client_msg_id": "78bf6097-2565-49b7-80e9-5aedcf1a4f5a",
+        "type": "message",
+        "text": "maybe I can pass you an enum `buying`\/`selling`\/`both`\/`nothing` and you can use that to decide if you are going to compute a prediction(s), if necessary what kind(s), or just merely store the data and train if you think its time.",
+        "user": "U8PN87H1U",
+        "ts": "1676742220.322969",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "cv9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "maybe I can pass you an enum "
+                            },
+                            {
+                                "type": "text",
+                                "text": "buying",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": "selling",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": "both",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "\/"
+                            },
+                            {
+                                "type": "text",
+                                "text": "nothing",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and you can use that to decide if you are going to compute a prediction(s), if necessary what kind(s), or just merely store the data and train if you think its time."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676742670.000000"
+        }
+    },
+    {
+        "client_msg_id": "8b83e247-37b1-4d66-a575-83df7137e881",
+        "type": "message",
+        "text": "if that can abbreviate your execution time in some cases I think that would be a win for time-to-simulate",
+        "user": "U8PN87H1U",
+        "ts": "1676742590.132109",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/YiCP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "if that can abbreviate your execution time in some cases I think that would be a win for time-to-simulate"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676742606.000000"
+        }
+    },
+    {
+        "client_msg_id": "550d57b2-95f3-4ecb-bc9f-a13b318b02fb",
+        "type": "message",
+        "text": "yeah, every minute is part of the \"best chance to succeed\" solution - the model auto-calibrates its error rate",
+        "user": "U04N4LBE5K4",
+        "ts": "1676747812.145979",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "k0xM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yeah, every minute is part of the \"best chance to succeed\" solution - the model auto-calibrates its error rate"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "37032469-340a-40da-a4a9-9651bf682efa",
+        "type": "message",
+        "text": "but if the model is good enough, you can skip minutes",
+        "user": "U04N4LBE5K4",
+        "ts": "1676747834.340349",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8H94",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "but if the model is good enough, you can skip minutes"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "945a92b8-dea7-425d-b478-79ff3c067ce3",
+        "type": "message",
+        "text": "It won't break anything",
+        "user": "U04N4LBE5K4",
+        "ts": "1676747841.590019",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "eSR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It won't break anything"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "3469526e-5eb5-4f3d-a971-91adb279774a",
+        "type": "message",
+        "text": "part of simulation will be discovery of where we can loosen the straps, how durable the strategy is, etc.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676747942.329309",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6mm",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "part of simulation will be discovery of where we can loosen the straps, how durable the strategy is, etc."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "efeab533-da16-4f8c-898e-e64c25223016",
+        "type": "message",
+        "text": "Also, something occurred to me as I was tracking Russia and China.  My thinking is that a US conflict with China will make bitcoin go up as the various liquidities involved in Asian currencies try to find a temporary safe haven -- we probably want to be in the game before that.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676747995.056059",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WYN",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Also, something occurred to me as I was tracking Russia and China.  My thinking is that a US conflict with China will make bitcoin go up as the various liquidities involved in Asian currencies try to find a temporary safe haven -- we probably want to be in the game before that."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1676748166.000000"
+        }
+    },
+    {
+        "client_msg_id": "e80d9521-8236-482c-b476-bcc2ae5ca8d6",
+        "type": "message",
+        "text": "Going to do protobuf\/zeromq and hand off what I came up with today -- finally have time",
+        "user": "U04N4LBE5K4",
+        "ts": "1676748207.626169",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "N75J",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Going to do protobuf\/zeromq and hand off what I came up with today -- finally have time"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "52075c83-fdcb-4d5c-bcf8-045eb38d413d",
+        "type": "message",
+        "text": "I think this makes sense, but it is something I'll have to implement. We need a \"confidence score\" for a regression model, which doesn't exist.\n\nSo by tracking the current error rate, I can develop a \"spread\" and provide a distribution of F-Scores w\/ likelihood.  This is a de-facto \"confidence score\" (confidence interval).\n\nIt also means the quality is dependent on always knowing with the current error rate -- so skipping timesteps can allow the model's quality on this front to drop.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676748415.417819",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Hd5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think this makes sense, but it is something I'll have to implement. We need a \"confidence score\" for a regression model, which doesn't exist.\n\nSo by tracking the current error rate, I can develop a \"spread\" and provide a distribution of F-Scores w\/ likelihood.  This is a de-facto \"confidence score\" (confidence interval).\n\nIt also means the quality is dependent on always knowing with the current error rate -- so skipping timesteps can allow the model's quality on this front to drop."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676738593.228459",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "7986f099-d284-45bc-b720-399dfd5d702f",
+        "type": "message",
+        "text": "E.g. this is a good call out, and helps outline the reason why we need to pass all the timesteps in...\n\nBut the simulator will tell us whether \"all\" is really necessary or whether it can loosened to every few min. etc.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676748547.297719",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "zGT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "E.g. this is a good call out, and helps outline the reason why we need to pass all the timesteps in...\n\nBut the simulator will tell us whether \"all\" is really necessary or whether it can loosened to every few min. etc."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676738593.228459",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "9c8e67dd-985e-4a6b-8199-95275de23f91",
+        "type": "message",
+        "text": "also, we probably only need to spot check -- e.g. pick 50 random spots on the timeline and run for 600 min, allowing 100 throwaway min to 'warm up'.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676748584.331839",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bqm5w",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "also, we probably only need to spot check -- e.g. pick 50 random spots on the timeline and run for 600 min, allowing 100 throwaway min to 'warm up'."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1676748647.000000"
+        },
+        "thread_ts": "1676738593.228459",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "type": "message",
+        "subtype": "thread_broadcast",
+        "text": "going to shut up now and get cracking, lol :slightly_smiling_face:",
+        "user": "U04N4LBE5K4",
+        "ts": "1676748692.736239",
+        "thread_ts": "1676738593.228459",
+        "root": {
+            "client_msg_id": "337cacde-09ba-4125-8466-caa71e84ad6a",
+            "type": "message",
+            "text": "are we going to need two predict functions, or two modes of the function maybe? To indicate whether we are looking to buy or sell, which would mean we care if f-score is zero\/non-zero, or one\/not-one, respectively",
+            "user": "U8PN87H1U",
+            "ts": "1676738593.228459",
+            "blocks": [
+                {
+                    "type": "rich_text",
+                    "block_id": "f3=9A",
+                    "elements": [
+                        {
+                            "type": "rich_text_section",
+                            "elements": [
+                                {
+                                    "type": "text",
+                                    "text": "are we going to need two predict functions, or two modes of the function maybe? To indicate whether we are looking to buy or sell, which would mean we care if f-score is zero\/non-zero, or one\/not-one, respectively"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "team": "T8NQ4486P",
+            "thread_ts": "1676738593.228459",
+            "reply_count": 4,
+            "reply_users_count": 1,
+            "latest_reply": "1676748692.736239",
+            "reply_users": [
+                "U04N4LBE5K4"
+            ],
+            "replies": [
+                {
+                    "user": "U04N4LBE5K4",
+                    "ts": "1676748415.417819"
+                },
+                {
+                    "user": "U04N4LBE5K4",
+                    "ts": "1676748547.297719"
+                },
+                {
+                    "user": "U04N4LBE5K4",
+                    "ts": "1676748584.331839"
+                },
+                {
+                    "user": "U04N4LBE5K4",
+                    "ts": "1676748692.736239"
+                }
+            ],
+            "is_locked": false,
+            "subscribed": true,
+            "last_read": "1676748692.736239"
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wQc",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "going to shut up now and get cracking, lol "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face",
+                                "unicode": "1f642"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "client_msg_id": "83b67dfd-e417-4599-a709-cd7f07a5e1bb"
+    },
+    {
+        "client_msg_id": "89a2c5e1-9b33-4bb8-8535-11ad33f8cab3",
+        "type": "message",
+        "text": "any interesting names you see are not to obfuscate but to distinguish this code from anything I'd typically write.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676750299.359369",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "x2es",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "any interesting names you see are not to obfuscate but to distinguish this code from anything I'd typically write."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "D54481D7-790E-45D2-83F5-E2724D8FC993",
+        "type": "message",
+        "text": "When you commit you will want to provide a .gitignore to disregard your build artifacts etc. I have one lined up for my visual studio stuff, but we have to share one. So the first one in needs to create it with what they need, and the second needs to append. And we might have a merge collision, in which case it should be one appended with the other ",
+        "user": "U8PN87H1U",
+        "ts": "1676750761.969389",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RGra",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "When you commit you will want to provide a .gitignore to disregard your build artifacts etc. I have one lined up for my visual studio stuff, but we have to share one. So the first one in needs to create it with what they need, and the second needs to append. And we might have a merge collision, in which case it should be one appended with the other "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676750776.000000"
+        },
+        "thread_ts": "1676750761.969389",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1676750827.207069",
+        "reply_users": [
+            "U8PN87H1U"
+        ],
+        "replies": [
+            {
+                "user": "U8PN87H1U",
+                "ts": "1676750827.207069"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1676750827.207069"
+    },
+    {
+        "client_msg_id": "36956BCE-7057-4FAD-BD99-D7A961BB5E33",
+        "type": "message",
+        "text": "Otherwise as long as we are in separate root folders I don’t expect any merge conflicts.",
+        "user": "U8PN87H1U",
+        "ts": "1676750827.207069",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wRjU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Otherwise as long as we are in separate root folders I "
+                            },
+                            {
+                                "type": "text",
+                                "text": "don’t"
+                            },
+                            {
+                                "type": "text",
+                                "text": " expect any merge conflicts."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676750761.969389",
+        "parent_user_id": "U8PN87H1U",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U04N4LBE5K4"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "d518a681-e644-4643-84ef-9ceceec5d64d",
+        "type": "message",
+        "text": "cool -- pushed; should be no problem.  I added `.gitignore` to the package (`seidr`), and a blank `.gitignore` in the parent.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676756605.648369",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6G6OD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "cool -- pushed; should be no problem.  I added "
+                            },
+                            {
+                                "type": "text",
+                                "text": ".gitignore",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " to the package ("
+                            },
+                            {
+                                "type": "text",
+                                "text": "seidr",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "), and a blank "
+                            },
+                            {
+                                "type": "text",
+                                "text": ".gitignore",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " in the parent."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "a4f11426-924e-4f78-bb1a-deaa99a89277",
+        "type": "message",
+        "text": "Just saw this. weirdly, that is exactly the same proto I came up with except for `int32 -&gt; uint64` and I included `package protoblog`",
+        "user": "U04N4LBE5K4",
+        "ts": "1676770379.821239",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "EvD",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Just saw this. weirdly, that is exactly the same proto I came up with except for "
+                            },
+                            {
+                                "type": "text",
+                                "text": "int32 -> uint64",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " and I included "
+                            },
+                            {
+                                "type": "text",
+                                "text": "package protoblog",
+                                "style": {
+                                    "code": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676586464.863729",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "63f6f6e7-5680-4cfc-a35b-0680339c41cc",
+        "type": "message",
+        "text": "I changed it to the same structure.\n\nI still have this line in under `syntax`; do you think I need to keep it, or doesn't matter?\n\n```package protoblog;```",
+        "user": "U04N4LBE5K4",
+        "ts": "1676770513.205199",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "JOr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I changed it to the same structure.\n\nI still have this line in under "
+                            },
+                            {
+                                "type": "text",
+                                "text": "syntax",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "; do you think I need to keep it, or doesn't matter?\n\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "package protoblog;"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676586464.863729",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "51e3df01-67a2-422b-b952-f8f039845d0d",
+        "type": "message",
+        "text": "checking now...",
+        "user": "U04N4LBE5K4",
+        "ts": "1676770902.973569",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7yph",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "checking now..."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676667092.295959",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "03c18cbc-224a-48ac-b542-fda928b7dbb1",
+        "type": "message",
+        "text": "shaving yaks -- in particular, the column analysis.  I take for granted how many yaks I get to shave in just one 40 hr work week when starting a personal proj.:man-facepalming:",
+        "user": "U04N4LBE5K4",
+        "ts": "1676774673.437259",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1+86",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "shaving yaks -- in particular, the column analysis.  I take for granted how many yaks I get to shave in just one 40 hr work week when starting a personal proj."
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "man-facepalming",
+                                "unicode": "1f926-200d-2642-fe0f"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1676775134.000000"
+        }
+    },
+    {
+        "client_msg_id": "9f0f184f-8649-4ef8-b32e-73fdd74ebaab",
+        "type": "message",
+        "text": "don't need:\n```['PriceBidMax', 'PriceAskMin', 'PriceSpread']```",
+        "user": "U04N4LBE5K4",
+        "ts": "1676779153.456969",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "IL4cW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "don't need:\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "['PriceBidMax', 'PriceAskMin', 'PriceSpread']"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "reactions": [
+            {
+                "name": "white_check_mark",
+                "users": [
+                    "U8PN87H1U"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]

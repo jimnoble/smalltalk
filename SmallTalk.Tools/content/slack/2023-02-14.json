@@ -1,0 +1,42 @@
+[
+    {
+        "client_msg_id": "77c1ee4f-295a-44f6-b010-ea8ffe1b09e5",
+        "type": "message",
+        "text": "Hey, I finally found a minute.  We have guests over.  Call you tmrw some time after 12?",
+        "user": "U04N4LBE5K4",
+        "ts": "1676402918.196619",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1s+aS",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hey, I finally found a minute.  We have guests over.  Call you tmrw some time after 12?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676293926.076429",
+        "parent_user_id": "U8PN87H1U"
+    }
+]

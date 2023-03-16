@@ -1,0 +1,401 @@
+[
+    {
+        "client_msg_id": "d0313986-dc3a-42b8-955d-159b1f0ac4ff",
+        "type": "message",
+        "text": "that is going to be tough to say until we can get this under simulation over historical data. Obviously it needs to be somewhere north of 50%, but it also depends heavily on the realized profits and the effectiveness of our stop-loss strategy. If we see e.g. a 0.1% net gain on average for all wins, but a 1% drop on average for all losses, we would need 10 wins for every 1 loss to break even.",
+        "user": "U8PN87H1U",
+        "ts": "1675797884.329509",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lLzm+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "that is going to be tough to say until we can get this under simulation over historical data. Obviously it needs to be somewhere north of 50%, but it also depends heavily on the realized profits and the effectiveness of our stop-loss strategy. If we see e.g. a 0.1% net gain on average for all wins, but a 1% drop on average for all losses, we would need 10 wins for every 1 loss to break even."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1675747412.633829",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "71aa6f1f-70a6-475f-a1f9-040a1eb52c8c",
+        "type": "message",
+        "text": "My stop-loss strategy thus far has been to drop-dead at a certain position age, and\/or cut bait at a particular threshold of loss.\nIt's been my experience that these stop-loss strategies tend to incur more painful losses than the typical gain, mainly because it takes substantial time and\/or price drop to decide that you've lost and cut bait.\nThe sooner we can be certain we've lost, the better, and we could probably use some smarts here.\nCutting bait ASAP is also a virtue because of the lost opportunity to buy while our assets are tied up in an open position.",
+        "user": "U8PN87H1U",
+        "ts": "1675798274.543789",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0TL1",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "My stop-loss strategy thus far has been to drop-dead at a certain position age, and\/or cut bait at a particular threshold of loss.\nIt's been my experience that these stop-loss strategies tend to incur more painful losses than the typical gain, mainly because it takes substantial time and\/or price drop to decide that you've lost and cut bait.\nThe sooner we can be certain we've lost, the better, and we could probably use some smarts here.\nCutting bait ASAP is also a virtue because of the lost opportunity to buy while our assets are tied up in an open position."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1675798580.000000"
+        },
+        "thread_ts": "1675747412.633829",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "b32c7691-f9c9-484b-9819-2f6aeeab0972",
+        "type": "message",
+        "text": "But obviously if we cut bait too soon, the price might end up becoming profitable in short order, and we have taken a needless loss.",
+        "user": "U8PN87H1U",
+        "ts": "1675798359.638549",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Jnb",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "But obviously if we cut bait too soon, the price might end up becoming profitable in short order, and we have taken a needless loss."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1675747412.633829",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "c1cfec3b-067c-4a19-adad-0e14bf5eda4c",
+        "type": "message",
+        "text": "It's quite a balancing act.",
+        "user": "U8PN87H1U",
+        "ts": "1675798491.370719",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "xeO",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "It's quite a balancing act."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1675747412.633829",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "4bd0c95e-92db-4096-b2b0-820e45fca566",
+        "type": "message",
+        "text": "but my gut check is that we will need to do better than 60% on the f-score or losses are gonna eat our lunch.",
+        "user": "U8PN87H1U",
+        "ts": "1675798565.451589",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6yF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "but my gut check is that we will need to do better than 60% on the f-score or losses are gonna eat our lunch."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1675747412.633829",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "ba3b44f1-2136-43d6-946c-1101042c7f54",
+        "type": "message",
+        "text": "notably wrt f-score, we actually only need to know if it is zero or non-zero when we are thinking about buying, and one or non-one if we are thinking about selling. We don't need any precision around f-score beyond that.",
+        "user": "U8PN87H1U",
+        "ts": "1675798822.698799",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "vTirT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "notably wrt f-score, we actually only need to know if it is zero or non-zero when we are thinking about buying, and one or non-one if we are thinking about selling. We don't need any precision around f-score beyond that."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1675747412.633829",
+        "parent_user_id": "U8PN87H1U",
+        "reactions": [
+            {
+                "name": "eyes",
+                "users": [
+                    "U04N4LBE5K4"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "12eca940-aba9-441d-a3cf-8e2f33f662a3",
+        "type": "message",
+        "text": "that works out to \"is the current price the lowest price for the next N minutes?\" and \"is the current price the highest price for the next N minutes?\", respectively.",
+        "user": "U8PN87H1U",
+        "ts": "1675798921.958459",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mwBnp",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "that works out to \"is the current price the lowest price for the next N minutes?\" and \"is the current price the highest price for the next N minutes?\", respectively."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1675747412.633829",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "25df348d-2ea1-4461-a371-6f4802251172",
+        "type": "message",
+        "text": "I think those two questions capture the essence of what we're trying to predict.",
+        "user": "U8PN87H1U",
+        "ts": "1675798963.660359",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YzqkU",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think those two questions capture the essence of what we're trying to predict."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1675747412.633829",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "6344d3a1-966d-4266-b5d8-f977ff8602c5",
+        "type": "message",
+        "text": "and it would be ok to be in error at least somewhat, such that the price ends up _very nearly_ the lowest for the next N minutes, even if it is not _exactly_ the lowest price",
+        "user": "U8PN87H1U",
+        "ts": "1675799213.799359",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "e\/G\/M",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and it would be ok to be in error at least somewhat, such that the price ends up "
+                            },
+                            {
+                                "type": "text",
+                                "text": "very nearly",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " the lowest for the next N minutes, even if it is not "
+                            },
+                            {
+                                "type": "text",
+                                "text": "exactly",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " the lowest price"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1675799549.000000"
+        },
+        "thread_ts": "1675747412.633829",
+        "parent_user_id": "U8PN87H1U"
+    }
+]

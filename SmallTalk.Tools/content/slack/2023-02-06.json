@@ -1,0 +1,1291 @@
+[
+    {
+        "client_msg_id": "e0afdcfd-7645-47e0-ba12-0c372a208454",
+        "type": "message",
+        "text": "ok -- no problem. It may be premature to look at this then, but I'll get to it soon.  Might be that it can be reduced.",
+        "user": "U04N4LBE5K4",
+        "ts": "1675695992.645839",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "w4otT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ok -- no problem. It may be premature to look at this then, but I'll get to it soon.  Might be that it can be reduced."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "8b8de1ee-c9fe-48c8-901b-7a4a112a17b1",
+        "type": "message",
+        "text": "I 'invented' the gravity metric as scalar characterization of the order book, precisely because the raw data is so preposterously large",
+        "user": "U8PN87H1U",
+        "ts": "1675742796.381179",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DqcQr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I 'invented' the gravity metric as scalar characterization of the order book, precisely because the raw data is so preposterously large"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "dbe736c4-b500-462d-b295-86abf094db9d",
+        "type": "message",
+        "text": "there is actually an even bigger firehose if we ever feel daring enough: the event stream. It is a live feed of literally everything that happens on the exchange, and is the only way to get some kinds of information",
+        "user": "U8PN87H1U",
+        "ts": "1675742914.774069",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "eYQ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "there is actually an even bigger firehose if we ever feel daring enough: the event stream. It is a live feed of literally everything that happens on the exchange, and is the only way to get some kinds of information"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "1e5ae917-cd35-44ed-91c8-adecd8827372",
+        "type": "message",
+        "text": "In the end, what we're trying to predict is the net effect of the actions of a bunch of individual actors -- the accounts on the exchange. If we had the private information of every account like e.g. the exchange has (trade history, currency balances, money transfers in and out of the account, *open positions*), that would surely be a tremendously powerful tool.\nSince we can't have that, my main idea with the event stream was to partially deanonymize the account activities into e.g. a Bayesian inference model to 'learn' the hidden variables of the system. Instead of hard numbers, at least a hazy characterization of what groupings of actors with similar behaviors are doing, or will do, or would do in a hypothetical",
+        "user": "U8PN87H1U",
+        "ts": "1675743463.704009",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZcDvC",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "In the end, what we're trying to predict is the net effect of the actions of a bunch of individual actors -- the accounts on the exchange. If we had the private information of every account like e.g. the exchange has (trade history, currency balances, money transfers in and out of the account, "
+                            },
+                            {
+                                "type": "text",
+                                "text": "open positions",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "), that would surely be a tremendously powerful tool.\nSince we can't have that, my main idea with the event stream was to partially deanonymize the account activities into e.g. a Bayesian inference model to 'learn' the hidden variables of the system. Instead of hard numbers, at least a hazy characterization of what groupings of actors with similar behaviors are doing, or will do, or would do in a hypothetical"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1675744051.000000"
+        },
+        "thread_ts": "1675743463.704009",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1675746840.777189",
+        "reply_users": [
+            "U04N4LBE5K4"
+        ],
+        "replies": [
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1675746840.777189"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1675746840.777189"
+    },
+    {
+        "client_msg_id": "e0f51073-c899-432c-aa72-57443de8fb29",
+        "type": "message",
+        "text": "everything that happens on the exchange and therefore the price actions is *strictly deterministic*, based solely on the actions taken by the actors of the system over time.",
+        "user": "U8PN87H1U",
+        "ts": "1675743579.231549",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "WGZg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "everything that happens on the exchange and therefore the price actions is "
+                            },
+                            {
+                                "type": "text",
+                                "text": "strictly deterministic",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": ", based solely on the actions taken by the actors of the system over time."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1675744933.000000"
+        }
+    },
+    {
+        "client_msg_id": "feb702bd-9ca6-494a-8e6c-b10f5c9483b4",
+        "type": "message",
+        "text": "if you had a list ahead of time of all of the orders that would be placed and when, you could trivially forward-compute what the price will be at any point in the future",
+        "user": "U8PN87H1U",
+        "ts": "1675743637.603289",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "DQFV",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "if you had a list ahead of time of all of the orders that would be placed and when, you could trivially forward-compute what the price will be at any point in the future"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1675744003.000000"
+        },
+        "thread_ts": "1675743637.603289",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1675746797.218729",
+        "reply_users": [
+            "U04N4LBE5K4"
+        ],
+        "replies": [
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1675746797.218729"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1675746797.218729"
+    },
+    {
+        "client_msg_id": "cd92eb81-7bf2-4eaf-9fd7-cc0f8f1a660a",
+        "type": "message",
+        "text": "every time a trade occurs, it means a *position has been opened* by a single actor in the system, the buyer, who now holds an amount of bitcoin at a specific buy price. That actor is motivated to sell for a higher price than that.\nSo, if you knew the buy price and open time of the positions for an account, you would have a _very_ good idea what kinds of prices they would be interested in selling at, and when in the future they may or may not act on it.",
+        "user": "U8PN87H1U",
+        "ts": "1675744375.877059",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HxA5",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "every time a trade occurs, it means a "
+                            },
+                            {
+                                "type": "text",
+                                "text": "position has been opened ",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "by a single actor in the system, the buyer, who now holds an amount of bitcoin"
+                            },
+                            {
+                                "type": "text",
+                                "text": " ",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "at a specific buy price. That actor is motivated to sell for a higher price than that.\nSo, if you knew the buy price and open time of the positions for an account, you would have a "
+                            },
+                            {
+                                "type": "text",
+                                "text": "very",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " good idea what kinds of prices they would be interested in selling at, and when in the future they may or may not act on it."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1675744543.000000"
+        },
+        "thread_ts": "1675744375.877059",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1675747008.600969",
+        "reply_users": [
+            "U04N4LBE5K4"
+        ],
+        "replies": [
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1675747008.600969"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1675747008.600969"
+    },
+    {
+        "client_msg_id": "4ee33731-5f03-4d0f-b944-a8f65201c276",
+        "type": "message",
+        "text": "so that's my actor theory.\nIn other news, if you ever get back into KSP 1, there are (and are forthcoming) mods that are absolutely jaw dropping.\nVolumetric atmosphere for EVE is coming soon:\n<https:\/\/www.youtube.com\/watch?v=YrlE4sckhMo>\n<https:\/\/www.youtube.com\/watch?v=NKvk8lszPtE>\n<https:\/\/www.youtube.com\/watch?v=KeU3ktmYYpI>\n<https:\/\/www.youtube.com\/watch?v=rhKp9nTZkNY>\nand Parallax 2 is already out, which makes the terrain on every planet preposterously more realistic:\n<https:\/\/www.youtube.com\/watch?v=D6MguhscZTQ>",
+        "user": "U8PN87H1U",
+        "ts": "1675744922.342329",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "wx66",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "so that's my actor theory.\nIn other news, if you ever get back into KSP 1, there are (and are forthcoming) mods that are absolutely jaw dropping.\nVolumetric atmosphere for EVE is coming soon:\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.youtube.com\/watch?v=YrlE4sckhMo"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.youtube.com\/watch?v=NKvk8lszPtE"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.youtube.com\/watch?v=KeU3ktmYYpI"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.youtube.com\/watch?v=rhKp9nTZkNY"
+                            },
+                            {
+                                "type": "text",
+                                "text": "\nand Parallax 2 is already out, which makes the terrain on every planet preposterously more realistic:\n"
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/www.youtube.com\/watch?v=D6MguhscZTQ"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "from_url": "https:\/\/www.youtube.com\/watch?v=YrlE4sckhMo",
+                "thumb_url": "https:\/\/i.ytimg.com\/vi\/YrlE4sckhMo\/hqdefault.jpg",
+                "thumb_width": 480,
+                "thumb_height": 360,
+                "video_html": "<iframe width=\"400\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/YrlE4sckhMo?feature=oembed&autoplay=1&iv_load_policy=3\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen title=\"Kerbal Space Program 2023 01 07   14 19 14 08\"><\/iframe>",
+                "video_html_width": 400,
+                "video_html_height": 225,
+                "service_icon": "https:\/\/a.slack-edge.com\/80588\/img\/unfurl_icons\/youtube.png",
+                "id": 1,
+                "original_url": "https:\/\/www.youtube.com\/watch?v=YrlE4sckhMo",
+                "fallback": "YouTube Video: Kerbal Space Program 2023 01 07   14 19 14 08",
+                "title": "Kerbal Space Program 2023 01 07   14 19 14 08",
+                "title_link": "https:\/\/www.youtube.com\/watch?v=YrlE4sckhMo",
+                "author_name": "blackrack",
+                "author_link": "https:\/\/www.youtube.com\/@blackrack2008",
+                "service_name": "YouTube",
+                "service_url": "https:\/\/www.youtube.com\/"
+            },
+            {
+                "from_url": "https:\/\/www.youtube.com\/watch?v=NKvk8lszPtE",
+                "thumb_url": "https:\/\/i.ytimg.com\/vi\/NKvk8lszPtE\/hqdefault.jpg",
+                "thumb_width": 480,
+                "thumb_height": 360,
+                "video_html": "<iframe width=\"400\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/NKvk8lszPtE?feature=oembed&autoplay=1&iv_load_policy=3\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen title=\"KSP volumetric clouds preview\/showcase\"><\/iframe>",
+                "video_html_width": 400,
+                "video_html_height": 225,
+                "service_icon": "https:\/\/a.slack-edge.com\/80588\/img\/unfurl_icons\/youtube.png",
+                "id": 2,
+                "original_url": "https:\/\/www.youtube.com\/watch?v=NKvk8lszPtE",
+                "fallback": "YouTube Video: KSP volumetric clouds preview\/showcase",
+                "title": "KSP volumetric clouds preview\/showcase",
+                "title_link": "https:\/\/www.youtube.com\/watch?v=NKvk8lszPtE",
+                "author_name": "blackrack",
+                "author_link": "https:\/\/www.youtube.com\/@blackrack2008",
+                "service_name": "YouTube",
+                "service_url": "https:\/\/www.youtube.com\/"
+            },
+            {
+                "from_url": "https:\/\/www.youtube.com\/watch?v=KeU3ktmYYpI",
+                "thumb_url": "https:\/\/i.ytimg.com\/vi\/KeU3ktmYYpI\/hqdefault.jpg",
+                "thumb_width": 480,
+                "thumb_height": 360,
+                "video_html": "<iframe width=\"400\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/KeU3ktmYYpI?feature=oembed&autoplay=1&iv_load_policy=3\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen title=\"Kerbal Space Program 2022 11 03   12 55 17 02\"><\/iframe>",
+                "video_html_width": 400,
+                "video_html_height": 225,
+                "service_icon": "https:\/\/a.slack-edge.com\/80588\/img\/unfurl_icons\/youtube.png",
+                "id": 3,
+                "original_url": "https:\/\/www.youtube.com\/watch?v=KeU3ktmYYpI",
+                "fallback": "YouTube Video: Kerbal Space Program 2022 11 03   12 55 17 02",
+                "title": "Kerbal Space Program 2022 11 03   12 55 17 02",
+                "title_link": "https:\/\/www.youtube.com\/watch?v=KeU3ktmYYpI",
+                "author_name": "blackrack",
+                "author_link": "https:\/\/www.youtube.com\/@blackrack2008",
+                "service_name": "YouTube",
+                "service_url": "https:\/\/www.youtube.com\/"
+            },
+            {
+                "from_url": "https:\/\/www.youtube.com\/watch?v=rhKp9nTZkNY",
+                "thumb_url": "https:\/\/i.ytimg.com\/vi\/rhKp9nTZkNY\/hqdefault.jpg",
+                "thumb_width": 480,
+                "thumb_height": 360,
+                "video_html": "<iframe width=\"400\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/rhKp9nTZkNY?feature=oembed&autoplay=1&iv_load_policy=3\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen title=\"Kerbal Space Program 2022 11 19   19 55 41 01\"><\/iframe>",
+                "video_html_width": 400,
+                "video_html_height": 225,
+                "service_icon": "https:\/\/a.slack-edge.com\/80588\/img\/unfurl_icons\/youtube.png",
+                "id": 4,
+                "original_url": "https:\/\/www.youtube.com\/watch?v=rhKp9nTZkNY",
+                "fallback": "YouTube Video: Kerbal Space Program 2022 11 19   19 55 41 01",
+                "title": "Kerbal Space Program 2022 11 19   19 55 41 01",
+                "title_link": "https:\/\/www.youtube.com\/watch?v=rhKp9nTZkNY",
+                "author_name": "blackrack",
+                "author_link": "https:\/\/www.youtube.com\/@blackrack2008",
+                "service_name": "YouTube",
+                "service_url": "https:\/\/www.youtube.com\/"
+            },
+            {
+                "from_url": "https:\/\/www.youtube.com\/watch?v=D6MguhscZTQ",
+                "thumb_url": "https:\/\/i.ytimg.com\/vi\/D6MguhscZTQ\/hqdefault.jpg",
+                "thumb_width": 480,
+                "thumb_height": 360,
+                "video_html": "<iframe width=\"400\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/D6MguhscZTQ?feature=oembed&autoplay=1&iv_load_policy=3\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen title=\"Parallax 2.0 Trailer - Bringing Kerbal Space Program To Life\"><\/iframe>",
+                "video_html_width": 400,
+                "video_html_height": 225,
+                "service_icon": "https:\/\/a.slack-edge.com\/80588\/img\/unfurl_icons\/youtube.png",
+                "id": 5,
+                "original_url": "https:\/\/www.youtube.com\/watch?v=D6MguhscZTQ",
+                "fallback": "YouTube Video: Parallax 2.0 Trailer - Bringing Kerbal Space Program To Life",
+                "title": "Parallax 2.0 Trailer - Bringing Kerbal Space Program To Life",
+                "title_link": "https:\/\/www.youtube.com\/watch?v=D6MguhscZTQ",
+                "author_name": "Linx",
+                "author_link": "https:\/\/www.youtube.com\/@Gameslinx",
+                "service_name": "YouTube",
+                "service_url": "https:\/\/www.youtube.com\/"
+            }
+        ]
+    },
+    {
+        "client_msg_id": "90eb75a2-6020-4f2d-866d-b477ad725cb6",
+        "type": "message",
+        "text": "yeah, emulate the order book",
+        "user": "U04N4LBE5K4",
+        "ts": "1675746797.218729",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "w9f4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yeah, emulate the order book"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1675743637.603289",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "d7f27515-850a-4f53-8361-1d16d69c31ef",
+        "type": "message",
+        "text": "`pymc` is the best lib at the moment for a bayesian analysis of the events.",
+        "user": "U04N4LBE5K4",
+        "ts": "1675746840.777189",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "919",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "pymc",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is the best lib at the moment for a bayesian analysis of the events."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1675746888.000000"
+        },
+        "thread_ts": "1675743463.704009",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "90758584-9270-49ef-9ad2-42bad63baf2d",
+        "type": "message",
+        "text": "yeah, a high performance emulation seems promising",
+        "user": "U04N4LBE5K4",
+        "ts": "1675747008.600969",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8n4",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yeah, a high performance emulation seems promising"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1675744375.877059",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "02d10174-06d7-4582-82c9-00644b02c9cb",
+        "type": "message",
+        "text": "dang I need to revisit this KSP 1",
+        "user": "U04N4LBE5K4",
+        "ts": "1675747142.581169",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pjQ8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "dang I need to revisit this KSP 1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "b7315f0f-bac3-451c-ab0b-5d674c976b3e",
+        "type": "message",
+        "text": "that is amazing",
+        "user": "U04N4LBE5K4",
+        "ts": "1675747151.571459",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "uCBZH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "that is amazing"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "75269eb5-c67c-4ffd-97b9-4b871b1f8af8",
+        "type": "message",
+        "text": "on the trade topic, I am building out (lol) a transform of the data to get the building blocks of a numerical derivative to a couple levels.",
+        "user": "U04N4LBE5K4",
+        "ts": "1675747198.872929",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YW3WR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "on the trade topic, I am building out (lol) a transform of the data to get the building blocks of a numerical derivative to a couple levels."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1675747373.000000"
+        }
+    },
+    {
+        "client_msg_id": "a56d6f68-91c7-4beb-a45e-0eb451d0cf19",
+        "type": "message",
+        "text": "gravity is a good name for the reduction, so I won't screw around with the clunky data until I have run out of ideas on the normal records.",
+        "user": "U04N4LBE5K4",
+        "ts": "1675747278.996789",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Uuv",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "gravity is a good name for the reduction, so I won't screw around with the clunky data until I have run out of ideas on the normal records."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1675747310.000000"
+        }
+    },
+    {
+        "client_msg_id": "B0514B93-FE96-4D06-A11C-DDEC40DBB17F",
+        "type": "message",
+        "text": "Do you mean derivatives in the calculus sense?",
+        "user": "U8PN87H1U",
+        "ts": "1675747412.633829",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7uN2G",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Do you mean derivatives in the calculus sense?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1675747412.633829",
+        "reply_count": 20,
+        "reply_users_count": 2,
+        "latest_reply": "1676159228.970479",
+        "reply_users": [
+            "U04N4LBE5K4",
+            "U8PN87H1U"
+        ],
+        "replies": [
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1675751728.050959"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1675751786.483679"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1675797884.329509"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1675798274.543789"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1675798359.638549"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1675798491.370719"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1675798565.451589"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1675798822.698799"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1675798921.958459"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1675798963.660359"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1675799213.799359"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1675897660.809909"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1675897852.327009"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1675906434.187729"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1675907540.008679"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676004916.171419"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676007992.824299"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676008539.541319"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676008686.753719"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676159228.970479"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1676159228.970479"
+    },
+    {
+        "type": "message",
+        "text": "there is also mechjeb2 which is indispensable, and another mod called outer planets adds a whole set of distant gas giants with moons you can visit. This is the 'subway map' I use when I plan my missions. Everything on the right side is from the outer planets mod.",
+        "files": [
+            {
+                "id": "F04N9KXKX8D",
+                "created": 1675748614,
+                "timestamp": 1675748614,
+                "name": "c733ryx5ejex.jpg",
+                "title": "c733ryx5ejex.jpg",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U8PN87H1U",
+                "user_team": "T8NQ4486P",
+                "editable": false,
+                "size": 1108175,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T8NQ4486P-F04N9KXKX8D\/c733ryx5ejex.jpg?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T8NQ4486P-F04N9KXKX8D\/download\/c733ryx5ejex.jpg?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "media_display_type": "unknown",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04N9KXKX8D-0cdadbee7c\/c733ryx5ejex_64.jpg?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04N9KXKX8D-0cdadbee7c\/c733ryx5ejex_80.jpg?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04N9KXKX8D-0cdadbee7c\/c733ryx5ejex_360.jpg?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "thumb_360_w": 360,
+                "thumb_360_h": 255,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04N9KXKX8D-0cdadbee7c\/c733ryx5ejex_480.jpg?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "thumb_480_w": 480,
+                "thumb_480_h": 339,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04N9KXKX8D-0cdadbee7c\/c733ryx5ejex_160.jpg?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04N9KXKX8D-0cdadbee7c\/c733ryx5ejex_720.jpg?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "thumb_720_w": 720,
+                "thumb_720_h": 509,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04N9KXKX8D-0cdadbee7c\/c733ryx5ejex_800.jpg?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "thumb_800_w": 800,
+                "thumb_800_h": 566,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04N9KXKX8D-0cdadbee7c\/c733ryx5ejex_960.jpg?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "thumb_960_w": 960,
+                "thumb_960_h": 679,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T8NQ4486P-F04N9KXKX8D-0cdadbee7c\/c733ryx5ejex_1024.jpg?t=xoxe-294820144227-4959529464018-4952916270310-5b65e8795b59dfbd274d768be4a9af7a",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 724,
+                "original_w": 4960,
+                "original_h": 3508,
+                "thumb_tiny": "AwAhADCp26UuPbB460g6dM0o4UnnqOtACEcZ4\/KkApz42jH40g6dqAQBcsKCMLn6U4EEjt2prdP0FAPcBj1H5mnZUrjPf8KZyPWnBuOPXrQAEHByV\/OgA4HK\/nSEmk6AZFADuh5I496b29qPxFKxGAAaAG0UUUAFFFFABRRRQB\/\/2Q==",
+                "permalink": "https:\/\/halforbit-crypto.slack.com\/files\/U8PN87H1U\/F04N9KXKX8D\/c733ryx5ejex.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T8NQ4486P-F04N9KXKX8D-60282577eb",
+                "is_starred": false,
+                "has_rich_preview": false,
+                "file_access": "visible"
+            }
+        ],
+        "upload": false,
+        "user": "U8PN87H1U",
+        "display_as_bot": false,
+        "ts": "1675748756.683679",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Hwl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "there is also mechjeb2 which is indispensable, and another mod called outer planets adds a whole set of distant gas giants with moons you can visit. This is the 'subway map' I use when I plan my missions. Everything on the right side is from the outer planets mod."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "client_msg_id": "54e87ff5-9a64-4735-8d9a-b4c0d53476e9"
+    },
+    {
+        "client_msg_id": "99022467-333e-4a56-9eb7-e8f1f1ab6bed",
+        "type": "message",
+        "text": "and CKAN which is a mod package manager that makes getting and maintaining all of this really easy <https:\/\/github.com\/KSP-CKAN\/CKAN\/releases>",
+        "user": "U8PN87H1U",
+        "ts": "1675749072.000709",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BRHu",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and CKAN which is a mod package manager that makes getting and maintaining all of this really easy "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/KSP-CKAN\/CKAN\/releases"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "attachments": [
+            {
+                "from_url": "https:\/\/github.com\/KSP-CKAN\/CKAN\/releases",
+                "image_url": "https:\/\/opengraph.githubassets.com\/c7b4a70c25c73019e373fcdb66bfa8c9765b0c149f59a97e63a26e30b1a5bccc\/KSP-CKAN\/CKAN",
+                "image_width": 500,
+                "image_height": 250,
+                "image_bytes": 61360,
+                "service_icon": "https:\/\/a.slack-edge.com\/80588\/img\/unfurl_icons\/github.png",
+                "id": 1,
+                "original_url": "https:\/\/github.com\/KSP-CKAN\/CKAN\/releases",
+                "fallback": "GitHub: Releases · KSP-CKAN\/CKAN",
+                "text": "The Comprehensive Kerbal Archive Network. Contribute to KSP-CKAN\/CKAN development by creating an account on GitHub.",
+                "title": "Releases · KSP-CKAN\/CKAN",
+                "title_link": "https:\/\/github.com\/KSP-CKAN\/CKAN\/releases",
+                "service_name": "GitHub"
+            }
+        ]
+    },
+    {
+        "client_msg_id": "bbbf647e-5d62-43f7-a555-f6b96f8e9b82",
+        "type": "message",
+        "text": "yeah, didn't really get anywhere.  Confirmed that: yes, the bitcoin trade seems to be markovian -- random walk.  Meaning: information about where it *is* is more important than any information about where it was.\n\nGoing to return to what I have done so far, reasonably ~ 60% odds of getting the sign right at, say 30-40 min in the future.   This is without setting up a holdout set (yet), but I have normalized everything, so that doesn't matter as much as it used to.\n\nNext I'll work on the F-score and see how the predictor does at getting a good enough F-score.",
+        "user": "U04N4LBE5K4",
+        "ts": "1675751728.050959",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Lh5Lr",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yeah, didn't really get anywhere.  Confirmed that: yes, the bitcoin trade seems to be markovian -- random walk.  Meaning: information about where it "
+                            },
+                            {
+                                "type": "text",
+                                "text": "is",
+                                "style": {
+                                    "bold": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " is more important than any information about where it was.\n\nGoing to return to what I have done so far, reasonably ~ 60% odds of getting the sign right at, say 30-40 min in the future.   This is without setting up a holdout set (yet), but I have normalized everything, so that doesn't matter as much as it used to.\n\nNext I'll work on the F-score and see how the predictor does at getting a good enough F-score."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1675752000.000000"
+        },
+        "thread_ts": "1675747412.633829",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "013d7930-6817-427d-9c63-76dce339137d",
+        "type": "message",
+        "text": "Do you know how much better than even you need to get to profit via the F-score sim? (e.g., is 60 percent right\/40% wrong w\/ a 45 min F-score window good enough?)",
+        "user": "U04N4LBE5K4",
+        "ts": "1675751786.483679",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "LX2",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Do you know how much better than even you need to get to profit via the F-score sim? (e.g., is 60 percent right\/40% wrong w\/ a 45 min F-score window good enough?)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1675747412.633829",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "9274ad95-b792-466e-9c5f-9a20aa8273eb",
+        "type": "message",
+        "text": "awesome -- I'll pimp my Kerbal.",
+        "user": "U04N4LBE5K4",
+        "ts": "1675751855.874019",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "gQqJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "awesome -- I'll pimp my Kerbal."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "9f7e848e-61f1-480c-aaed-df9973ee68ea",
+        "type": "message",
+        "text": "been proudly doing everything by hand",
+        "user": "U04N4LBE5K4",
+        "ts": "1675752147.304089",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "FC7ld",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "been proudly doing everything by hand"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    }
+]

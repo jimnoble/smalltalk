@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace SmallTalk.Data;
 
-class MessageDateRepository : IMessageDateRepository
+public class MessageDateRepository : IMessageDateRepository
 {
     static Mutex _mutex = new Mutex();
     

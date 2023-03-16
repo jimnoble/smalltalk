@@ -1,0 +1,251 @@
+[
+    {
+        "client_msg_id": "031e1a52-ce1b-4e3d-b844-1dd68c1dc970",
+        "type": "message",
+        "text": "what do you think for a first hack at the input contract that we just go with the schema in our historical tsv? I will just feed you one row at a time, all the information. You can either pick what you want or we can whittle it down to just that.",
+        "user": "U8PN87H1U",
+        "ts": "1676583990.663239",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "SsuAa",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "what do you think for a first hack at the input contract that we just go with the schema in our historical tsv? I will just feed you one row at a time, all the information. You can either pick what you want or we can whittle it down to just that."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676586662.000000"
+        }
+    },
+    {
+        "client_msg_id": "5d3a0659-8e20-44fc-9a6a-7e3dac351077",
+        "type": "message",
+        "text": "and do you have any inkling what the output contract might be?",
+        "user": "U8PN87H1U",
+        "ts": "1676584009.301849",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "V3xQw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and do you have any inkling what the output contract might be?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "2bb841fd-5c5d-4d4e-ab77-d7f468067663",
+        "type": "message",
+        "text": "here is the `.proto` for one row from that tsv, with the `TimeStart` datetime column removed (`TimeStartEpochMinutes` remains):\n```syntax = \"proto3\";\n\nmessage HistorySegment {\n   int32 TimeStartEpochMinutes = 1;\n   float PriceCenter = 2;\n   float PriceBidMax = 3;\n   float PriceAskMin = 4;\n   float PriceSpread = 5;\n   float PriceBuy1 = 6;\n   float PriceBuy10 = 7;\n   float PriceBuy100 = 8;\n   float PriceSell1 = 9;\n   float PriceSell10 = 10;\n   float PriceSell100 = 11;\n   float AmountOfferedBid = 12;\n   float AmountOfferedAsk = 13;\n   float GravityBid = 14;\n   float GravityAsk = 15;\n   float GravityNet = 16;\n   float GravitySum = 17;\n   float GravityNormalized = 18;\n}```",
+        "user": "U8PN87H1U",
+        "ts": "1676586464.863729",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "KejP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "here is the "
+                            },
+                            {
+                                "type": "text",
+                                "text": ".proto",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " for one row from that tsv, with the "
+                            },
+                            {
+                                "type": "text",
+                                "text": "TimeStart",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " datetime column removed ("
+                            },
+                            {
+                                "type": "text",
+                                "text": "TimeStartEpochMinutes",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " remains):\n"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "rich_text_preformatted",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "syntax = \"proto3\";\n\nmessage HistorySegment {\n   int32 TimeStartEpochMinutes = 1;\n   float PriceCenter = 2;\n   float PriceBidMax = 3;\n   float PriceAskMin = 4;\n   float PriceSpread = 5;\n   float PriceBuy1 = 6;\n   float PriceBuy10 = 7;\n   float PriceBuy100 = 8;\n   float PriceSell1 = 9;\n   float PriceSell10 = 10;\n   float PriceSell100 = 11;\n   float AmountOfferedBid = 12;\n   float AmountOfferedAsk = 13;\n   float GravityBid = 14;\n   float GravityAsk = 15;\n   float GravityNet = 16;\n   float GravitySum = 17;\n   float GravityNormalized = 18;\n}"
+                            }
+                        ],
+                        "border": 0
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676666900.000000"
+        },
+        "thread_ts": "1676586464.863729",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1676770513.205199",
+        "reply_users": [
+            "U04N4LBE5K4"
+        ],
+        "replies": [
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676770379.821239"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676770513.205199"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1676770513.205199"
+    },
+    {
+        "client_msg_id": "2c935309-d74d-4eec-83e3-aabadc3c1d82",
+        "type": "message",
+        "text": "I chose `float` instead of `double` as it takes half the memory\/bandwidth\/storage space, and should make a performance difference. But let me know if you think it will cause precision problems.",
+        "user": "U8PN87H1U",
+        "ts": "1676586534.585369",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZUL",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I chose "
+                            },
+                            {
+                                "type": "text",
+                                "text": "float",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " instead of "
+                            },
+                            {
+                                "type": "text",
+                                "text": "double",
+                                "style": {
+                                    "code": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " as it takes half the memory\/bandwidth\/storage space, and should make a performance difference. But let me know if you think it will cause precision problems."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676586744.000000"
+        }
+    }
+]

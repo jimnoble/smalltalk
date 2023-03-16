@@ -1,0 +1,618 @@
+[
+    {
+        "client_msg_id": "fbf4f804-45e7-4a3c-91b5-5930f0a649bd",
+        "type": "message",
+        "text": "I think we should be extremely careful with our source code here and how we choose to collaborate over it. I think even a private github repository is too risky. So I have set up a private git server. Lets pick a day and time so I can give you your credentials over the phone some time soon.",
+        "user": "U8PN87H1U",
+        "ts": "1676197182.880279",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Nl7cg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I think we should be extremely careful with our source code here and how we choose to collaborate over it. I think even a private github repository is too risky. So I have set up a private git server. Lets pick a day and time so I can give you your credentials over the phone some time soon."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676197198.000000"
+        },
+        "thread_ts": "1676197182.880279",
+        "reply_count": 3,
+        "reply_users_count": 1,
+        "latest_reply": "1676255996.072549",
+        "reply_users": [
+            "U04N4LBE5K4"
+        ],
+        "replies": [
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676255946.371009"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676255972.814789"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676255996.072549"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1676255996.072549"
+    },
+    {
+        "client_msg_id": "fed8f10e-581f-4d64-a7b3-4bd235a34adf",
+        "type": "message",
+        "text": "have you taken a look at all at h-score? I recall there was a pretty pronounced and surprising inverse correlation with f-score, maybe offset by half a time window in one direction or the other? And unlike f-score, we _have_ h-score as a computable value in realtime.",
+        "user": "U8PN87H1U",
+        "ts": "1676203012.244809",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pv70f",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "have you taken a look at all at h-score? I recall there was a pretty pronounced and surprising inverse correlation with f-score, maybe offset by half a time window in one direction or the other? And unlike f-score, we "
+                            },
+                            {
+                                "type": "text",
+                                "text": "have",
+                                "style": {
+                                    "italic": true
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": " h-score as a computable value in realtime."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676203140.000000"
+        },
+        "thread_ts": "1676203012.244809",
+        "reply_count": 4,
+        "reply_users_count": 2,
+        "latest_reply": "1676255696.784109",
+        "reply_users": [
+            "U8PN87H1U",
+            "U04N4LBE5K4"
+        ],
+        "replies": [
+            {
+                "user": "U8PN87H1U",
+                "ts": "1676204522.489479"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1676204631.143319"
+            },
+            {
+                "user": "U8PN87H1U",
+                "ts": "1676204696.951679"
+            },
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676255696.784109"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1676255696.784109"
+    },
+    {
+        "client_msg_id": "459f12fc-1100-49a7-ab73-4fd287847d3e",
+        "type": "message",
+        "text": "I seem to recall that if our time window is e.g. 16 minutes, that the h-score inverted and shifted forward 8 minutes was like, kissing cousins with the f-score. It was noisy but the correlation was clear as day.",
+        "user": "U8PN87H1U",
+        "ts": "1676204522.489479",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "mA8p",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I seem to recall that if our time window is e.g. 16 minutes, that the h-score inverted and shifted forward 8 minutes was like, kissing cousins with the f-score. It was noisy but the correlation was clear as day."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676203012.244809",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "b2b3928a-15c9-4cbb-868e-ba2daaf23afc",
+        "type": "message",
+        "text": "and we only need to peer 8 minutes into the future to compute that transformed h-score, instead of 16 for the f-score",
+        "user": "U8PN87H1U",
+        "ts": "1676204631.143319",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "8aFMw",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "and we only need to peer 8 minutes into the future to compute that transformed h-score, instead of 16 for the f-score"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676204646.000000"
+        },
+        "thread_ts": "1676203012.244809",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "68d11ddc-d98a-4d8e-a256-bad69e19ea46",
+        "type": "message",
+        "text": "obv the window time of 16 is just an arbitrary example, but i seem to recall it was in the neighborhood of 5-30",
+        "user": "U8PN87H1U",
+        "ts": "1676204696.951679",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "2GI",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "obv the window time of 16 is just an arbitrary example, but i seem to recall it was in the neighborhood of 5-30"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676204888.000000"
+        },
+        "thread_ts": "1676203012.244809",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "FC100E51-138C-4111-A3CB-29235A227C8A",
+        "type": "message",
+        "text": "Was working on some collector infrastructure and I discovered that in addition to being expectable more compact, protobuf is actually like 25x faster to serialize\/deserialize than json. \n\nSince we have to make so many predict calls, this might really make a difference for simulation speed. \n\nWhat do you think of using protobuf as our serialization strategy? Surely there are python libraries for that.",
+        "user": "U8PN87H1U",
+        "ts": "1676244524.521209",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5fSs0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Was working on some collector infrastructure and I discovered that in addition to being expectable more compact, protobuf is actually like 25x faster to serialize\/deserialize than json. \n\nSince we have to make so many predict calls, this might really make a difference for simulation speed. \n\nWhat do you think of using protobuf as our serialization strategy? Surely there are python libraries for that."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U8PN87H1U",
+            "ts": "1676244617.000000"
+        },
+        "thread_ts": "1676244524.521209",
+        "reply_count": 1,
+        "reply_users_count": 1,
+        "latest_reply": "1676255918.687519",
+        "reply_users": [
+            "U04N4LBE5K4"
+        ],
+        "replies": [
+            {
+                "user": "U04N4LBE5K4",
+                "ts": "1676255918.687519"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1676255918.687519"
+    },
+    {
+        "client_msg_id": "c14bde20-1d4a-40a5-8976-64db2e910b48",
+        "type": "message",
+        "text": "I'll check that out -- decoupled the F-score\/h-score\/ etc prediction in the new streaming system, so that'll be easy to change.\n\nSo far I have implemented the basics to motivate the sim.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676255696.784109",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ZNj3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "I'll check that out -- decoupled the F-score\/h-score\/ etc prediction in the new streaming system, so that'll be easy to change.\n\nSo far I have implemented the basics to motivate the sim."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676203012.244809",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "31b67708-ffe8-4317-bd70-c49a449d08bf",
+        "type": "message",
+        "text": "ZeroMQ would have been my pick left to my own devices, awesome.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676255792.768939",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lji",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "ZeroMQ would have been my pick left to my own devices, awesome."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676186231.227489",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "497279d1-96f5-4631-9518-026f40175f0a",
+        "type": "message",
+        "text": "zero mq w protobuf sounds fantastic",
+        "user": "U04N4LBE5K4",
+        "ts": "1676255918.687519",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "NaVd",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "zero mq w protobuf sounds fantastic"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676244524.521209",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "1599be26-e33c-4aca-9d88-e8ec2c7fa62d",
+        "type": "message",
+        "text": "let's do it -- got an MVP\/simple scaffold ready for simming.",
+        "user": "U04N4LBE5K4",
+        "ts": "1676255924.433819",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "iv9i",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "let's do it -- got an MVP\/simple scaffold ready for simming."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "edited": {
+            "user": "U04N4LBE5K4",
+            "ts": "1676256068.000000"
+        }
+    },
+    {
+        "client_msg_id": "5cdf25a9-b0f9-4a17-8b02-3a9a08713137",
+        "type": "message",
+        "text": "sounds good",
+        "user": "U04N4LBE5K4",
+        "ts": "1676255946.371009",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "BHk",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "sounds good"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676197182.880279",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "7a0b5d83-fa55-46eb-84ad-c2037dde8e00",
+        "type": "message",
+        "text": "tmrw work?",
+        "user": "U04N4LBE5K4",
+        "ts": "1676255972.814789",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "F8pa",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "tmrw work?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676197182.880279",
+        "parent_user_id": "U8PN87H1U"
+    },
+    {
+        "client_msg_id": "3d15d296-8a87-4034-9b47-8332824826bb",
+        "type": "message",
+        "text": "Also, how are we building the images and composing the compute (e.g. CICD)",
+        "user": "U04N4LBE5K4",
+        "ts": "1676255996.072549",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "nUqZo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Also, how are we building the images and composing the compute (e.g. CICD)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "c5f48bf79e05",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-02-05\/4765375549041_c5f48bf79e05f594269b_72.png",
+            "first_name": "Chris",
+            "real_name": "Chris",
+            "display_name": "Chris",
+            "team": "T8NQ4486P",
+            "name": "christopher.j.donlan",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676197182.880279",
+        "parent_user_id": "U8PN87H1U"
+    }
+]

@@ -1,0 +1,89 @@
+[
+    {
+        "client_msg_id": "4aef4962-180b-433a-ba42-76bf9c219116",
+        "type": "message",
+        "text": "yea that works for me, just drop me a line",
+        "user": "U8PN87H1U",
+        "ts": "1676453781.099389",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "4+iF",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "yea that works for me, just drop me a line"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1676293926.076429",
+        "parent_user_id": "U8PN87H1U",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U04N4LBE5K4"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "250422ad-ffce-472c-913e-e46d3b62e772",
+        "type": "message",
+        "text": "sorry man, total day from hell. Let's try for tomorrow afternoon sometime",
+        "user": "U8PN87H1U",
+        "ts": "1676513295.382719",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "=TY=",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "sorry man, total day from hell. Let's try for tomorrow afternoon sometime"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T8NQ4486P",
+        "user_team": "T8NQ4486P",
+        "source_team": "T8NQ4486P",
+        "user_profile": {
+            "avatar_hash": "9376b232cade",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2018-01-05\/296069299047_9376b232cadea221521b_72.png",
+            "first_name": "James",
+            "real_name": "James Noble",
+            "display_name": "",
+            "team": "T8NQ4486P",
+            "name": "jimnoble",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    }
+]

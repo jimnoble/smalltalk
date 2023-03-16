@@ -664,6 +664,9 @@ code {
   padding-bottom: 2px;
   background-color: #303036;
 }
+input[type=file] {
+  display: none;
+}
 @-moz-keyframes message-appear {
   0% {
     opacity: 0%;
