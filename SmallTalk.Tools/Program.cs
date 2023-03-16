@@ -52,7 +52,7 @@ foreach (var date in await slackStore.ListKeys())
 
         if (files.Any())
         {
-            text += string.Join("\r\n\r\n", files);
+            text += string.Join("\r\n\r\n", files.Select(f => $"`FILE: {f}`"));
         }
 
         //Console.WriteLine($"{type}: {time}: {users[user]}: {text}");

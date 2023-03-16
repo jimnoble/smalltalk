@@ -80,18 +80,34 @@
                                         }
                                         else if (!string.IsNullOrWhiteSpace(message.Content))
                                         {
-                                            <p>@((MarkupString)Markdown.ToHtml(messageVersions.Last().Content ?? string.Empty))</p>                                        
+                                            var markdown = messageVersions.Last().Content ?? string.Empty;
+
+                                            @if (messageVersions.Count() > 1)
+                                            {
+                                                markdown += @" <span class='subtle'>(edited)</span>";
+                                            }
+
+                                            @((MarkupString)Markdown.ToHtml(markdown))                                                
                                         }
 
                                         @foreach (var attachment in message.Attachments)
                                         {
-                                            <a class="button" href="@attachment.Url" download>
-                                                <span class="glyphicon glyphicon-file"></span>
-                                                <span>@attachment.Label</span>
-                                                <span class="subtle">@attachment.ContentType</span>
-                                                <span class="subtle">@FormatFileSize(attachment.SizeBytes)</span>
-                                                <span class="glyphicon glyphicon-cloud-download"></span>
-                                            </a>
+                                            if (IsImageType(attachment.ContentType))
+                                            {
+                                                <a href="@attachment.Url" class="image-tile" target="_blank">
+                                                    <img class="image-tile" src="@attachment.Url" />
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <a class="button" href="@attachment.Url" download>
+                                                    <span class="glyphicon glyphicon-file"></span>
+                                                    <span>@attachment.Label</span>
+                                                    <span class="subtle">@attachment.ContentType</span>
+                                                    <span class="subtle">@FormatFileSize(attachment.SizeBytes)</span>
+                                                    <span class="glyphicon glyphicon-cloud-download"></span>
+                                                </a>                                                
+                                            }
                                         }
                                     </div>
                                 </div>
@@ -260,5 +276,18 @@
         // Adjust the format string to your preferences. For example "{0:0.#}{1}" would
         // show a single decimal place, and no space.
         return string.Format("{0:0.##} {1}", len, sizes[order]);
+    }
+
+    bool IsImageType(string contentType)
+    {
+        switch (contentType)
+        {
+            case "image/png":
+            case "image/gif":
+            case "image/jpeg":
+                return true;
+
+            default: return false;
+        }
     }
 }

@@ -369,7 +369,11 @@ pre {
   margin-top: 5px;
 }
 .message-group .message-row .content-column .image-tile img {
-  width: 100%;
+  display: block;
+  max-width: 100%;
+  max-height: 300px;
+  width: auto;
+  height: auto;
 }
 .message-group .message-row .content-column .attachment-tile {
   cursor: pointer;
