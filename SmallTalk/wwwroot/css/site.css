@@ -292,6 +292,13 @@ pre {
   animation-name: message-appear;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
+  opacity: 50%;
+  outline: solid 1px #ff1493;
+}
+.message-group .message-stack.incoming {
+  animation-name: message-appear;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
 .message-group .message-stack:hover .content-column {
   background-color: #242428;

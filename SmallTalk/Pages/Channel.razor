@@ -49,7 +49,7 @@
 
                             var messageDeleted = string.IsNullOrWhiteSpace(message.Content) && !message.Attachments.Any();
 
-                            <div tabindex="0" class="message-stack @(messageVersions.First().WriteTime > LastViewTime ? "incoming" : "")">
+                            <div tabindex="0" class="message-stack @(messageVersions.First().WriteTime.ToUniversalTime() > LastViewTime ? "incoming" : "")">
                                 <div class="toolbar">
                                     <div class="toolbox">
                                         @if (!messageDeleted)

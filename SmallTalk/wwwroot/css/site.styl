@@ -138,7 +138,13 @@ $content-max-width = 1200px
         animation-name: message-appear
         animation-duration: 0.5s
         animation-iteration-count: 1
+        opacity: 50%
+        outline: solid 1px deeppink
     .message-stack
+        &.incoming
+            animation-name: message-appear
+            animation-duration: 0.5s
+            animation-iteration-count: 1
         &:hover 
             .content-column
                 background-color: hsl(240deg, 5%, 15%)
