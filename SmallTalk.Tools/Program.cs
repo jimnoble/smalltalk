@@ -25,6 +25,15 @@ var users = new Dictionary<string, string>
     ["U04N4LBE5K4"] = "christopher.j.donlan@gmail.com"
 };
 
+var emojis = new Dictionary<string, string>
+{
+    ["man-shrugging"] = "🤷‍♂️",
+    ["confused"] = "😕",
+    ["slightly_smiling_face"] = "🙂",
+    ["man-facepalming"] = "🤦‍♂️"
+};
+
+
 foreach (var date in await slackStore.ListKeys())
 {
     var document = await slackStore.Get(date);
@@ -46,7 +55,7 @@ foreach (var date in await slackStore.ListKeys())
             text += string.Join("\r\n\r\n", files);
         }
 
-        Console.WriteLine($"{type}: {time}: {users[user]}: {text}");
+        //Console.WriteLine($"{type}: {time}: {users[user]}: {text}");
         
         await messageDateRepository.AppendMessageAsync(
             channel: "alchemy",
@@ -72,6 +81,11 @@ string ProcessText(string text)
         text, 
         @"\<(?<Url>.*)\|(?<Label>.*)\>", 
         m => $"[{m.Groups["Label"].Value}]({m.Groups["Url"].Value})");
+
+    text = Regex.Replace(
+        text, 
+        ":(?<Name>[a-zA-Z0-9_-]+):",
+        m => emojis[m.Groups["Name"].Value]);
 
     var lines = text.Split(new[] { "\r\n", "\n" }, StringSplitOptions.None).ToList();
 
