@@ -76,6 +76,7 @@ $content-max-width = 900px
 
 .scrollable-content
     overflow-y: auto
+    overflow-x: hidden
     flex: 1 1 200px
 
 .login-button
@@ -101,22 +102,62 @@ $content-max-width = 900px
     margin-top: $block-size * 2
     margin-bottom: $block-size * -4
 
-.message-stack
+.message-group
     // background-color: rgba(white, 5%)
     margin: $block-size
-    border-radius: $block-size * 2
-    overflow: hidden
+    //border-radius: $block-size * 2
+    //overflow: hidden
     &.incoming
         //outline: solid 1px deeppink
         //transition: background-color 1s
         animation-name: message-appear
         animation-duration: 0.5s
         animation-iteration-count: 1
+    .message-stack
+        &:hover 
+            .content-column
+                background-color: hsl(240deg, 5%, 15%)
+            .toolbox
+                opacity: 100%
+        &:focus 
+            .content-column
+                background-color: hsl(240deg, 5%, 15%)
+            .toolbox
+                opacity: 100%
+    .toolbar
+        display: flex
+        justify-content: flex-end
+        //outline: solid 1px deeppink
+        height: $block-size * 7
+        margin-bottom: $block-size * -7
+        .toolbox
+            @extend .strip
+            background-color: hsl(240deg, 5%, 15%)
+            line-height: $block-size * 5
+            border-radius: $block-size
+            outline: solid 1px rgba(white, 20%)
+            z-index: 1000
+            opacity: 0%
+            transition: opacity 0.5s ease-out
+            & > *
+                @extend .pad-xs
+                text-align: center
+                padding-left: $block-size * 2
+                padding-right: $block-size * 2
+                display: block
+                color: white
+                filter: grayscale()
+                border-radius: $block-size
+                background-color: transparent
+                border: none
+
+                &:hover
+                    background-color: hsl(240deg, 5%, 25%)
     .message-row
         @extend .strip
         //@extend .pad-xs
         .margin-column
-            flex: 0 0 45px
+            flex: 0 0 $block-size * 10
             padding-top: $block-size
             .avatar
                 //margin: 0px auto
@@ -137,16 +178,24 @@ $content-max-width = 900px
                 //padding-right: 5px
         .content-column
             @extend .pad-s
-            padding-left: $block-size * 2
-            padding-right: $block-size * 2
-            border-radius: $block-size * 2
+            transition: background-color 0.5s ease-out
+            cursor: pointer
+            padding-left: $block-size * 1
+            padding-right: $block-size * 1
+            //border-radius: $block-size * 2
             //background-color: hsl(240deg, 5%, 15%)
             padding-top: 5px
-            padding-bottom: 0px
-            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+            padding-bottom: 5px
+            //box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
             //border: solid 1px rgba(white, 5%)
             width: 100%
             line-height: $block-size * 5
+            border-radius: $block-size
+            // &:hover
+            //     background-color: hsl(240deg, 5%, 15%)
+            // &:focus
+            //     //outline: dashed 1px deeppink !important
+            //     background-color: hsl(240deg, 5%, 15%)
             .image-tile
                 display: block
                 margin-top: $block-size
@@ -196,7 +245,9 @@ $content-max-width = 900px
                 z-index: 200
         &.header
             margin-bottom: $block-size * -2
+            z-index: 1000
             .content-column
+                margin-left: $block-size * -1
                 border-bottom-left-radius: 0px
                 border-bottom-right-radius: 0px
                 background-color: transparent;
@@ -452,10 +503,11 @@ blockquote
     margin-bottom: $block-size
 
 pre
+    @extend .pad-s
     background-color: hsl(240deg, 5%, 20%)
     border-radius: $block-size
     text-indent: $block-size * -1
-    padding-left: $block-size
+    //padding-left: $block-size
     code
         background-color: transparent
 

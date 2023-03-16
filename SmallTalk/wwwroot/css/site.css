@@ -160,38 +160,41 @@ table {
   content: "An error has occurred.";
 }
 .pad-none,
-.message-stack .message-row .content-column p {
+.message-group .message-row .content-column p {
   padding: 0px;
   gap: 0px;
 }
 .pad-xs,
-.message-stack .reaction-row a,
+.message-group .toolbar .toolbox > *,
+.message-group .reaction-row a,
 .action-bar {
   padding: 5px;
   gap: 5px;
 }
 .pad-s,
-.message-stack .message-row .content-column,
-.message-stack .message-row .content-column .attachment-tile,
+.message-group .message-row .content-column,
+.message-group .message-row .content-column .attachment-tile,
 .action-bar a,
 .editor,
 .editor .textarea,
 .button,
 header h1,
-p {
+p,
+pre {
   padding: 10px;
   gap: 10px;
 }
 .subtle,
 .date-divider,
-.message-stack .message-row .margin-column .timestamp,
-.message-stack .message-row .content-column .message-stack-title .timestamp,
+.message-group .message-row .margin-column .timestamp,
+.message-group .message-row .content-column .message-stack-title .timestamp,
 .typing-indicator {
   color: rgba(255,255,255,0.35);
   font-size: 10px;
 }
 .strip,
-.message-stack .message-row {
+.message-group .toolbar .toolbox,
+.message-group .message-row {
   display: flex;
 }
 .stack {
@@ -199,7 +202,7 @@ p {
   flex-direction: column;
 }
 .outline-throb,
-.message-stack .message-row .content-column.selected,
+.message-group .message-row .content-column.selected,
 .action-bar {
   animation-name: color;
   animation-duration: 2s;
@@ -235,6 +238,7 @@ p {
 }
 .scrollable-content {
   overflow-y: auto;
+  overflow-x: hidden;
   flex: 1 1 200px;
 }
 .login-button {
@@ -261,21 +265,60 @@ p {
   margin-top: 10px;
   margin-bottom: -20px;
 }
-.message-stack {
+.message-group {
   margin: 5px;
-  border-radius: 10px;
-  overflow: hidden;
 }
-.message-stack.incoming {
+.message-group.incoming {
   animation-name: message-appear;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
 }
-.message-stack .message-row .margin-column {
-  flex: 0 0 45px;
+.message-group .message-stack:hover .content-column {
+  background-color: #242428;
+}
+.message-group .message-stack:hover .toolbox {
+  opacity: 100%;
+}
+.message-group .message-stack:focus .content-column {
+  background-color: #242428;
+}
+.message-group .message-stack:focus .toolbox {
+  opacity: 100%;
+}
+.message-group .toolbar {
+  display: flex;
+  justify-content: flex-end;
+  height: 35px;
+  margin-bottom: -35px;
+}
+.message-group .toolbar .toolbox {
+  background-color: #242428;
+  line-height: 25px;
+  border-radius: 5px;
+  outline: solid 1px rgba(255,255,255,0.2);
+  z-index: 1000;
+  opacity: 0%;
+  transition: opacity 0.5s ease-out;
+}
+.message-group .toolbar .toolbox > * {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: block;
+  color: #fff;
+  filter: grayscale();
+  border-radius: 5px;
+  background-color: transparent;
+  border: none;
+}
+.message-group .toolbar .toolbox > *:hover {
+  background-color: #3d3d43;
+}
+.message-group .message-row .margin-column {
+  flex: 0 0 50px;
   padding-top: 5px;
 }
-.message-stack .message-row .margin-column .avatar {
+.message-group .message-row .margin-column .avatar {
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -286,28 +329,29 @@ p {
   position: relative;
   top: 7.5px;
 }
-.message-stack .message-row .margin-column .timestamp {
+.message-group .message-row .margin-column .timestamp {
   font-size: 10px;
   text-align: center;
 }
-.message-stack .message-row .content-column {
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 10px;
+.message-group .message-row .content-column {
+  transition: background-color 0.5s ease-out;
+  cursor: pointer;
+  padding-left: 5px;
+  padding-right: 5px;
   padding-top: 5px;
-  padding-bottom: 0px;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  padding-bottom: 5px;
   width: 100%;
   line-height: 25px;
+  border-radius: 5px;
 }
-.message-stack .message-row .content-column .image-tile {
+.message-group .message-row .content-column .image-tile {
   display: block;
   margin-top: 5px;
 }
-.message-stack .message-row .content-column .image-tile img {
+.message-group .message-row .content-column .image-tile img {
   width: 100%;
 }
-.message-stack .message-row .content-column .attachment-tile {
+.message-group .message-row .content-column .attachment-tile {
   cursor: pointer;
   padding-left: 15px;
   padding-right: 15px;
@@ -320,48 +364,50 @@ p {
   background-color: #29333d;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
 }
-.message-stack .message-row .content-column .message-stack-title {
+.message-group .message-row .content-column .message-stack-title {
   display: flex;
 }
-.message-stack .message-row .content-column .message-stack-title .username {
+.message-group .message-row .content-column .message-stack-title .username {
   font-size: 20px;
   line-height: 20px;
   font-weight: 100;
   padding-top: 5px;
   padding-left: 5px;
 }
-.message-stack .message-row .content-column .message-stack-title .timestamp {
+.message-group .message-row .content-column .message-stack-title .timestamp {
   padding-top: 10px;
   padding-left: 10px;
   line-height: 15px;
 }
-.message-stack .message-row .content-column p+p {
+.message-group .message-row .content-column p+p {
   margin-top: 5px;
 }
-.message-stack .message-row .content-column.selected {
+.message-group .message-row .content-column.selected {
   outline: solid 0px #7f8000;
   background-color: #22222a;
   box-shadow: 0 0 50px rgba(0,0,0,0.8);
   z-index: 200;
 }
-.message-stack .message-row.header {
+.message-group .message-row.header {
   margin-bottom: -10px;
+  z-index: 1000;
 }
-.message-stack .message-row.header .content-column {
+.message-group .message-row.header .content-column {
+  margin-left: -5px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
   background-color: transparent;
   border: none;
   box-shadow: none;
 }
-.message-stack .reaction-row {
+.message-group .reaction-row {
   padding-top: 5px;
   margin-left: 35px;
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
 }
-.message-stack .reaction-row a {
+.message-group .reaction-row a {
   color: #eddbff;
   cursor: pointer;
   padding-left: 10px;
@@ -570,7 +616,6 @@ pre {
   background-color: #303036;
   border-radius: 5px;
   text-indent: -5px;
-  padding-left: 5px;
 }
 pre code {
   background-color: transparent;

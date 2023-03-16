@@ -1,7 +1,9 @@
-﻿@using SmallTalk.Data;
+﻿@using EventAggregator.Blazor;
+@using SmallTalk.Data;
 @using SmallTalk.Data.Schema;
 @inject IJSRuntime JSRuntime
 @inject IMessageDateRepository MessageDateRepository
+@inject IEventAggregator EventAggregator
 
 <div class="editor">
     <div>
@@ -35,6 +37,11 @@
         await JSRuntime.InvokeVoidAsync("configureEditorContentArea");
     }
 
+    public void EditMessage(Message message)
+    {
+        Text = message.Content;
+    }
+
     public async Task SendAsync()
     {
         var text = (await JSRuntime.InvokeAsync<string>("getEditorText")).Replace(@" ", " ").Trim();
@@ -55,7 +62,9 @@
 
         Text = "";
 
-        StateHasChanged();
+        //StateHasChanged();
+
+        await EventAggregator.PublishAsync(new MessagePublishedEvent());
 
         await OnSubmit.InvokeAsync();
     }
