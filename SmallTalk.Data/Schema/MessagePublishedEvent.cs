@@ -1,3 +1,3 @@
 ﻿namespace SmallTalk.Data.Schema;
 
-public record MessagePublishedEvent();
+public record MessagePublishedEvent(bool WasEdit);

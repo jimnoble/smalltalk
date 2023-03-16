@@ -124,7 +124,7 @@
 
         Attachment = null;
 
-        await EventAggregator.PublishAsync(new MessagePublishedEvent());
+        await EventAggregator.PublishAsync(new MessagePublishedEvent(WasEdit: false));
 
         await OnSubmit.InvokeAsync(true);
     }
@@ -185,7 +185,7 @@
         
         StateHasChanged();
 
-        await EventAggregator.PublishAsync(new MessagePublishedEvent());
+        await EventAggregator.PublishAsync(new MessagePublishedEvent(WasEdit: true));
 
         await OnSubmit.InvokeAsync(false);
     }

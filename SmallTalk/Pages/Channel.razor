@@ -103,7 +103,7 @@
         </div>
     </div>
     
-    <MessageEditor @ref="messageEditor" ChannelName=@ChannelName User=@User OnSubmit=MessageSubmittedAsync />
+    <MessageEditor @ref="messageEditor" ChannelName=@ChannelName User=@User />
 
 </div>
 
@@ -160,7 +160,7 @@
     {
         await InvokeAsync(async () => await UpdateMessagesAsync());
 
-        //scrollToBottomPending = true;        
+        scrollToBottomPending = !messagePublishedEvent.WasEdit;
     }
 
     async Task UpdateMessagesAsync()
@@ -168,11 +168,6 @@
         await LoadMessagesAsync();
 
         StateHasChanged();
-    }
-
-    async Task MessageSubmittedAsync(bool scrollToBottom)
-    {
-        scrollToBottomPending = scrollToBottom;        
     }
 
     async Task LoadMessagesAsync()
@@ -224,7 +219,7 @@
                 Attachments: Array.Empty<Attachment>(),
                 Reactions: Array.Empty<Reaction>()));
 
-        await EventAggregator.PublishAsync(new MessagePublishedEvent());
+        await EventAggregator.PublishAsync(new MessagePublishedEvent(WasEdit: true));
     }
 
     async Task UndoDeleteMessageAsync(IEnumerable<Message> messageVersions)
@@ -248,7 +243,7 @@
                 Attachments: Array.Empty<Attachment>(),
                 Reactions: Array.Empty<Reaction>()));
 
-        await EventAggregator.PublishAsync(new MessagePublishedEvent());
+        await EventAggregator.PublishAsync(new MessagePublishedEvent(WasEdit: true));
     }
 
     string FormatFileSize(long length)
