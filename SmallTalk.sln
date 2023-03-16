@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33312.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmallTalk", "SmallTalk\SmallTalk.csproj", "{A93FB727-578A-4E67-9C83-42DF17649705}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallTalk.Data", "SmallTalk.Data\SmallTalk.Data.csproj", "{601264D5-13EB-4611-BEFC-F82A5D91B084}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmallTalk.Data", "SmallTalk.Data\SmallTalk.Data.csproj", "{601264D5-13EB-4611-BEFC-F82A5D91B084}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

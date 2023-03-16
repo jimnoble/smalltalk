@@ -1,11 +1,17 @@
-﻿<div class="strip pad-xs">
+﻿@using SmallTalk.Data;
+@using SmallTalk.Data.Schema
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject SmallTalkDataContext SmallTalkDataContext
+
+<div class="strip pad-xs">
     <AuthorizeView>
         <Authorized>
             @*<a href="Identity/Account/Manage">Hello, @context.User.Identity?.Name!</a>
             <form method="post" action="Identity/Account/Logout">
                 <button type="submit" class="nav-link btn btn-link">Log out</button>
             </form>*@
-            <div class="avatar">A</div>
+            <div>@User.DisplayName</div>
+            <AvatarView User=@User />
         </Authorized>
         <NotAuthorized>
             @*<a href="Identity/Account/Register">Register</a>*@
@@ -13,3 +19,18 @@
         </NotAuthorized>
     </AuthorizeView>
 </div>
+
+@code {
+    User User { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+
+        var user = authenticationState.User;
+
+        var users = (await SmallTalkDataContext.Users.Get()).ToDictionary(u => u.Email, u => u);
+
+        User = users[user.Identity.Name];
+    }
+}

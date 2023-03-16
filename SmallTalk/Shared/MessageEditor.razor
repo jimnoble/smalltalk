@@ -48,6 +48,12 @@
     [Parameter]
     public EventCallback OnSubmit { get; set; }
 
+    [Parameter]
+    public string ChannelName { get; set; }
+
+    [Parameter]
+    public User User { get; set; }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await JSRuntime.InvokeVoidAsync("setEditorText", Text ?? string.Empty);
@@ -67,12 +73,12 @@
         var text = (await JSRuntime.InvokeAsync<string>("getEditorText")).Replace(@" ", " ").Trim();
 
         await MessageDateRepository.AppendMessageAsync(
-            channel: "alchemy",
+            channel: ChannelName,
             date: DateTime.UtcNow,
             message: new Message(
                 MessageId: Guid.NewGuid(),
-                Channel: "alchemy",
-                Author: "jimnoble@gmail.com",
+                Channel: ChannelName,
+                Author: User.Email,
                 WriteTime: DateTime.UtcNow,
                 ParentMessageDate: null,
                 ParentMessageId: null,
@@ -105,7 +111,7 @@
         var text = (await JSRuntime.InvokeAsync<string>("getEditorText")).Replace(@" ", " ").Trim();
 
         await MessageDateRepository.AppendMessageAsync(
-            channel: "alchemy",
+            channel: ChannelName,
             date: message.WriteTime.Date,
             message: new Message(
                 MessageId: message.MessageId,

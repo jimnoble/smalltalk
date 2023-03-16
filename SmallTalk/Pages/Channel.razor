@@ -4,6 +4,7 @@
 @using MoreLinq;
 @using SmallTalk.Data;
 @using SmallTalk.Data.Schema;
+@inject AuthenticationStateProvider AuthenticationStateProvider
 @inject IEventAggregator EventAggregator
 @inject IJSRuntime JSRuntime
 @inject IMessageDateRepository MessageDateRepository
@@ -14,85 +15,83 @@
 
 <div class="content-stack stack">
 
+    <h1 class="title">#@ChannelName</h1>
+
     <div id="@ScrollableId" class="scrollable-content">
 
-        <h1>#@ChannelName</h1>
-
-        @foreach (var messageDay in Messages ?? Array.Empty<IEnumerable<IEnumerable<IEnumerable<Message>>>>())
-        {
-            <div class="date-divider">@messageDay.First().First().First().WriteTime.ToString("D")</div>
-
-            foreach (var messageStack in messageDay)
+        <div class="centered-content">
+            @foreach (var messageDay in Messages ?? Array.Empty<IEnumerable<IEnumerable<IEnumerable<Message>>>>())
             {
-                var user = Users[messageStack.First().First().Author];
+                <div class="date-divider">@messageDay.First().First().First().WriteTime.ToString("D")</div>
 
-                <div class="message-group">
+                foreach (var messageStack in messageDay)
+                {
+                    var user = Users[messageStack.First().First().Author];
 
-                    <div class="header message-row">
-                        <div class="margin-column">
-                            @if (string.IsNullOrWhiteSpace(user.AvatarUrl))
-                            {
-                                <div class="avatar" style="background-color: @(user.AvatarColor)">@user.DisplayName.Substring(0, 1)</div>
-                            }
-                            else
-                            {
-                                <div class="avatar" style="background: url(@(user.AvatarUrl)) no-repeat center center; background-size: auto 100%; background-color: @(user.AvatarColor)"></div>
-                            }
-                        </div>
-                        <div class="content-column">
-                            <div class="message-stack-title">
-                                <div class="username">@user.DisplayName</div>
-                                <div class="timestamp">@($"{messageStack.First().First().WriteTime:HH:mm}")</div>
+                    <div class="message-group">
+
+                        <div class="header message-row">
+                            <div class="margin-column">
+                                <AvatarView User=@user />
+                            </div>
+                            <div class="content-column">
+                                <div class="message-stack-title">
+                                    <div class="username">@user.DisplayName</div>
+                                    <div class="timestamp">@($"{messageStack.First().First().WriteTime:HH:mm}")</div>
+                                </div>
                             </div>
                         </div>
+
+                        @foreach(var messageVersions in messageStack)
+                        {
+                            var message = messageVersions.Last();
+
+                            <div tabindex="0" class="message-stack @(messageVersions.First().WriteTime > LastViewTime ? "incoming" : "")">
+                                <div class="toolbar">
+                                    @if (message.Author == User.Email)
+                                    {
+                                        <div class="toolbox">
+                                            @if (!string.IsNullOrWhiteSpace(message.Content))
+                                            {
+                                                    @*<a href="#">😄</a>
+                                                    <a href="#"><span class="glyphicon glyphicon-share"></span></a>*@
+                                                    <button @onclick="() => DeleteMessageAsync(messageVersions)"><span class="glyphicon glyphicon-trash"></span></button>
+                                                    <button @onclick="() => EditMessageAsync(messageVersions)"><span class="glyphicon glyphicon-pencil"></span></button>
+                                            }
+                                            else
+                                            {
+                                                @*<a href="#">😄</a>
+                                                <a href="#"><span class="glyphicon glyphicon-share"></span></a>*@
+                                                <button @onclick="() => UndoDeleteMessageAsync(messageVersions)"><span class="glyphicon glyphicon-repeat flip-horizontal"></span></button>
+                                            }
+                                        </div>
+                                    }
+                                </div>
+                                <div class="message-row">
+                                    <div class="margin-column">
+                                        <div class="timestamp">@*@($"{message.WriteTime:HH:mm}")*@</div>
+                                    </div>
+                                    <div class="content-column">
+                                        @if (string.IsNullOrWhiteSpace(message.Content))
+                                        {
+                                            <p class="subtle">message deleted</p>
+                                        }
+                                        else
+                                        {
+                                            <p>@((MarkupString)Markdown.ToHtml(messageVersions.Last().Content ?? string.Empty))</p>                                        
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
                     </div>
-
-                    @foreach(var messageVersions in messageStack)
-                    {
-                        var message = messageVersions.Last();
-
-                        <div tabindex="0" class="message-stack @(messageVersions.First().WriteTime > LastViewTime ? "incoming" : "")">
-                            <div class="toolbar">
-                                <div class="toolbox">
-                                    @if (!string.IsNullOrWhiteSpace(message.Content))
-                                    {
-                                            @*<a href="#">😄</a>
-                                            <a href="#"><span class="glyphicon glyphicon-share"></span></a>*@
-                                            <button @onclick="() => DeleteMessageAsync(messageVersions)"><span class="glyphicon glyphicon-trash"></span></button>
-                                            <button @onclick="() => EditMessageAsync(messageVersions)"><span class="glyphicon glyphicon-pencil"></span></button>
-                                    }
-                                    else
-                                    {
-                                        @*<a href="#">😄</a>
-                                        <a href="#"><span class="glyphicon glyphicon-share"></span></a>*@
-                                        <button @onclick="() => UndoDeleteMessageAsync(messageVersions)"><span class="glyphicon glyphicon-repeat flip-horizontal"></span></button>
-                                    }
-                                </div>
-                            </div>
-                            <div class="message-row">
-                                <div class="margin-column">
-                                    <div class="timestamp">@*@($"{message.WriteTime:HH:mm}")*@</div>
-                                </div>
-                                <div class="content-column">
-                                    @if (string.IsNullOrWhiteSpace(message.Content))
-                                    {
-                                        <p class="subtle">message deleted</p>
-                                    }
-                                    else
-                                    {
-                                        <p>@((MarkupString)Markdown.ToHtml(messageVersions.Last().Content ?? string.Empty))</p>                                        
-                                    }
-                                </div>
-                            </div>
-                        </div>
-                    }
-
-                </div>
+                }
             }
-        }
+        </div>
     </div>
     
-    <MessageEditor @ref="messageEditor" OnSubmit=MessageSubmittedAsync />
+    <MessageEditor @ref="messageEditor" ChannelName=@ChannelName User=@User OnSubmit=MessageSubmittedAsync />
 
 </div>
 
@@ -113,6 +112,8 @@
 
     IEnumerable<IEnumerable<IEnumerable<IEnumerable<Message>>>> Messages { get; set; }
 
+    User User { get; set; }
+
     protected override async Task OnInitializedAsync()
     {
         EventAggregator.Subscribe(this);
@@ -120,6 +121,14 @@
 
     protected override async Task OnParametersSetAsync()
     {
+        var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+
+        var user = authenticationState.User;
+
+        var users = (await SmallTalkDataContext.Users.Get()).ToDictionary(u => u.Email, u => u);
+
+        User = users[user.Identity.Name];
+
         await LoadMessagesAsync();
     }
 

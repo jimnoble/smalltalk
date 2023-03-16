@@ -167,7 +167,8 @@ table {
 .pad-xs,
 .message-group .toolbar .toolbox > *,
 .message-group .reaction-row a,
-.action-bar {
+.action-bar,
+h1.title {
   padding: 5px;
   gap: 5px;
 }
@@ -222,7 +223,6 @@ pre {
   background-color: rgba(0,127,255,0.15);
 }
 .main-content {
-  max-width: 900px;
   margin: 0px auto;
   background-color: #18181b;
   height: 100%;
@@ -240,6 +240,10 @@ pre {
   overflow-y: auto;
   overflow-x: hidden;
   flex: 1 1 200px;
+}
+.centered-content {
+  margin: 0px auto;
+  max-width: 900px;
 }
 .login-button {
   padding: 5px;
@@ -524,6 +528,16 @@ pre {
 }
 .flip-horizontal {
   transform: scale(-1, 1);
+}
+h1.title {
+  padding-left: 10px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+  border-bottom: solid 1px #303036;
+  z-index: 1000;
+  max-width: 900px;
+  margin: 0px auto;
+  width: 100%;
+  font-weight: 100;
 }
 *,
 *:before,

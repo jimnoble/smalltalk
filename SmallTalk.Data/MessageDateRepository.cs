@@ -17,6 +17,8 @@ class MessageDateRepository : IMessageDateRepository
     {
         var basePath = Path.Combine(_rootPath, $"message-dates/{channel}");
 
+        Directory.CreateDirectory(basePath);
+
         foreach (var path in Directory.EnumerateFiles(basePath, "*.*", SearchOption.AllDirectories))
         {
             var match = Regex.Match(

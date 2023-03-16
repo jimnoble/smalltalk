@@ -1,0 +1,15 @@
+﻿@using SmallTalk.Data.Schema;
+
+@if (string.IsNullOrWhiteSpace(User.AvatarUrl))
+{
+    <div class="avatar" style="background-color: @(User.AvatarColor)">@User.DisplayName.Substring(0, 1)</div>
+}
+else
+{
+    <div class="avatar" style="background: url(@(User.AvatarUrl)) no-repeat center center; background-size: auto 100%; background-color: @(User.AvatarColor)"></div>
+}
+
+@code {
+    [Parameter]
+    public User User { get; set; }
+}
