@@ -12,7 +12,7 @@ $default-font-family = 'Open Sans', 'Helvetica', 'Helvetica Neue', 'Segoe UI', '
 $default-font-size = $block-size * 3
 $default-line-height = $block-size * 4
 $default-text-color = hsl(270deg, 100%, 93%)
-$content-max-width = 900px
+$content-max-width = 1200px
 
 // END THEME //////////////////////////////////////////////////////////////////
 
@@ -41,6 +41,12 @@ $content-max-width = 900px
     display: flex
     flex-direction: column
 
+.username
+    font-size: $block-size * 4
+    line-height: $block-size * 6
+    font-weight: 100
+    padding-right: $block-size
+
 .outline-throb
     animation-name: color
     animation-duration: 2s
@@ -61,7 +67,7 @@ $content-max-width = 900px
 .main-content
     //max-width: $content-max-width
     margin: 0px auto
-    background-color: hsl(240deg, 5%, 10%)
+    background-color: hsl(240deg, 5%, 5%)
     height: 100%
     flex: 1
     //overflow-y: auto
@@ -82,6 +88,10 @@ $content-max-width = 900px
 .centered-content
     margin: 0px auto
     max-width: $content-max-width
+    background-color: hsl(240deg, 5%, 10%)
+    // position: relative
+    // left: 6px
+    overflow: hidden
 
 .login-button
     padding: $block-size
@@ -391,6 +401,7 @@ h1.title {
     padding-left: $block-size * 2
     box-shadow: 0px 0px 20px rgba(black, 50%)
     border-bottom: solid 1px hsl(240deg, 5%, 20%)
+    background-color: hsl(240deg, 5%, 12%)
     z-index: 1000
     max-width: $content-max-width
     margin: 0px auto
@@ -468,7 +479,7 @@ header
 
 main
     flex: 1
-
+    
 header h1
     @extend .pad-s
     font-size: $default-font-size * 1.3333

@@ -147,6 +147,8 @@
     public async Task HandleAsync(MessagePublishedEvent messagePublishedEvent)
     {
         await InvokeAsync(async () => await UpdateMessagesAsync());
+
+        scrollToBottomPending = true;        
     }
 
     async Task UpdateMessagesAsync()
@@ -206,7 +208,7 @@
                 Attachments: Array.Empty<Attachment>(),
                 Reactions: Array.Empty<Reaction>()));
 
-        UpdateMessagesAsync();
+        await EventAggregator.PublishAsync(new MessagePublishedEvent());
     }
 
     async Task UndoDeleteMessageAsync(IEnumerable<Message> messageVersions)
@@ -230,6 +232,6 @@
                 Attachments: Array.Empty<Attachment>(),
                 Reactions: Array.Empty<Reaction>()));
 
-        UpdateMessagesAsync();
+        await EventAggregator.PublishAsync(new MessagePublishedEvent());
     }
 }
