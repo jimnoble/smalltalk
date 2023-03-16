@@ -37,7 +37,7 @@
                             <div class="content-column">
                                 <div class="message-stack-title">
                                     <div class="username">@user.DisplayName</div>
-                                    <div class="timestamp">@($"{messageStack.First().First().WriteTime:HH:mm}")</div>
+                                    <div class="timestamp">@($"{messageStack.First().First().WriteTime:h:mm tt}")</div>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +85,7 @@
 
                                         @foreach (var attachment in message.Attachments)
                                         {
-                                            <a class="button" href="@attachment.Url">
+                                            <a class="button" href="@attachment.Url" download>
                                                 <span class="glyphicon glyphicon-file"></span>
                                                 <span>@attachment.Label</span>
                                                 <span class="subtle">@attachment.ContentType</span>
@@ -181,11 +181,14 @@
 
         var messages = new List<Message>();
 
-        await foreach (var date in MessageDateRepository.EnumerateDatesAsync(channel: "alchemy"))
+        await foreach (var date in MessageDateRepository.EnumerateDatesAsync(channel: ChannelName))
         {
-            await foreach (var message in MessageDateRepository.EnumerateMessagesAsync(channel: "alchemy", date: date))
+            await foreach (var message in MessageDateRepository.EnumerateMessagesAsync(channel: ChannelName, date: date))
             {
-                messages.Add(message);
+                messages.Add(message with 
+                {
+                    WriteTime = message.WriteTime.ToLocalTime(), 
+                });
             }
         }
 
@@ -199,7 +202,7 @@
     {
         await messageEditor.EditMessageAsync(messageVersions.Last() with 
         { 
-            WriteTime  = messageVersions.First().WriteTime 
+            WriteTime = messageVersions.First().WriteTime.ToUniversalTime() 
         });
     }
 
@@ -232,7 +235,7 @@
             .First();
 
         await MessageDateRepository.AppendMessageAsync(
-            channel: "alchemy",
+            channel: ChannelName,
             date: message.WriteTime.Date,
             message: new Message(
                 MessageId: message.MessageId,

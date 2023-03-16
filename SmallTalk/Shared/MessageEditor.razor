@@ -151,6 +151,18 @@
 
         var text = (await JSRuntime.InvokeAsync<string>("getEditorText")).Replace(@" ", " ").Trim();
 
+        var attachments = Attachment.HasValue ?
+            new[]
+            {
+                new Attachment(
+                    AttachmentId: Attachment.Value.AttachmentId,
+                    Label: Attachment.Value.Label,
+                    ContentType: Attachment.Value.ContentType,
+                    SizeBytes: Attachment.Value.SizeBytes,
+                    Url: Attachment.Value.Url)
+            } :
+            Array.Empty<Attachment>();
+
         await MessageDateRepository.AppendMessageAsync(
             channel: ChannelName,
             date: message.WriteTime.Date,
@@ -162,13 +174,15 @@
                 ParentMessageDate: message.ParentMessageDate,
                 ParentMessageId: message.ParentMessageId,
                 Content: text,
-                Attachments: Array.Empty<Attachment>(),
+                Attachments: attachments,
                 Reactions: Array.Empty<Reaction>()));
 
         Text = string.Empty;
 
         EditingMessage = null;
 
+        Attachment = null;
+        
         StateHasChanged();
 
         await EventAggregator.PublishAsync(new MessagePublishedEvent());
@@ -194,7 +208,7 @@
                 Path.Combine(outputPath, file.Name),
                 FileMode.Create);
 
-            await file.OpenReadStream().CopyToAsync(fs);
+            await file.OpenReadStream(100_000_000).CopyToAsync(fs);
 
             Attachment = new Attachment(
                 AttachmentId: attachmentId,

@@ -246,11 +246,13 @@ pre {
   overflow-y: auto;
   overflow-x: hidden;
   flex: 1 1 200px;
+  height: 100%;
 }
 .centered-content {
   margin: 0px auto;
   max-width: 1200px;
   background-color: #18181b;
+  min-height: 100%;
   overflow: hidden;
 }
 .login-button {
