@@ -18,6 +18,7 @@
   <ItemGroup>
     <PackageReference Include="EventAggregator.Blazor" Version="2.0.0" />
     <PackageReference Include="Markdig" Version="0.31.0" />
+    <PackageReference Include="Markdown.ColorCode" Version="1.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.3" />

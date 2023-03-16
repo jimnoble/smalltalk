@@ -1,6 +1,7 @@
 ﻿@page "/channels/{ChannelName}"
 @using EventAggregator.Blazor;
 @using Markdig;
+@using Markdown.ColorCode;
 @using MoreLinq;
 @using SmallTalk.Data;
 @using SmallTalk.Data.Schema;
@@ -84,10 +85,10 @@
 
                                             @if (messageVersions.Count() > 1)
                                             {
-                                                markdown += @" <span class='subtle'>(edited)</span>";
+                                                markdown += "\r\n<span class='subtle'>(edited)</span>";
                                             }
 
-                                            @((MarkupString)Markdown.ToHtml(markdown))                                                
+                                            @((MarkupString)Markdown.ToHtml(markdown, markdownPipeline))                                                
                                         }
 
                                         @foreach (var attachment in message.Attachments)
@@ -125,6 +126,11 @@
 
 @code
 {
+    MarkdownPipeline markdownPipeline = new MarkdownPipelineBuilder()
+        .UseAdvancedExtensions()
+        .UseColorCode()
+        .Build();
+
     MessageEditor messageEditor;
 
     bool scrollToBottomPending;

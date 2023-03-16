@@ -659,9 +659,10 @@ blockquote {
   margin-bottom: 5px;
 }
 pre {
+  font-family: monospace;
   background-color: #303036;
   border-radius: 5px;
-  text-indent: -5px;
+  line-height: 17.5px;
 }
 pre code {
   background-color: transparent;
