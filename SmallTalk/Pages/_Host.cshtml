@@ -1,4 +1,4 @@
-﻿@page "/"
+@page "/"
 @using Microsoft.AspNetCore.Components.Web
 @namespace SmallTalk.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
@@ -159,6 +159,33 @@
             }
         }
 
+        function setFavicon(url) {
+            var link = document.querySelector("link[rel~='icon']");
+            if (!link) {
+                link = document.createElement('link');
+                link.rel = 'icon';
+                document.head.appendChild(link);
+            }
+            link.href = url;
+        }
+
+        window.isVisible = true;
+
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                console.log('became hidden');
+                window.isVisible = false;
+            }
+            else {
+                console.log('became visible');
+                window.isVisible = true;
+                setFavicon('favicon.png');
+            }
+        });
+
+        function getIsVisible() {
+            return window.isVisible;
+        }
     </script>
 
     <script src="_framework/blazor.server.js"></script>

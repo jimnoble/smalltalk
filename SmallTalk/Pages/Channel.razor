@@ -1,4 +1,4 @@
-﻿@page "/channels/{ChannelName}"
+@page "/channels/{ChannelName}"
 @using EventAggregator.Blazor;
 @using Markdig;
 @using Markdown.ColorCode;
@@ -133,7 +133,7 @@
         </div>
     </div>
 
-    <audio id="audio1" autoplay controls style="display: none"><source src="/content/audio/new-message.mp3" /></audio>
+    <audio id="audio1" autoplay controls style="display: none"><source src="/content/audio/message-received.mp3" /></audio>
     @*@if (playTone)
     {
         <div>!!!!</div>
@@ -204,7 +204,14 @@
 
         if (playTone)
         {
-            await JSRuntime.InvokeVoidAsync("playSound");
+            var isVisible = await JSRuntime.InvokeAsync<bool>("getIsVisible");
+
+            if (!isVisible)
+            {
+                await JSRuntime.InvokeVoidAsync("setFavicon", "favicon-green.png");
+
+                await JSRuntime.InvokeVoidAsync("playSound");
+            }
 
             playTone = false;
         }
