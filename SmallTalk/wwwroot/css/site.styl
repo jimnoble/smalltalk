@@ -85,6 +85,15 @@ $content-max-width = 1200px
     overflow-x: hidden
     flex: 1 1 200px
     height: 100%
+    padding-left: 12px
+
+@media (max-width: $content-max-width)
+{
+    .scrollable-content
+    {
+        padding-left: 0px    
+    }
+}
 
 .centered-content
     margin: 0px auto
@@ -94,7 +103,7 @@ $content-max-width = 1200px
     // position: relative
     // left: 6px
     overflow: hidden
-
+    
 .login-button
     padding: $block-size
     line-height: $default-font-size * 2

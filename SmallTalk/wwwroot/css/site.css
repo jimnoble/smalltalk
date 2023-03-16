@@ -247,6 +247,12 @@ pre {
   overflow-x: hidden;
   flex: 1 1 200px;
   height: 100%;
+  padding-left: 12px;
+}
+@media (max-width: 1200px) {
+  .scrollable-content {
+    padding-left: 0px;
+  }
 }
 .centered-content {
   margin: 0px auto;
