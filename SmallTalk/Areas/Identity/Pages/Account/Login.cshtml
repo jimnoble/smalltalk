@@ -5,6 +5,16 @@
     ViewData["Title"] = "Log in";
 }
 
+<script type="text/javascript">
+    console.info(window.location)
+
+    if (window.location.search) {
+        var url = window.location.origin + window.location.pathname
+        console.log('redirect to ' + url)
+        window.location.href = url
+    }
+</script>
+
 <div class="dialog-container">
     <div class="login-form">
         @*<h1>@ViewData["Title"]</h1>*@
