@@ -495,6 +495,8 @@ pre {
   outline: none !important;
   box-shadow: inset 0px 0px 5px rgba(0,0,0,0.5);
   border: solid 1px #545454;
+  max-height: 500px;
+  overflow-y: auto;
 }
 .editor .textarea[contenteditable]:empty::before {
   content: "Message #alchemy";
@@ -559,6 +561,13 @@ h1.title {
   margin: 0px auto;
   width: 100%;
   font-weight: 100;
+}
+.quote-icon {
+  font-family: Georgia;
+  display: block;
+  font-size: 35px;
+  padding-top: 10px;
+  line-height: 20px;
 }
 *,
 *:before,
@@ -665,6 +674,7 @@ pre {
   line-height: 17.5px;
 }
 pre code {
+  display: block;
   background-color: transparent;
 }
 code {

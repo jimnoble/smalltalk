@@ -358,6 +358,8 @@ $content-max-width = 1200px
         outline: none !important
         box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
         border: solid 1px hsl(0deg, 0%, 33%)
+        max-height: 500px
+        overflow-y: auto
     .textarea[contenteditable]:empty::before
         content: "Message #alchemy"
         color: gray
@@ -425,6 +427,22 @@ h1.title
 .file-upload
     //outline: solid 1px deeppink
 
+.quote-icon
+    font-family: Georgia
+    display: block
+    font-size: $block-size * 7
+    padding-top: $block-size * 2
+    line-height: $block-size * 4
+
+// .tiny-button
+//     display: flex
+//     flex-wrap: nowrap
+//     gap: $block-size
+//     outline: solid 1px deeppink !important
+//     span
+//         display: block
+//         flex-wrap: nowrap
+    
 @keyframes message-appear {
     0% {
         opacity: 0%
@@ -562,10 +580,9 @@ pre
     font-family: monospace
     background-color: hsl(240deg, 5%, 20%)
     border-radius: $block-size
-    //text-indent: $block-size * -1
-    //padding-left: $block-size
     line-height: $block-size * 3.5
     code
+        display: block
         background-color: transparent
 
 code

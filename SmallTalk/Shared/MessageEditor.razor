@@ -90,6 +90,13 @@
         await JSRuntime.InvokeVoidAsync("focusEditor");
     }
 
+    public async Task SetEditorTextAsync(string text)
+    {
+        Text = text;
+
+        await JSRuntime.InvokeVoidAsync("setEditorText", Text ?? string.Empty);
+    }
+
     public async Task SendAsync()
     {
         var text = (await JSRuntime.InvokeAsync<string>("getEditorText")).Replace(@" ", " ").Trim();

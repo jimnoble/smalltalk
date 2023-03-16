@@ -51,24 +51,37 @@
 
                             <div tabindex="0" class="message-stack @(messageVersions.First().WriteTime > LastViewTime ? "incoming" : "")">
                                 <div class="toolbar">
-                                    @if (message.Author == User.Email)
-                                    {
-                                        <div class="toolbox">
+                                    <div class="toolbox">
+                                        @if (!messageDeleted)
+                                        {
+                                            <button class="tiny-button" title="Quote" @onclick="() => QuoteMessageAsync(message)">
+                                                <span class="quote-icon">&OpenCurlyDoubleQuote;</span>
+                                            </button>
+                                        }
+
+                                        @if (message.Author == User.Email)
+                                        {
                                             @if (!messageDeleted)
                                             {
                                                     @*<a href="#">😄</a>
                                                     <a href="#"><span class="glyphicon glyphicon-share"></span></a>*@
-                                                    <button @onclick="() => DeleteMessageAsync(messageVersions)"><span class="glyphicon glyphicon-trash"></span></button>
-                                                    <button @onclick="() => EditMessageAsync(messageVersions)"><span class="glyphicon glyphicon-pencil"></span></button>
+                                                    <button class="tiny-button" title="Delete" @onclick="() => DeleteMessageAsync(messageVersions)">
+                                                        <span class="glyphicon glyphicon-trash"></span>
+                                                    </button>
+                                                    <button class="tiny-button" title="Edit" @onclick="() => EditMessageAsync(messageVersions)">
+                                                        <span class="glyphicon glyphicon-pencil"></span>
+                                                    </button>
                                             }
                                             else
                                             {
                                                 @*<a href="#">😄</a>
                                                 <a href="#"><span class="glyphicon glyphicon-share"></span></a>*@
-                                                <button @onclick="() => UndoDeleteMessageAsync(messageVersions)"><span class="glyphicon glyphicon-repeat flip-horizontal"></span></button>
+                                                <button class="tiny-button" title="Undo" @onclick="() => UndoDeleteMessageAsync(messageVersions)">
+                                                    <span class="glyphicon glyphicon-repeat flip-horizontal"></span>
+                                                </button>
                                             }
-                                        </div>
-                                    }
+                                        }
+                                    </div>
                                 </div>
                                 <div class="message-row">
                                     <div class="margin-column">
@@ -266,6 +279,13 @@
                 Reactions: Array.Empty<Reaction>()));
 
         await EventAggregator.PublishAsync(new MessagePublishedEvent(WasEdit: true));
+    }
+
+    async Task QuoteMessageAsync(Message message)
+    {
+        var lines = message.Content.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
+
+        await messageEditor.SetEditorTextAsync(string.Join("\n", lines.Select(l => $"> {l}")) + "\r\n\r\n\r\n");
     }
 
     string FormatFileSize(long length)
