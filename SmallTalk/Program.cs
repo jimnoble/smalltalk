@@ -22,6 +22,7 @@ builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuth
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddSmallTalkData();
 builder.Services.AddEventAggregator();
+builder.WebHost.UseUrls("https://localhost:4331");
 
 var app = builder.Build();
 
