@@ -248,13 +248,6 @@ pre {
   flex: 1 1 200px;
   height: 100%;
   padding-left: 12px;
-  opacity: 0%;
-}
-.scrollable-content.visible {
-  animation-name: message-appear;
-  animation-duration: 0.2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 }
 @media (max-width: 1200px) {
   .scrollable-content {
