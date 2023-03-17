@@ -18,7 +18,7 @@
 
     <h1 class="title">#@ChannelName</h1>
 
-    <div id="@ScrollableId" class="scrollable-content">
+    <div id="@ScrollableId" class="scrollable-content" onscroll="scrollableScrolled()">
 
         <div class="centered-content">
             @foreach (var messageDay in Messages ?? Array.Empty<IEnumerable<IEnumerable<IEnumerable<Message>>>>())
@@ -195,13 +195,10 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender || scrollToBottomPending)
-        {
-            await JSRuntime.InvokeVoidAsync("scrollToBottom", ScrollableId);
+        await JSRuntime.InvokeVoidAsync("observeScrollable", ScrollableId, firstRender || scrollToBottomPending);
 
-            scrollToBottomPending = false;
-        }
-
+        scrollToBottomPending = false;
+        
         if (playTone)
         {
             var isVisible = await JSRuntime.InvokeAsync<bool>("getIsVisible");
@@ -225,7 +222,9 @@
         {
             await InvokeAsync(async () => await UpdateMessagesAsync());
 
-            scrollToBottomPending = !messagePublishedEvent.WasEdit;
+            scrollToBottomPending = 
+                messagePublishedEvent.Author == User.Email && 
+                !messagePublishedEvent.WasEdit;
         }
     }
 
@@ -294,6 +293,7 @@
 
         await EventAggregator.PublishAsync(new MessagePublishedEvent(
             Channel: ChannelName,
+            Author: User.Email,
             WasEdit: true));
     }
 
@@ -320,6 +320,7 @@
 
         await EventAggregator.PublishAsync(new MessagePublishedEvent(
             Channel: ChannelName,
+            Author: User.Email,
             WasEdit: true));
     }
 

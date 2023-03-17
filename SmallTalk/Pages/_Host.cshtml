@@ -36,7 +36,6 @@
     <script type="text/javascript">
                         ﻿
         function setEditorText(value) {
-            console.log('setting editor text to ' + value);
             var element = document.getElementById('content1')
             element.innerText = value;
             placeCaretAtEnd(element);
@@ -46,9 +45,7 @@
             return document.getElementById('content1').innerText;
         }
 
-        function scrollToBottom(id) {
-            console.log('scrolling to bottom ' + id);
-            var element = document.getElementById(id);
+        function scrollToBottom(element) {
             element.scrollTop = element.scrollHeight;
         }
 
@@ -57,16 +54,6 @@
             element.onkeypress = function (evt) {
                 if (evt.keyCode == 13) {
                     if (evt.shiftKey) {
-                        @*// Shift + enter pressed
-                        evt.preventDefault()
-                        evt.stopPropagation() // Stop default handling
-
-                        // Simulate enter is pressed
-                        var e = new Event("keydown");
-                        e.keyCode = 13;
-                        e.which = e.keyCode;
-                        element.dispatchEvent(e);*@
-
                         console.log('new line!');
                     }
                     else {
@@ -140,8 +127,6 @@
 
         function placeCaretAtEnd(el) {
             
-            console.log('placing caret at end for ' + el);
-
             el.focus();
             if (typeof window.getSelection != "undefined"
                     && typeof document.createRange != "undefined") {
@@ -186,6 +171,32 @@
         function getIsVisible() {
             return window.isVisible;
         }
+
+        function observeScrollable(scrollableId, scrollToBottomNow) {
+            console.log('observeScrollable called')
+            var scrollable = document.getElementById(scrollableId)
+            if (scrollToBottomNow || window.magnet) scrollToBottom(scrollable)
+            window.scrollable = scrollable
+            new ResizeObserver(scrollableResized).observe(scrollable)
+        }
+
+        function scrollableResized() {
+            console.log('scrollableResized called')
+        }
+
+        function scrollableScrolled() {
+            var scrollable = window.scrollable
+            var bottomedOut = Math.abs((scrollable.scrollTop + scrollable.getBoundingClientRect().height) - scrollable.scrollHeight) < 0.5
+            if (bottomedOut && !window.magnet) {
+                console.log('magnet on')
+                window.magnet = true
+            }
+            else if (!bottomedOut && window.magnet) {
+                console.log('magnet off')
+                window.magnet = false
+            }             
+        }
+
     </script>
 
     <script src="_framework/blazor.server.js"></script>

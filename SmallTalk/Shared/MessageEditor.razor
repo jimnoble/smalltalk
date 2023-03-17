@@ -133,6 +133,7 @@
 
         await EventAggregator.PublishAsync(new MessagePublishedEvent(
             Channel: ChannelName,
+            Author: User.Email,
             WasEdit: false));
 
         await OnSubmit.InvokeAsync(true);
@@ -196,6 +197,7 @@
 
         await EventAggregator.PublishAsync(new MessagePublishedEvent(
             Channel: ChannelName,
+            Author: User.Email,
             WasEdit: true));
 
         await OnSubmit.InvokeAsync(false);
