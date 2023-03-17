@@ -190,6 +190,7 @@
             if (bottomedOut && !window.magnet) {
                 console.log('magnet on')
                 window.magnet = true
+                scrollable.classList.add('visible')
             }
             else if (!bottomedOut && window.magnet) {
                 console.log('magnet off')
