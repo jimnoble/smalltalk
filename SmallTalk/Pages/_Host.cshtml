@@ -186,7 +186,7 @@
 
         function scrollableScrolled() {
             var scrollable = window.scrollable
-            var bottomedOut = Math.abs((scrollable.scrollTop + scrollable.getBoundingClientRect().height) - scrollable.scrollHeight) < 0.5
+            var bottomedOut = Math.abs((scrollable.scrollTop + scrollable.getBoundingClientRect().height) - scrollable.scrollHeight) < 1
             if (bottomedOut && !window.magnet) {
                 console.log('magnet on')
                 window.magnet = true
