@@ -294,7 +294,9 @@
         var messageVersions = messages.GroupBy(m => m.MessageId);
 
         Messages = messageVersions
-            .Where(m => !string.IsNullOrWhiteSpace(m.Last().Content) || 
+            .Where(m => 
+                !string.IsNullOrWhiteSpace(m.Last().Content) || 
+                m.Last().Attachments.Any() ||
                 (m.Last().Author == User.Email && (now - m.Last().WriteTime.ToUniversalTime()).TotalSeconds < 15))
             .GroupBy(v => v.First().WriteTime.Date)
             .Select(g => g.GroupAdjacent(v => v.First().Author));
@@ -302,6 +304,7 @@
         RefreshIntervalSeconds = messageVersions
             .Where(m =>
                 string.IsNullOrWhiteSpace(m.Last().Content) &&
+                !m.Last().Attachments.Any() &&
                 m.Last().Author == User.Email &&
                 (now - m.Last().WriteTime.ToUniversalTime()).TotalSeconds < 15)
             .Select(m => (double?)(15 - (now - m.Last().WriteTime.ToUniversalTime()).TotalSeconds))
