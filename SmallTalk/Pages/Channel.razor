@@ -172,6 +172,8 @@
 
     public bool UserTypingVisible { get; set; }
 
+    public double? RefreshIntervalSeconds { get; set; }
+
     protected override async Task OnInitializedAsync()
     {
         EventAggregator.Subscribe(this);
@@ -211,6 +213,13 @@
         }
 
         LastViewTime = DateTime.UtcNow;
+
+        if (RefreshIntervalSeconds.HasValue)
+        {
+            await Task.Delay(TimeSpan.FromSeconds(RefreshIntervalSeconds.Value + 1));
+
+            await UpdateMessagesAsync();
+        }
     }
 
     public async Task HandleAsync(MessagePublishedEvent messagePublishedEvent)
@@ -244,7 +253,7 @@
         UserTypingText = $"{Users[userTypingEvent.User].DisplayName} is typing...";
 
         UserTypingVisible = true;
-        
+
         StateHasChanged();
 
         await Task.Delay(TimeSpan.FromSeconds(5));
@@ -266,6 +275,8 @@
 
     async Task LoadMessagesAsync()
     {
+        var now = DateTime.UtcNow;
+
         Users = (await SmallTalkDataContext.Users.Get()).ToDictionary(u => u.Email, u => u);
 
         var messages = new List<Message>();
@@ -281,10 +292,22 @@
             }
         }
 
-        Messages = messages
-            .GroupBy(m => m.MessageId)
+        var messageVersions = messages.GroupBy(m => m.MessageId);
+
+        Messages = messageVersions
+            .Where(m => !string.IsNullOrWhiteSpace(m.Last().Content) || 
+                (m.Last().Author == User.Email && (now - m.Last().WriteTime.ToUniversalTime()).TotalSeconds < 15))
             .GroupBy(v => v.First().WriteTime.Date)
             .Select(g => g.GroupAdjacent(v => v.First().Author));
+
+        RefreshIntervalSeconds = messageVersions
+            .Where(m =>
+                string.IsNullOrWhiteSpace(m.Last().Content) &&
+                m.Last().Author == User.Email &&
+                (now - m.Last().WriteTime.ToUniversalTime()).TotalSeconds < 15)
+            .Select(m => (double?)(15 - (now - m.Last().WriteTime.ToUniversalTime()).TotalSeconds))
+            .DefaultIfEmpty()
+            .Min();
 
         var newMessages = messages
             .GroupBy(m => m.MessageId)
@@ -308,7 +331,7 @@
 
         await MessageDateRepository.AppendMessageAsync(
             channel: message.Channel,
-            date: message.WriteTime.Date,
+            date: message.WriteTime.ToUniversalTime().Date,
             message: new Message(
                 MessageId: message.MessageId,
                 Channel: message.Channel,
