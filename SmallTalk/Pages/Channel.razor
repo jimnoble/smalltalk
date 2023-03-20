@@ -333,18 +333,20 @@
 
     string FormatFileSize(long length)
     {
-        string[] sizes = { "B", "KB", "MB", "GB", "TB" };
-        double len = length;
-        int order = 0;
+        var sizes = new[]{ "B", "KB", "MB", "GB", "TB" };
+        
+        var len = length;
+        
+        var order = 0;
+        
         while (len >= 1024 && order < sizes.Length - 1)
         {
             order++;
+        
             len = len / 1024;
         }
 
-        // Adjust the format string to your preferences. For example "{0:0.#}{1}" would
-        // show a single decimal place, and no space.
-        return string.Format("{0:0.##} {1}", len, sizes[order]);
+        return string.Format("{0:0.#} {1}", len, sizes[order]);
     }
 
     bool IsImageType(string contentType)
