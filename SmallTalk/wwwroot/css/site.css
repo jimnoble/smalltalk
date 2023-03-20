@@ -261,6 +261,15 @@ pre {
   min-height: 100%;
   overflow: hidden;
 }
+.fading-content {
+  opacity: 0%;
+}
+.fading-content.opaque {
+  animation-name: message-appear;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
 .login-button {
   padding: 5px;
   line-height: 30px;

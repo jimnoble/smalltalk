@@ -104,6 +104,14 @@ $content-max-width = 1200px
     // left: 6px
     overflow: hidden
     
+.fading-content
+    opacity: 0%
+    &.opaque
+        animation-name: message-appear
+        animation-duration: 0.5s
+        animation-iteration-count: 1
+        animation-fill-mode: forwards
+
 .login-button
     padding: $block-size
     line-height: $default-font-size * 2

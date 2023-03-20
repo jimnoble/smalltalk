@@ -16,123 +16,122 @@
 <PageTitle>smalltalk #@ChannelName</PageTitle>
 
 <div class="content-stack stack">
-
     <h1 class="title">#@ChannelName</h1>
-
     <div id="@ScrollableId" class="scrollable-content" onscroll="scrollableScrolled()">
-
         <div class="centered-content">
-            @foreach (var messageDay in Messages ?? Array.Empty<IEnumerable<IEnumerable<IEnumerable<Message>>>>())
-            {
-                <div class="date-divider">@messageDay.First().First().First().WriteTime.ToString("D")</div>
-
-                foreach (var messageStack in messageDay)
+            <div class="fading-content">
+                @foreach (var messageDay in Messages ?? Array.Empty<IEnumerable<IEnumerable<IEnumerable<Message>>>>())
                 {
-                    var user = Users[messageStack.First().First().Author];
+                    <div class="date-divider">@messageDay.First().First().First().WriteTime.ToString("D")</div>
 
-                    <div class="message-group">
-                        <div class="header message-row">
-                            <div class="margin-column">
-                                <AvatarView User=@user />
-                            </div>
-                            <div class="content-column">
-                                <div class="message-stack-title">
-                                    <div class="username">@user.DisplayName</div>
-                                    <div class="timestamp">@($"{messageStack.First().First().WriteTime:h:mm tt}")</div>
+                    foreach (var messageStack in messageDay)
+                    {
+                        var user = Users[messageStack.First().First().Author];
+
+                        <div class="message-group">
+                            <div class="header message-row">
+                                <div class="margin-column">
+                                    <AvatarView User=@user />
+                                </div>
+                                <div class="content-column">
+                                    <div class="message-stack-title">
+                                        <div class="username">@user.DisplayName</div>
+                                        <div class="timestamp">@($"{messageStack.First().First().WriteTime:h:mm tt}")</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        @foreach(var messageVersions in messageStack)
-                        {
-                            var message = messageVersions.Last();
+                            @foreach(var messageVersions in messageStack)
+                            {
+                                var message = messageVersions.Last();
 
-                            var messageDeleted = string.IsNullOrWhiteSpace(message.Content) && !message.Attachments.Any();
+                                var messageDeleted = string.IsNullOrWhiteSpace(message.Content) && !message.Attachments.Any();
 
-                            <div tabindex="0" class="message-stack @(messageVersions.First().WriteTime.ToUniversalTime() > LastViewTime ? "incoming" : "")">
-                                <div class="toolbar">
-                                    <div class="toolbox">
-                                        @if (!messageDeleted)
-                                        {
-                                            <button class="tiny-button" title="Quote" @onclick="() => QuoteMessageAsync(message)">
-                                                <span class="quote-icon">&OpenCurlyDoubleQuote;</span>
-                                            </button>
-                                        }
-
-                                        @if (message.Author == User.Email)
-                                        {
+                                <div tabindex="0" class="message-stack @(messageVersions.First().WriteTime.ToUniversalTime() > LastViewTime ? "incoming" : "")">
+                                    <div class="toolbar">
+                                        <div class="toolbox">
                                             @if (!messageDeleted)
                                             {
-                                                    @*<a href="#">😄</a>
-                                                    <a href="#"><span class="glyphicon glyphicon-share"></span></a>*@
-                                                    <button class="tiny-button" title="Delete" @onclick="() => DeleteMessageAsync(messageVersions)">
-                                                        <span class="glyphicon glyphicon-trash"></span>
-                                                    </button>
-                                                    <button class="tiny-button" title="Edit" @onclick="() => EditMessageAsync(messageVersions)">
-                                                        <span class="glyphicon glyphicon-pencil"></span>
-                                                    </button>
-                                            }
-                                            else
-                                            {
-                                                @*<a href="#">😄</a>
-                                                <a href="#"><span class="glyphicon glyphicon-share"></span></a>*@
-                                                <button class="tiny-button" title="Undo" @onclick="() => UndoDeleteMessageAsync(messageVersions)">
-                                                    <span class="glyphicon glyphicon-repeat flip-horizontal"></span>
+                                                <button class="tiny-button" title="Quote" @onclick="() => QuoteMessageAsync(message)">
+                                                    <span class="quote-icon">&OpenCurlyDoubleQuote;</span>
                                                 </button>
                                             }
-                                        }
+
+                                            @if (message.Author == User.Email)
+                                            {
+                                                @if (!messageDeleted)
+                                                {
+                                                        @*<a href="#">😄</a>
+                                                        <a href="#"><span class="glyphicon glyphicon-share"></span></a>*@
+                                                        <button class="tiny-button" title="Delete" @onclick="() => DeleteMessageAsync(messageVersions)">
+                                                            <span class="glyphicon glyphicon-trash"></span>
+                                                        </button>
+                                                        <button class="tiny-button" title="Edit" @onclick="() => EditMessageAsync(messageVersions)">
+                                                            <span class="glyphicon glyphicon-pencil"></span>
+                                                        </button>
+                                                }
+                                                else
+                                                {
+                                                    @*<a href="#">😄</a>
+                                                    <a href="#"><span class="glyphicon glyphicon-share"></span></a>*@
+                                                    <button class="tiny-button" title="Undo" @onclick="() => UndoDeleteMessageAsync(messageVersions)">
+                                                        <span class="glyphicon glyphicon-repeat flip-horizontal"></span>
+                                                    </button>
+                                                }
+                                            }
+                                        </div>
+                                    </div>
+                                    <div class="message-row">
+                                        <div class="margin-column">
+                                            <div class="timestamp">@*@($"{message.WriteTime:HH:mm}")*@</div>
+                                        </div>
+                                        <div class="content-column">
+                                            @if (messageDeleted)
+                                            {
+                                                <p class="subtle">message deleted</p>
+                                            }
+                                            else if (!string.IsNullOrWhiteSpace(message.Content))
+                                            {
+                                                var markdown = messageVersions.Last().Content ?? string.Empty;
+
+                                                @if (messageVersions.Count() > 1)
+                                                {
+                                                    markdown += "\r\n<span class='subtle'>(edited)</span>";
+                                                }
+
+                                                @((MarkupString)Markdown.ToHtml(markdown, markdownPipeline))                                                
+                                            }
+
+                                            @foreach (var attachment in message.Attachments)
+                                            {
+                                                if (IsImageType(attachment.ContentType))
+                                                {
+                                                    <a href="@attachment.Url" class="image-tile" target="_blank">
+                                                        <img class="image-tile" src="@attachment.Url" />
+                                                    </a>
+                                                }
+                                                else
+                                                {
+                                                    <a class="button" href="@attachment.Url" download>
+                                                        <span class="glyphicon glyphicon-file"></span>
+                                                        <span>@attachment.Label</span>
+                                                        <span class="subtle">@attachment.ContentType</span>
+                                                        <span class="subtle">@FormatFileSize(attachment.SizeBytes)</span>
+                                                        <span class="glyphicon glyphicon-cloud-download"></span>
+                                                    </a>                                                
+                                                }
+                                            }
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="message-row">
-                                    <div class="margin-column">
-                                        <div class="timestamp">@*@($"{message.WriteTime:HH:mm}")*@</div>
-                                    </div>
-                                    <div class="content-column">
-                                        @if (messageDeleted)
-                                        {
-                                            <p class="subtle">message deleted</p>
-                                        }
-                                        else if (!string.IsNullOrWhiteSpace(message.Content))
-                                        {
-                                            var markdown = messageVersions.Last().Content ?? string.Empty;
-
-                                            @if (messageVersions.Count() > 1)
-                                            {
-                                                markdown += "\r\n<span class='subtle'>(edited)</span>";
-                                            }
-
-                                            @((MarkupString)Markdown.ToHtml(markdown, markdownPipeline))                                                
-                                        }
-
-                                        @foreach (var attachment in message.Attachments)
-                                        {
-                                            if (IsImageType(attachment.ContentType))
-                                            {
-                                                <a href="@attachment.Url" class="image-tile" target="_blank">
-                                                    <img class="image-tile" src="@attachment.Url" />
-                                                </a>
-                                            }
-                                            else
-                                            {
-                                                <a class="button" href="@attachment.Url" download>
-                                                    <span class="glyphicon glyphicon-file"></span>
-                                                    <span>@attachment.Label</span>
-                                                    <span class="subtle">@attachment.ContentType</span>
-                                                    <span class="subtle">@FormatFileSize(attachment.SizeBytes)</span>
-                                                    <span class="glyphicon glyphicon-cloud-download"></span>
-                                                </a>                                                
-                                            }
-                                        }
-                                    </div>
-                                </div>
-                            </div>
-                        }
-                    </div>
-                }
-            }           
-            <div class="typing-indicator">
-                <span class="typing-indicator-content @(UserTypingVisible ? "opaque" : "transparent")">@UserTypingText</span>
-                &nbsp;
+                            }
+                        </div>
+                    }
+                }           
+                <div class="typing-indicator">
+                    <span class="typing-indicator-content @(UserTypingVisible ? "opaque" : "transparent")">@UserTypingText</span>
+                    &nbsp;
+                </div>
             </div>
         </div>
     </div>

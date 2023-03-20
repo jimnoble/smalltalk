@@ -138,6 +138,7 @@
             if (bottomedOut && !window.magnet) {
                 console.log('magnet on')
                 window.magnet = true
+                document.getElementById('fading-content').classList.add('opaque')
             }
             else if (!bottomedOut && window.magnet) {
                 console.log('magnet off')
