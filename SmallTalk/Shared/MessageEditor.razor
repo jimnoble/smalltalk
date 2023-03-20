@@ -74,7 +74,7 @@
         {
             text = value;
 
-            if ((DateTime.UtcNow - lastUserTypingEventTime).TotalSeconds >= 4)
+            if ((DateTime.UtcNow - lastUserTypingEventTime).TotalSeconds >= 3)
             {
                 Console.WriteLine(lastUserTypingEventTime);
 

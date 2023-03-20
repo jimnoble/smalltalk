@@ -454,7 +454,7 @@ pre {
   transition: opacity 0.25s ease-out;
 }
 .typing-indicator .typing-indicator-content {
-  transition: opacity 1.25s ease-out;
+  transition: opacity 1s ease-out;
 }
 .typing-indicator .typing-indicator-content.opaque {
   opacity: 100%;
