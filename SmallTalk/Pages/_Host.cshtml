@@ -37,6 +37,12 @@
 
         function scrollToBottom(element) {
             element.scrollTop = element.scrollHeight;
+            setTimeout(
+                function() 
+                {  
+                    document.getElementById('fading-content').classList.add('opaque')
+                }, 
+                1000)
         }
 
         function configureEditorContentArea() {

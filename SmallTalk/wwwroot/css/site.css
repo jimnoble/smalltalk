@@ -266,7 +266,7 @@ pre {
 }
 .fading-content.opaque {
   animation-name: message-appear;
-  animation-duration: 0.5s;
+  animation-duration: 0.25s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }

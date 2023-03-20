@@ -19,7 +19,7 @@
     <h1 class="title">#@ChannelName</h1>
     <div id="@ScrollableId" class="scrollable-content" onscroll="scrollableScrolled()">
         <div class="centered-content">
-            <div class="fading-content">
+            <div id="fading-content" class="fading-content">
                 @foreach (var messageDay in Messages ?? Array.Empty<IEnumerable<IEnumerable<IEnumerable<Message>>>>())
                 {
                     <div class="date-divider">@messageDay.First().First().First().WriteTime.ToString("D")</div>

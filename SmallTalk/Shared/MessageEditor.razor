@@ -127,7 +127,12 @@
     {
         var text = Text;
 
-        var attachments = Attachment.HasValue ? 
+        if (string.IsNullOrWhiteSpace(text))
+        {
+            return;
+        }
+
+        var attachments = Attachment.HasValue ?
             new[] 
             { 
                 new Attachment(
@@ -186,6 +191,11 @@
         var message = EditingMessage.Value;
 
         var text = Text;
+
+        if (string.IsNullOrWhiteSpace(text))
+        {
+            return;
+        }
 
         var attachments = Attachment.HasValue ?
             new[]
