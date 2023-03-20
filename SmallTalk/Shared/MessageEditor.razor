@@ -107,7 +107,7 @@
 
     public async Task EditMessageAsync(Message message)
     {
-        Text = message.Content.Replace(" ", " ");
+        Text = message.Content;//.Replace(" ", " ");
 
         EditingMessage = message;
 
