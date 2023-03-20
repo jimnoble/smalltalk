@@ -34,16 +34,6 @@
     </div>
 
     <script type="text/javascript">
-                        ﻿
-        function setEditorText(value) {
-            var element = document.getElementById('content1')
-            element.innerText = value;
-            placeCaretAtEnd(element);
-        }
-
-        function getEditorText() {
-            return document.getElementById('content1').innerText;
-        }
 
         function scrollToBottom(element) {
             element.scrollTop = element.scrollHeight;
@@ -81,48 +71,6 @@
             var element = document.getElementById('audio1');
             element.currentTime = 0;
             element.play();
-        }
-
-        function BlazorContentEditable(DivID, Instance, TextToDisplay) {
-
-            //set prefilled text
-            document.getElementById(DivID).innerHTML = TextToDisplay;
-
-            //set initial height
-            SetHeight(DivID);
-    
-            //set event listener
-            document.getElementById(DivID).addEventListener("input", function () {
-                Instance.invokeMethodAsync("GetUpdatedTextFromJavascript", document.getElementById(DivID).value);
-                SetHeight(DivID);
-            });
-        }
-
-        function SetValue(DivID, TextToDisplay) {
-            //set prefilled text
-            console.info(document.getElementById(DivID))
-
-            document.getElementById(DivID).innerHTML = TextToDisplay;
-            alert('setting to ' + TextToDisplay);
-        }
-
-        function SetHeight(DivID) {
-
-            //reset to original height
-            document.getElementById(DivID).style.height = 'auto';
-
-            //from https://gomakethings.com/automatically-expand-a-textarea-as-the-user-types-using-vanilla-javascript/
-            // Get the computed styles for the element
-            var computed = window.getComputedStyle(document.getElementById(DivID));
-
-            // Calculate the height
-            var height = parseInt(computed.getPropertyValue('border-top-width'), 10)
-                + document.getElementById(DivID).scrollHeight
-                + parseInt(computed.getPropertyValue('border-bottom-width'), 10);
-
-            //set the height
-            document.getElementById(DivID).style.height = (height + 'px');
-
         }
 
         function placeCaretAtEnd(el) {
@@ -197,9 +145,22 @@
             }             
         }
 
+        function setupTextAreas() {
+            const tx = document.getElementsByTagName("textarea");
+            for (let i = 0; i < tx.length; i++) {
+                tx[i].setAttribute("style", "height:" + (tx[i].scrollHeight) + "px;overflow-y:hidden;");
+                tx[i].addEventListener("input", onInput, false);
+                onInput.call(tx[i])
+            }
+        }
+
+        function onInput() {
+            this.style.height = 0;
+            this.style.height = (this.scrollHeight) + "px";
+        }
+
     </script>
 
     <script src="_framework/blazor.server.js"></script>
-    @*<script src="_content/BlazorContentEditable/BlazorContentEditable.js"></script>*@
 </body>
 </html>

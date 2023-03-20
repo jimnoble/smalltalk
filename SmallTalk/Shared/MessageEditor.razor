@@ -7,7 +7,13 @@
 
 <div class="editor">
     <div>
-        <span id="content1" @ref="textArea" class="textarea" role="textbox" contenteditable></span>
+        <textarea 
+            @ref="textArea" 
+            @bind="Text"
+            @bind:event="oninput"
+            id="content1" 
+            class="textarea" 
+            placeholder="Message #@ChannelName"></textarea>
     </div>
     <div class="tool-strip">
         @if (Attachment == null)
@@ -72,9 +78,9 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        await JSRuntime.InvokeVoidAsync("setEditorText", Text ?? string.Empty);
-
         await JSRuntime.InvokeVoidAsync("configureEditorContentArea");
+
+        await JSRuntime.InvokeVoidAsync("setupTextAreas", Text ?? string.Empty);
     }
 
     public async Task EditMessageAsync(Message message)
@@ -93,13 +99,11 @@
     public async Task SetEditorTextAsync(string text)
     {
         Text = text;
-
-        await JSRuntime.InvokeVoidAsync("setEditorText", Text ?? string.Empty);
     }
 
     public async Task SendAsync()
     {
-        var text = (await JSRuntime.InvokeAsync<string>("getEditorText")).Replace(@" ", " ").Trim();
+        var text = Text;
 
         var attachments = Attachment.HasValue ? 
             new[] 
@@ -159,7 +163,7 @@
     {
         var message = EditingMessage.Value;
 
-        var text = (await JSRuntime.InvokeAsync<string>("getEditorText")).Replace(@" ", " ").Trim();
+        var text = Text;
 
         var attachments = Attachment.HasValue ?
             new[]
