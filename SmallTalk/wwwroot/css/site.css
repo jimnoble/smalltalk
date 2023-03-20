@@ -596,6 +596,12 @@ h1.title {
   padding-top: 10px;
   line-height: 20px;
 }
+.site-badge {
+  width: 25;
+  height: 25px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
 #components-reconnect-modal {
   background-color: #18181b !important;
 }
