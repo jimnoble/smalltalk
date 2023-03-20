@@ -61,9 +61,31 @@
 {
     ElementReference textArea;
 
+    string text;
+
+    DateTime lastUserTypingEventTime;
+
     Attachment? Attachment { get; set; }
 
-    public string Text { get; set; }
+    public string Text 
+    {
+        get => text;
+        set 
+        {
+            text = value;
+
+            if ((DateTime.UtcNow - lastUserTypingEventTime).TotalSeconds >= 4)
+            {
+                Console.WriteLine(lastUserTypingEventTime);
+
+                EventAggregator.PublishAsync(new UserTypingEvent(
+                    Channel: ChannelName,
+                    User: User.Email));
+
+                lastUserTypingEventTime = DateTime.UtcNow;
+            }
+        }
+    }
 
     public Message? EditingMessage { get; set; }
 

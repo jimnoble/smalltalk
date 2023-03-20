@@ -447,10 +447,20 @@ pre {
   border: solid 1px rgba(255,255,255,0.1);
 }
 .typing-indicator {
-  margin-left: 55px;
-  margin-bottom: 5px;
+  margin-left: 60px;
+  line-height: 5px;
+  margin-bottom: 10px;
   opacity: 100%;
-  transition: all 0.25s ease-out;
+  transition: opacity 0.25s ease-out;
+}
+.typing-indicator .typing-indicator-content {
+  transition: opacity 1.25s ease-out;
+}
+.typing-indicator .typing-indicator-content.opaque {
+  opacity: 100%;
+}
+.typing-indicator .typing-indicator-content.transparent {
+  opacity: 0%;
 }
 .action-bar {
   float: right;

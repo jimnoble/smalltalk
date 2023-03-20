@@ -11,6 +11,7 @@
 @inject IMessageDateRepository MessageDateRepository
 @inject SmallTalkDataContext SmallTalkDataContext
 @implements IHandle<MessagePublishedEvent>
+@implements IHandle<UserTypingEvent>
 
 <PageTitle>smalltalk #@ChannelName</PageTitle>
 
@@ -30,7 +31,6 @@
                     var user = Users[messageStack.First().First().Author];
 
                     <div class="message-group">
-
                         <div class="header message-row">
                             <div class="margin-column">
                                 <AvatarView User=@user />
@@ -129,24 +129,15 @@
                         }
                     </div>
                 }
-            }
+            }           
+            <div class="typing-indicator">
+                <span class="typing-indicator-content @(UserTypingVisible ? "opaque" : "transparent")">@UserTypingText</span>
+                &nbsp;
+            </div>
         </div>
     </div>
-
     <audio id="audio1" autoplay controls style="display: none"><source src="/content/audio/message-received.mp3" /></audio>
-    @*@if (playTone)
-    {
-        <div>!!!!</div>
-        <audio autoplay controls><source src="/content/audio/new-message.mp3" /></audio>
-    }
-    else
-    {
-        <div>????</div>
-        <audio controls muted><source src="/content/audio/new-message.mp3" /></audio>
-    }*@
-
     <MessageEditor @ref="messageEditor" ChannelName=@ChannelName User=@User />
-
 </div>
 
 @code
@@ -162,6 +153,8 @@
 
     bool playTone;
 
+    DateTime userTypingTextShowTime;
+
     [Parameter]
     public string ChannelName { get; set; }
 
@@ -174,6 +167,10 @@
     IEnumerable<IEnumerable<IEnumerable<IEnumerable<Message>>>> Messages { get; set; }
 
     User User { get; set; }
+
+    public string UserTypingText { get; set; }
+
+    public bool UserTypingVisible { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -198,7 +195,7 @@
         await JSRuntime.InvokeVoidAsync("observeScrollable", ScrollableId, firstRender || scrollToBottomPending);
 
         scrollToBottomPending = false;
-        
+
         if (playTone)
         {
             var isVisible = await JSRuntime.InvokeAsync<bool>("getIsVisible");
@@ -222,9 +219,41 @@
         {
             await InvokeAsync(async () => await UpdateMessagesAsync());
 
-            scrollToBottomPending = 
-                messagePublishedEvent.Author == User.Email && 
+            scrollToBottomPending =
+                messagePublishedEvent.Author == User.Email &&
                 !messagePublishedEvent.WasEdit;
+        }
+    }
+
+    public async Task HandleAsync(UserTypingEvent userTypingEvent)
+    {
+        if (userTypingEvent.Channel != ChannelName || 
+            userTypingEvent.User == User.Email) return;
+
+        await InvokeAsync(async () => await ShowUserTypingTextAsync(userTypingEvent));
+    }
+
+    async Task ShowUserTypingTextAsync(UserTypingEvent userTypingEvent)
+    {
+        var now = DateTime.UtcNow;
+
+        Console.WriteLine($"{now}: {User.Email}: User Typing {userTypingEvent.User}");
+
+        userTypingTextShowTime = now;
+
+        UserTypingText = $"{Users[userTypingEvent.User].DisplayName} is typing...";
+
+        UserTypingVisible = true;
+        
+        StateHasChanged();
+
+        await Task.Delay(TimeSpan.FromSeconds(5));
+
+        if (userTypingTextShowTime == now)
+        {
+            UserTypingVisible = false;
+
+            StateHasChanged();
         }
     }
 

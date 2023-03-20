@@ -306,11 +306,18 @@ $content-max-width = 1200px
 .typing-indicator
     @extend .subtle
     @extend .text-color-throb
-    margin-left: $block-size * 11
-    margin-bottom: $block-size
+    margin-left: $block-size * 12
+    line-height: $block-size * 1
+    margin-bottom: $block-size * 2
     opacity: 100%
-    transition: all 0.25s ease-out
-        
+    transition: opacity 0.25s ease-out
+    .typing-indicator-content
+        transition: opacity 1.25s ease-out
+        &.opaque
+            opacity: 100%
+        &.transparent
+            opacity: 0%
+
 .action-bar
     @extend .pad-xs
     @extend .outline-throb
