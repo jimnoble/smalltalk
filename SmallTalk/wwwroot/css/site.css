@@ -576,6 +576,9 @@ h1.title {
   padding-top: 10px;
   line-height: 20px;
 }
+#components-reconnect-modal {
+  background-color: #18181b !important;
+}
 *,
 *:before,
 *:after {
