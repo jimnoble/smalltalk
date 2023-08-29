@@ -16,9 +16,9 @@ Smalltalk is a multi-user, multi-channel web chat application with support for m
 
 - **Images and Attachments:** Share images and files effortlessly by attaching them to your messages.
 
-- **Responsive Design:** Experience the same level of comfort and functionality whether you're on your desktop or using your mobile device.
-
 - **Edit and Delete:** Amend your messages or remove them completely.
+
+- **Responsive Design:** Experience the same level of comfort and functionality whether you're on your desktop or using your mobile device.
 
 ## License 
 
