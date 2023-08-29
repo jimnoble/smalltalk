@@ -1,6 +1,6 @@
 # Smalltalk: A Web Chat Application
 
-Smalltalk is a multi-user, multi-channel web chat application with support for markdown formatting, emojis, images, attachments, and seamless responsive design across desktop and mobile devices. Created in C#/.NET using Blazor and [Halforbit Data Stores](https://github.com/halforbit/data-stores).
+Smalltalk is a multi-user, multi-channel web chat application with support for markdown formatting, emojis, images, attachments, and a seamless responsive design across desktop and mobile devices. Created in C#/.NET using Blazor and [Halforbit Data Stores](https://github.com/halforbit/data-stores).
 
 <p align="center">
 <img src="content/smalltalk-screen.png" alt="screenshot" width="450"/>
